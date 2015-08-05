@@ -2,5 +2,5 @@
 
 angular.module('dlitApp')
   .controller('LoginCtrl', function ($scope,Page) {
-    Page.setTitle("เข้าสู่ระบบ");
+    Page.setTitle('เข้าสู่ระบบ');
   });

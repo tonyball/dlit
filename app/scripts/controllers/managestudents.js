@@ -2,5 +2,5 @@
 
 angular.module('dlitApp')
   .controller('ManagestudentsCtrl', function ($scope,Page) {
-    Page.setTitle("นักเรียนของฉัน");
+    Page.setTitle('นักเรียนของฉัน');
   });
