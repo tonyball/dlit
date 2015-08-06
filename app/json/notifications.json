@@ -1,0 +1,14 @@
+{
+	"notifications":[
+		{
+			"id":"",
+			"text":"",
+			"sender_id":"",
+			"receiver_id":"",
+			"created":"",
+			"classroom_id":"",
+			"type":"",
+			"url":""
+		}
+	]
+}
