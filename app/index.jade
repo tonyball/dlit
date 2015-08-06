@@ -37,10 +37,20 @@ body
     li
       a(href="#").black-text ออกจากระบบ
 
+  ul.notifications.dropdown-content#notifications-dropdown
+    div.notifications-header
+      header.black-text การแจ้งเตือน
+    li.divider
+    li
+      a.notify-item.black-text
+        img(src='images/physics-logo.png', 'alt'='physics', width="50").noify-logo.circle.left
+        | 13:00 น. | ธัญวรัตม์ อยู่วนิชชานนท์ ได้ส่งคำถามเรื่อง การเคลื่อนที่แนวตรง
+
+
   nav.white
     ul.right  
       li.notification-icon
-        a(href="#").black-text
+        a(href="", data-activates="notifications-dropdown").black-text.noti-dropdown-button
           i.small.material-icons notifications 
       li
         img(src="images/avatar.png", alt="profile avatar", width="42").circle.responsive-img.left.hide-on-med-and-down
@@ -73,6 +83,8 @@ body
         a(href="#/overview").black-text.waves-effect.waves-orange 
           i.small.material-icons.left poll
           | ภาพรวมนักเรียน
+      img(src="images/dlit-logo.png", alt="dlit logo").hide-on-med-and-up.col.offset-s1
+
 
     a(href="#", data-activates="slide-out").button-collapse.show-on-large
       i.mdi-navigation-menu.black-text
@@ -127,7 +139,8 @@ body
 
   script.
     $(document).ready(function(){
-      $(".button-collapse").sideNav({closeOnClick: true});
+      $(".button-collapse").sideNav({closeOnClick: true, menuWidth: 300});
       $(".dropdown-button").dropdown({hover: false,belowOrigin: true });
+      $(".noti-dropdown-button").dropdown({hover: true,belowOrigin: true, gutter: 0, constrain_width: false});
     })
 
