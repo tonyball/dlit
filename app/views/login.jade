@@ -1,1 +1,19 @@
-p This is the login view.
+
+form(id="", method="Post", action="login").container.card.col.offset-s2
+	div.row
+		div.input-field.col.s6.offset-s3
+			i.small.material-icons.prefix account_circle
+			input(id="username",type='text',text='email').validate
+			label(for="username") ชื่อผู้ใช้หรืออีเมลล์
+	div.row
+		div.input-field.col.s6.offset-s3
+			i.small.material-icons.prefix vpn_key
+			input(id="password",type='password').validate
+			label(for="password") รหัสผ่าน
+	div.row
+		div.col.offset-s5
+			button(type='submit',name='login').btn.waves-effect.waves-light.orange.lighten-1
+				| เข้าสู่ระบบ    
+				i.small.material-icons.prefix send
+
+					
