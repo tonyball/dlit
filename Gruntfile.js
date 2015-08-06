@@ -1,4 +1,4 @@
-// Generated on 2015-08-05 using generator-angular-jade-stylus 0.8.7
+// Generated on 2015-08-06 using generator-angular-jade-stylus 0.8.7
 'use strict';
 
 // # Globbing
@@ -31,16 +31,13 @@ module.exports = function (grunt) {
         files: ['bower.json'],
         tasks: ['bowerInstall']
       },
-      js: {
-        files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
-        tasks: ['newer:jshint:all'],
-        options: {
-          livereload: true
-        }
+      coffee: {
+        files: ['<%= yeoman.app %>/scripts/{,*/}*.{coffee,litcoffee,coffee.md}'],
+        tasks: ['newer:coffee:dist']
       },
-      jsTest: {
-        files: ['test/spec/{,*/}*.js'],
-        tasks: ['newer:jshint:test', 'karma']
+      coffeeTest: {
+        files: ['test/spec/{,*/}*.{coffee,litcoffee,coffee.md}'],
+        tasks: ['newer:coffee:test', 'karma']
       },
       stylus: {
         files: ['<%= yeoman.app %>/styles/{,*/}*.styl'],
@@ -49,7 +46,7 @@ module.exports = function (grunt) {
       jade: {
         files: ['<%= yeoman.app %>/views/{,*/}*.jade', '<%= yeoman.app %>/*.jade'],
         tasks: ['bowerInstall', 'jade:server']
-      },
+      }, 
       gruntfile: {
         files: ['Gruntfile.js']
       },
@@ -60,7 +57,7 @@ module.exports = function (grunt) {
         files: [
           '.tmp/{,*/}*.html',
           '.tmp/styles/{,*/}*.css',
-          '<%= yeoman.app %>/scripts/{,*/}*.js',
+          '.tmp/scripts/{,*/}*.js',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
       }
@@ -163,15 +160,8 @@ module.exports = function (grunt) {
       },
       all: {
         src: [
-          'Gruntfile.js',
-          '<%= yeoman.app %>/scripts/{,*/}*.js'
+          'Gruntfile.js'
         ]
-      },
-      test: {
-        options: {
-          jshintrc: 'test/.jshintrc'
-        },
-        src: ['test/spec/{,*/}*.js']
       }
     },
 
@@ -211,6 +201,42 @@ module.exports = function (grunt) {
         src: ['<%= yeoman.app %>/index.jade'],
         
         ignorePath: '<%= yeoman.app %>/'
+      }
+    },
+
+    // Compiles CoffeeScript to JavaScript
+    coffee: {
+      options: {
+        sourceMap: true,
+        sourceRoot: ''
+      },
+      server: {
+        files: [{
+          expand: true,
+          cwd: '<%= yeoman.app %>/scripts',
+          src: '{,*/}*.coffee',
+          dest: '.tmp/scripts',
+          ext: '.js'
+        }]
+      },
+      dist: {
+        sourceMap: false,
+        files: [{
+          expand: true,
+          cwd: '<%= yeoman.app %>/scripts',
+          src: '{,*/}*.coffee',
+          dest: '.tmp/scripts',
+          ext: '.js'
+        }]
+      },
+      test: {
+        files: [{
+          expand: true,
+          cwd: 'test/spec',
+          src: '{,*/}*.coffee',
+          dest: '.tmp/spec',
+          ext: '.js'
+        }]
       }
     },
 
@@ -358,9 +384,12 @@ module.exports = function (grunt) {
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       server: [
+        'coffee:server',
         'stylus:server'
       ],
       test: [
+        'coffee:server',
+        'coffee:test',
         'stylus:test'
       ],
       dist: [
@@ -438,6 +467,7 @@ module.exports = function (grunt) {
     'clean:dist',
     'bowerInstall',
     'jade:dist',
+    'coffee:dist',
     'stylus:dist',
     'useminPrepare',
     'concurrent:dist',
