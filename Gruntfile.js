@@ -46,7 +46,7 @@ module.exports = function (grunt) {
       jade: {
         files: ['<%= yeoman.app %>/views/{,*/}*.jade', '<%= yeoman.app %>/*.jade'],
         tasks: ['bowerInstall', 'jade:server']
-      }, 
+      },
       gruntfile: {
         files: ['Gruntfile.js']
       },
@@ -427,7 +427,7 @@ module.exports = function (grunt) {
     // Test settings
     karma: {
       unit: {
-        configFile: 'karma.conf.js',
+        configFile: 'test/karma.conf.coffee',
         singleRun: true
       }
     }

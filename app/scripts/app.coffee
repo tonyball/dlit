@@ -10,8 +10,8 @@ angular
   .config ($routeProvider) ->
     $routeProvider
       .when '/',
-        templateUrl: 'views/main.html'
-        controller: 'MainCtrl'
+        templateUrl: 'views/dashboard.html'
+        controller: 'DashboardCtrl'
       .when '/activity',
         templateUrl: 'views/activity.html'
         controller: 'ActivityCtrl'

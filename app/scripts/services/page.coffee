@@ -2,13 +2,11 @@
 
 angular.module('dlitApp')
   .factory 'Page', ->
-    # Service logic
-    # ...
-
-    meaningOfLife = 42
-
-    # Public API here
+    title = 'กระดานหลัก'
     {
-      someMethod: ->
-        meaningOfLife
+    title: ->
+      title
+    setTitle: (newTitle) ->
+      title = newTitle
+      return
     }

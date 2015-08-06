@@ -1,0 +1,12 @@
+{
+	"examscores":[
+		{
+			"id":"",
+			"score":"",
+			"exam_id":"",
+			"classroom_id":"",
+			"subject_id":"",
+			"user_id":""
+		}
+	]
+}

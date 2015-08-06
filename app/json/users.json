@@ -1,0 +1,24 @@
+{
+	"users":[
+		{
+			"id":"",
+			"username":"",
+			"password":"",
+			"firstname":"",
+			"lastname":"",
+			"email":"",
+			"school":"",
+			"role":"",
+			"gender":"",
+			"birthdate":"",
+			"tel":"",
+			"education_level":"",
+			"address":"",
+			"created":"",
+			"modified":"",
+			"citizenid":"",
+			"user_code":"",
+			"avatar":""
+		}
+	]
+}
