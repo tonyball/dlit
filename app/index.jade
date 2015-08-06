@@ -15,12 +15,82 @@ head
   link(rel="stylesheet", href="styles/main.css")
   // endbuild
   link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css")
+  link(href="https://fonts.googleapis.com/icon?family=Material+Icons", rel="stylesheet")
 body
   // Add your site or application content here
+  
+  //- Dropdown items
+  ul.dropdown-content#user-dropdown
+    li
+      a(href="#/profile").black-text ข้อมูลส่วนตัว
+    li.divider
+    li
+      a(href="#dashboard").black-text ห้องเรียนของฉัน
+    li
+      a(href="#managestudents").black-text นักเรียนของฉัน
+    li.divider
+    li
+      a(href="#").black-text ตั้งค่า
+    li
+      a(href="#").black-text ความช่วยเหลือ
+    li.divider
+    li
+      a(href="#").black-text ออกจากระบบ
 
-  div.container(ng-view)
+  nav.white
+    ul.right  
+      li.notification-icon
+        a(href="#").black-text
+          i.small.material-icons notifications 
+      li
+        img(src="images/avatar.png", alt="profile avatar", width="42").circle.responsive-img.left.hide-on-med-and-down
+        a(href="#", data-activates="user-dropdown").black-text.waves-effect.waves-orange.dropdown-button สุขุมาล กิติสิน
+          i.small.material-icons.right arrow_drop_down
 
+    ul(ng-controller="SidenavCtrl").side-nav#slide-out
+    
+      li(ng-class="{ active: isActive('/')}")
+        a(href="#/").black-text.waves-effect.waves-orange 
+          i.small.material-icons.left apps 
+          | กระดานหลัก
 
+      li(ng-class="{ active: isActive('/managestudents')}")
+        a(href="#/managestudents").black-text.waves-effect.waves-orange 
+          i.small.material-icons.left supervisor_account 
+          | นักเรียนของฉัน
+
+      li(ng-class="{ active: isActive('/studentprogress')}")
+        a(href="#/studentprogress").black-text.waves-effect.waves-orange 
+          i.small.material-icons.left local_library
+          | ติดตามนักเรียน
+
+      li(ng-class="{ active: isActive('/activity')}")
+        a(href="#/activity").black-text.waves-effect.waves-orange 
+          i.small.material-icons.left check_box
+          | งานนักเรียน
+
+      li(ng-class="{ active: isActive('/overview')}")
+        a(href="#/overview").black-text.waves-effect.waves-orange 
+          i.small.material-icons.left poll
+          | ภาพรวมนักเรียน
+
+    a(href="#", data-activates="slide-out").button-collapse.show-on-large
+      i.mdi-navigation-menu.black-text
+    ul
+      li.page-title
+        h4.black-text {{ Page.title() }}
+
+  div.row      
+    div(ng-view).col.m12
+  
+  div.container
+  footer.row
+      div.text-left.col.m8
+        p การพัฒนาคุณภาพการศึกษาด้วยเทคโนโลยีสารสนเทศ (DLIT) โดยสำนักงานคณะกรรมการการศึกษาขั้นพื้นฐาน (สพฐ.) กระทรวงศึกษาธิการ สงวนลิขสิทธิ์ © 2558
+
+      div.col.offset-m4 Powered by 
+        img(src="images/newkru-logo-white.png", width="100")
+  
   <!--[if lt IE 9]>
   script(src="bower_components/es5-shim/es5-shim.js")
   script(src="bower_components/json3/lib/json3.min.js")
@@ -50,7 +120,14 @@ body
   script(src="scripts/controllers/profile.js")
   script(src="scripts/controllers/subjects.js")
   script(src="scripts/services/page.js")
+  script(src="scripts/controllers/sidenav.js")
   // endbuild
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
   script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js")
+
+  script.
+    $(document).ready(function(){
+      $(".button-collapse").sideNav({closeOnClick: true});
+      $(".dropdown-button").dropdown({hover: false,belowOrigin: true });
+    })
 
