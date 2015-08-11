@@ -1,5 +1,5 @@
-{
-	"classrooms":[
+
+[
 		{
 			"id":"",
 			"title":"",
@@ -11,5 +11,4 @@
 			"subject_id":"",
 			"video_id":""
 		}
-	]
-}
+]
