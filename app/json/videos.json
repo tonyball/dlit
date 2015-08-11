@@ -5,6 +5,7 @@
 			"classroom_id":"1",
 			"duration":"",
 			"slide_id":"",
+			"type":"1",
 			"video_url":"video_dlit_math_set/01.mp4"
 		},
 		{
@@ -13,6 +14,7 @@
 			"classroom_id":"1",
 			"duration":"",
 			"slide_id":"",
+			"type":"2",
 			"video_url":"video_dlit_math_set/02.mp4"
 		},
 		{
@@ -21,6 +23,7 @@
 			"classroom_id":"1",
 			"duration":"",
 			"slide_id":"",
+			"type":"1",
 			"video_url":"video_dlit_math_set/03.mp4"
 		},
 		{
@@ -29,6 +32,7 @@
 			"classroom_id":"1",
 			"duration":"",
 			"slide_id":"",
+			"type":"2",
 			"video_url":"video_dlit_math_set/04.mp4"
 		},
 		{
@@ -37,6 +41,7 @@
 			"classroom_id":"1",
 			"duration":"",
 			"slide_id":"",
+			"type":"2",
 			"video_url":"video_dlit_math_set/05.mp4"
 		},
 		{
@@ -45,6 +50,7 @@
 			"classroom_id":"1",
 			"duration":"",
 			"slide_id":"",
+			"type":"1",
 			"video_url":"video_dlit_math_set/06.mp4"
 		},
 		{
@@ -53,6 +59,7 @@
 			"classroom_id":"1",
 			"duration":"",
 			"slide_id":"",
+			"type":"1",
 			"video_url":"video_dlit_math_set/07.mp4"
 		},
 		{
@@ -61,6 +68,7 @@
 			"classroom_id":"1",
 			"duration":"",
 			"slide_id":"",
+			"type":"2",
 			"video_url":"video_dlit_math_set/08.mp4"
 		},
 		{
@@ -69,6 +77,7 @@
 			"classroom_id":"1",
 			"duration":"",
 			"slide_id":"",
+			"type":"2",
 			"video_url":"video_dlit_math_set/09.mp4"
 		},
 		{
@@ -77,6 +86,7 @@
 			"classroom_id":"1",
 			"duration":"",
 			"slide_id":"",
+			"type":"1",
 			"video_url":"video_dlit_math_set/10.mp4"
 		},
 		{
@@ -85,6 +95,7 @@
 			"classroom_id":"1",
 			"duration":"",
 			"slide_id":"",
+			"type":"2",
 			"video_url":"video_dlit_math_set/11.mp4"
 		}
 ]
