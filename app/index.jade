@@ -1,4 +1,4 @@
- doctype html
+doctype html
 html(ng-app="dlitApp", ng-controller="DashboardCtrl")
 head
   meta(charset="utf-8")
@@ -59,7 +59,7 @@ body
 
     ul(ng-controller="SidenavCtrl").side-nav#slide-out
     
-      li(ng-class="{ active: isActive('/')}")
+      li(ng-class="{ active: isActive('/dashboard')}")
         a(href="#/").black-text.waves-effect.waves-orange 
           i.small.material-icons.left apps 
           | กระดานหลัก
@@ -91,7 +91,8 @@ body
       i.mdi-navigation-menu.black-text
     ul
       li.page-title
-        h4.black-text {{ Page.title() }}
+        h4.black-text.hide-on-small-only {{ Page.title() }}
+        h5.black-text.hide-on-med-and-up &nbsp&nbsp&nbsp{{ Page.title() }}
 
   div.row      
     div(ng-view).col.m12
@@ -135,7 +136,7 @@ body
   script(src="scripts/services/page.js")
   script(src="scripts/controllers/sidenav.js")
   // endbuild
-  script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
+  script(src="https://code.jquery.com/jquery-2.1.1.min.js")
   script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js")
 
   script.
@@ -143,5 +144,6 @@ body
       $(".button-collapse").sideNav({closeOnClick: true, menuWidth: 300});
       $(".dropdown-button").dropdown({hover: false,belowOrigin: true });
       $(".noti-dropdown-button").dropdown({hover: true,belowOrigin: true, gutter: 0, constrain_width: false});
+      $('.modal-trigger').leanModal();
     })
 
