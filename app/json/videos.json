@@ -1,5 +1,4 @@
-{
-	"videos":[
+[
 		{
 			"id":"01",
 			"title":"intro",
@@ -88,5 +87,4 @@
 			"slide_id":"",
 			"video_url":"video_dlit_math_set/11.mp4"
 		}
-	]
-}
+]

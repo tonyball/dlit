@@ -1,5 +1,4 @@
-{
-	"exams":[
+[
 		{
 			"id":"",
 			"title":"",
@@ -8,5 +7,4 @@
 			"examanswer_id":"",
 			"content_url":""
 		}
-	]
-}
+]

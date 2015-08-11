@@ -1,5 +1,4 @@
-{
-	"exscores":[
+[
 		{
 			"id":"",
 			"score":"",
@@ -8,5 +7,4 @@
 			"exercise_id":"",
 			"subject_id":""
 		}
-	]
-}
+]

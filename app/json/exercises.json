@@ -1,5 +1,4 @@
-{
-	"exerises":[
+[
 		{
 			"id":"",
 			"title":"",
@@ -9,5 +8,4 @@
 			"exanswer_id":"",
 			"content_url":"",
 		}
-	]
-}
+]
