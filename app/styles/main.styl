@@ -2,7 +2,7 @@
 	min-width 9%
 	max-width 9%
 	
-@media screen and (min-width: 992px)
+@media screen and (min-width: 660px)
 	nav
 		padding-left 1em !important
 		padding-right 1em !important
@@ -41,6 +41,7 @@ html,body
 	margin 0
 	padding 0
 	height 100%
+	background-color #f1f1f1
 
 h4 
 	margin-top 0.35em !important
@@ -104,3 +105,13 @@ ul.side-nav
 		font-weight bolder
 img.circle 
 	padding-top 5px
+	
+.input-field 
+	input[type=text]:focus , input[type=password]:focus
+		border-bottom 1px solid orange !important
+		color #000 !important
+		box-shadow 0 1px 0 0 orange !important
+	input[type=text]:focus + label , input[type=password]:focus + label
+		color orange !important
+	i.prefix.active
+		color orange !important
