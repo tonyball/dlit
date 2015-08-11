@@ -9,7 +9,7 @@ angular
   ])
   .config ($routeProvider) ->
     $routeProvider
-      .when '/',
+      .when '/dashboard',
         templateUrl: 'views/dashboard.html'
         controller: 'DashboardCtrl'
       .when '/activity',
@@ -40,5 +40,5 @@ angular
         templateUrl: 'views/subjects.html'
         controller: 'SubjectsCtrl'
       .otherwise
-        redirectTo: '/'
+        redirectTo: '/dashboard'
 
