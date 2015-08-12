@@ -103,12 +103,15 @@ body
         p การพัฒนาคุณภาพการศึกษาด้วยเทคโนโลยีสารสนเทศ (DLIT) โดยสำนักงานคณะกรรมการการศึกษาขั้นพื้นฐาน (สพฐ.) กระทรวงศึกษาธิการ สงวนลิขสิทธิ์ © 2558
 
       div.col.offset-m4 Powered by 
-        img(src="images/newkru-logo-white.png", width="100")
+        img(src="images/newkru-logo-footer.png", width="100")
   
   <!--[if lt IE 9]>
   script(src="bower_components/es5-shim/es5-shim.js")
   script(src="bower_components/json3/lib/json3.min.js")
   <![endif]-->
+
+  script(src="https://code.jquery.com/jquery-2.1.1.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js")
 
   // build:js scripts/vendor.js
   // bower:js
@@ -136,14 +139,12 @@ body
   script(src="scripts/services/page.js")
   script(src="scripts/controllers/sidenav.js")
   // endbuild
-  script(src="https://code.jquery.com/jquery-2.1.1.min.js")
-  script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js")
+  
 
   script.
     $(document).ready(function(){
       $(".button-collapse").sideNav({closeOnClick: true, menuWidth: 300});
       $(".dropdown-button").dropdown({hover: false,belowOrigin: true });
-      $(".noti-dropdown-button").dropdown({hover: true,belowOrigin: true, gutter: 0, constrain_width: false});
-      $('.modal-trigger').leanModal();
+      $(".noti-dropdown-button").dropdown({hover: true,belowOrigin: true, gutter: 0, constrain_width: true});
     })
 
