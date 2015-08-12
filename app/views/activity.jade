@@ -1,1 +1,111 @@
-p This is the activity view.
+//- filter
+form
+	.input-field.col.s12
+		select
+			option(value="1",selected) เซต (Set)
+			option(value="2") Option 2
+			option(value="3") Option 3
+			option(value="4") Option 4
+		label กรุณาเลือกห้องเรียน
+
+//- content-list's card
+.row
+	.col.s12
+		.card.animated.bounceInDown
+			.card-content
+				span.card-title.black-text เซต (Set)
+				ul.collapsible(data-collapsible="accordion")
+					li
+						.collapsible-header
+							i.material-icons local_movies
+							| ชื่อเรื่องวิดีโอ
+							span
+							a(href="!#").right.orange-text.darken-3 ดูเนื้อหา
+						.collapsible-body
+							.row
+								.card.col.s4.animated.flipInX.grey.lighten-2
+									.card-content
+										span.card-title.black-text ยังไม่เริ่ม
+										p 1 
+											br
+											| 2 
+								.card.col.s4.animated.flipInX.green.lighten-2
+									.card-content
+										span.card-title.black-text เริ่มแล้ว
+										p 1 
+											br
+											| 2 
+								.card.col.s4.animated.flipInX.green.darken-2
+									.card-content
+										span.card-title.black-text เสร็จแล้ว
+										p 1 
+											br
+											| 2
+					li
+						.collapsible-header
+							i.material-icons border_color
+							| ชื่อแบบฝึกหัด
+							span
+							a(href="!#").right.orange-text.darken-3 ดูเนื้อหา
+						.collapsible-body
+							.row
+								.card.col.s4.animated.flipInX.grey.lighten-2
+									.card-content
+										span.card-title.black-text ยังไม่เริ่ม
+										p 1 
+											br
+											| 2 
+								.card.col.s4.animated.flipInX.green.lighten-2
+									.card-content
+										span.card-title.black-text เริ่มแล้ว
+										p 1 
+											br
+											| 2 
+								.card.col.s4.animated.flipInX.green.darken-2
+									.card-content
+										span.card-title.black-text เสร็จแล้ว
+										p 1 
+											br
+											| 2
+					li
+						.collapsible-header
+							i.material-icons insert_drive_file
+							| ข้อสอบ
+							span
+							a(href="!#").right.orange-text.darken-3 ดูเนื้อหา
+						.collapsible-body
+							.row
+								.card.col.s4.animated.flipInX.grey.lighten-2
+									.card-content
+										span.card-title.black-text ยังไม่เริ่ม
+										p 1 
+											br
+											| 2 
+								.card.col.s4.animated.flipInX.green.lighten-2
+									.card-content
+										span.card-title.black-text เริ่มแล้ว
+										p 1 
+											br
+											| 2 
+								.card.col.s4.animated.flipInX.green.darken-2
+									.card-content
+										span.card-title.black-text เสร็จแล้ว
+										p 1 
+											br
+											| 2
+			.card-action
+				.input-field.col.s12
+					select
+						option(value="1",selected) เนื้อหาทั้งหมด
+						option(value="2") วิดีโอสื่อการสอน
+						option(value="3") แบบฝึกหัด
+						option(value="4") ข้อสอบ
+					label แสดงเฉพาะ 
+
+
+
+script.
+	$(document).ready(function(){
+		$('select').material_select();
+		$('.collapsible').collapsible({ accordion : false });
+	})
