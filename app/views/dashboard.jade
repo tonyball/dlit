@@ -1,5 +1,6 @@
 .row
-	.col.s12.m6.l3
+	//- classroom list
+	.col.s12.m6.l4
 		.card.animated.rollIn
 			.card-image.waves-effect.waves-block.waves-light				
 				img(src="images/maths-logo.jpg").activator.responsive-img
@@ -18,7 +19,7 @@
 			.card-reveal
 				span.card-title.activator.grey-text.text-darken-4 
 					| เซต (Set)
-					i.material-icons.right close
+					i.material-icons.right.red-text close
 				
 				h6 เนื้อหาที่เรียน
 				ul.collection
@@ -28,117 +29,21 @@
 					li.collection-item 4
 					li.collection-item 5
 				ul.collection
-					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange.waves-block จัดการห้องเรียน
-					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange.waves-block  ติดตามนักเรียน
-					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange.waves-block  งานนักเรียน
-
-	.col.s12.m6.l3
-		.card.animated.rollIn
-			.card-image.waves-effect.waves-block.waves-light				
-				img(src="images/maths-logo.jpg").activator.responsive-img
-			.card-content
-				span.card-title.activator.grey-text.text-darken-4 
-					i.material-icons.right more_vert
-					| เซต (Set)	
-					
-				p
-					em รหัสห้องเรียน: ABCDF
-				.row
-				center 
-					a.modal-trigger.waves-effect.waves-orange.btn-flat(data-target='studentlist')
-						i.material-icons.left people
-						|  รายชื่อนักเรียน
-			.card-reveal
-				span.card-title.activator.grey-text.text-darken-4 
-					| เซต (Set)
-					i.material-icons.right close
-				
-				h6 เนื้อหาที่เรียน
-				ul.collection
-					li.collection-item 1
-					li.collection-item 2
-					li.collection-item 3
-					li.collection-item 4
-					li.collection-item 5
-				ul.collection
-					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange.waves-block จัดการห้องเรียน
-					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange.waves-block  ติดตามนักเรียน
-					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange.waves-block  งานนักเรียน
-	.col.s12.m6.l3
-		.card.animated.rollIn
-			.card-image.waves-effect.waves-block.waves-light				
-				img(src="images/maths-logo.jpg").activator.responsive-img
-			.card-content
-				span.card-title.activator.grey-text.text-darken-4 
-					i.material-icons.right more_vert
-					| เซต (Set)	
-					
-				p
-					em รหัสห้องเรียน: ABCDF
-				.row
-				center 
-					a.modal-trigger.waves-effect.waves-orange.btn-flat(data-target='studentlist')
-						i.material-icons.left people
-						|  รายชื่อนักเรียน
-			.card-reveal
-				span.card-title.activator.grey-text.text-darken-4 
-					| เซต (Set)
-					i.material-icons.right close
-				
-				h6 เนื้อหาที่เรียน
-				ul.collection
-					li.collection-item 1
-					li.collection-item 2
-					li.collection-item 3
-					li.collection-item 4
-					li.collection-item 5
-				ul.collection
-					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange.waves-block จัดการห้องเรียน
-					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange.waves-block  ติดตามนักเรียน
-					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange.waves-block  งานนักเรียน
-
-	.col.s12.m6.l3
-		.card.animated.rollIn
-			.card-image.waves-effect.waves-block.waves-light				
-				img(src="images/maths-logo.jpg").activator.responsive-img
-			.card-content
-				span.card-title.activator.grey-text.text-darken-4 
-					i.material-icons.right more_vert
-					| เซต (Set)	
-					
-				p
-					em รหัสห้องเรียน: ABCDF
-				.row
-				center 
-					a.modal-trigger.waves-effect.waves-orange.btn-flat(data-target='studentlist')
-						i.material-icons.left people
-						|  รายชื่อนักเรียน
-			.card-reveal
-				span.card-title.activator.grey-text.text-darken-4 
-					| เซต (Set)
-					i.material-icons.right close
-				
-				h6 เนื้อหาที่เรียน
-				ul.collection
-					li.collection-item 1
-					li.collection-item 2
-					li.collection-item 3
-					li.collection-item 4
-					li.collection-item 5
-				ul.collection
-					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange.waves-block จัดการห้องเรียน
-					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange.waves-block  ติดตามนักเรียน
-					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange.waves-block  งานนักเรียน
+					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange จัดการห้องเรียน
+					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange  ติดตามนักเรียน
+					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange  งานนักเรียน
 
 
 
+
+//- studentlist by classroom
 div#studentlist.modal.bottom-sheet
 	div.modal-content
 		h4.hide-on-small-only เซต (Set) 
-			i.material-icons.right.modal-action.modal-close.waves-effect.waves-light.circle.red.white-text close
+			i.material-icons.right.modal-action.modal-close.waves-effect.waves-light.red-text close
 			| | รายชื่อนักเรียน
 		h5.hide-on-med-and-up เซต (Set) 
-			i.material-icons.right.modal-action.modal-close.waves-effect.waves-light.circle.red.white-text close
+			i.material-icons.right.modal-action.modal-close.waves-effect.waves-light.red-text close
 			| | รายชื่อนักเรียน
 
 		ul.collection
@@ -154,9 +59,9 @@ div#studentlist.modal.bottom-sheet
 				a(href="").orange-text ข้อมูลนักเรียน
 
 
-
-div(style="bottom: 105px; right: 45px;").fixed-action-btn
-	a(data-position="top",data-delay="50",data-tooltip="สร้างห้องเรียนใหม่").btn-floating.btn-large.orange.darken-2.waves-effect.waves-light.btn.tooltipped
+//- action button
+div(style="bottom: 55px; right: 55px;").fixed-action-btn.animated.fadeInDown
+	a(data-position="top",data-delay="50",data-tooltip="สร้างห้องเรียน").btn-floating.btn-large.orange.darken-2.waves-effect.waves-light.btn.tooltipped
 		i.large.material-icons add
 
 script.

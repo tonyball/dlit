@@ -1,1 +1,89 @@
-p This is the managestudents view.
+//- filter
+form
+	.input-field.col.s12
+		select
+			option(value="1",selected) เซต (Set)
+			option(value="2") Option 2
+			option(value="3") Option 3
+			option(value="4") Option 4
+		label กรุณาเลือกห้องเรียน
+
+
+//- table studentlist
+.row
+	.col.m12
+		.card.animated.slideInDown
+			.card-content
+				span.card-title.black-text เซต (Set)
+				strong.right จำนวนนักเรียน 30 คน
+				table.bordered.hoverable
+					thead
+						tr.orange.accent-1
+							th(data-field="std_id") รหัสนักเรียน
+							th(data-field="std_fullname") ชื่อ - นามสกุล
+							th(data-field="std_email") อีเมลล์
+
+					tbody
+						tr
+							td 50509
+							td นายวีรภัทร ศิรไพบูลย์
+							td weeraphat.s@ku.th
+						tr
+							td 50843
+							td นายภัทร ไตรรัตน์
+							td patara.t@ku.th
+						tr
+							td 50509
+							td นายวีรภัทร ศิรไพบูลย์
+							td weeraphat.s@ku.th
+						tr
+							td 50843
+							td นายภัทร ไตรรัตน์
+							td patara.t@ku.th
+						tr
+							td 50509
+							td นายวีรภัทร ศิรไพบูลย์
+							td weeraphat.s@ku.th
+						tr
+							td 50843
+							td นายภัทร ไตรรัตน์
+							td patara.t@ku.th
+						tr
+							td 50509
+							td นายวีรภัทร ศิรไพบูลย์
+							td weeraphat.s@ku.th
+						tr
+							td 50843
+							td นายภัทร ไตรรัตน์
+							td patara.t@ku.th
+			.card-action
+				a(href="").waves-effect.waves-orange.btn-flat.black-text
+					i.material-icons.left insert_chart
+					| ภาพรวมนักเรียน
+				a(href="").waves-effect.waves-orange.btn-flat.black-text
+					i.material-icons.left local_library 
+					| งานนักเรียน
+				a(href="").waves-effect.waves-orange.btn-flat.black-text 
+					i.material-icons.left description
+					| ติดตามนักเรียน
+				strong.right รหัสห้องเรียน: ABCDF 
+
+
+//- action button
+.fixed-action-btn.animated.fadeInDown(style="bottom: 55px; right: 55px")
+	a.btn-floating.btn-large.orange.darken-2.waves-effect.waves-light
+		i.large.material-icons add
+	ul
+		li
+			a(data-position="left",data-delay="50",data-tooltip="เพิ่มนักเรียน").btn-floating.green.waves-effect.waves-light.btn.tooltipped
+				i.material-icons person_add
+		li
+			a(data-position="left",data-delay="50",data-tooltip="สร้างห้องเรียน").btn-floating.blue.waves-effect.waves-light.btn.tooltipped
+				i.material-icons school
+
+
+script.
+	$(document).ready(function(){
+		$('.tooltipped').tooltip({delay: 50});
+		$('select').material_select();
+		})
