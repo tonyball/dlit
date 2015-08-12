@@ -16,6 +16,7 @@ head
   // endbuild
   link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css")
   link(href="https://fonts.googleapis.com/icon?family=Material+Icons", rel="stylesheet")
+  link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css")
 body
   // Add your site or application content here
   
@@ -66,7 +67,7 @@ body
 
       li(ng-class="{ active: isActive('/managestudents')}")
         a(href="#/managestudents").black-text.waves-effect.waves-orange 
-          i.small.material-icons.left supervisor_account 
+          i.small.material-icons.left contacts 
           | นักเรียนของฉัน
 
       li(ng-class="{ active: isActive('/studentprogress')}")
@@ -83,8 +84,12 @@ body
         a(href="#/overview").black-text.waves-effect.waves-orange 
           i.small.material-icons.left poll
           | ภาพรวมนักเรียน
+      br
       div.row
-        img(src="images/dlit-logo.png", alt="dlit logo").hide-on-med-and-up.col.offset-s3
+        .hide-on-med-and-up.col.offset-s3
+          img(src="images/dlit-logo.png",width="100", alt="dlit logo")
+          br
+          img(src="images/newkru-logo-footer.png",width="100", alt="newkru logo")
 
 
     a(href="#", data-activates="slide-out").button-collapse.show-on-large
@@ -98,11 +103,11 @@ body
     div(ng-view).col.m12
   
   div.container
-  footer.row
-      div.text-left.col.m8
+  footer.row.footer-copyright
+      div.text-left.col.m12.grey-text.text-darken-2
         p การพัฒนาคุณภาพการศึกษาด้วยเทคโนโลยีสารสนเทศ (DLIT) โดยสำนักงานคณะกรรมการการศึกษาขั้นพื้นฐาน (สพฐ.) กระทรวงศึกษาธิการ สงวนลิขสิทธิ์ © 2558
 
-      div.col.offset-m4 Powered by 
+      div.center-align.hide-on-small-only 
         img(src="images/newkru-logo-footer.png", width="100")
   
   <!--[if lt IE 9]>
