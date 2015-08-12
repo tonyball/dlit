@@ -7,4 +7,4 @@ angular.module('dlitApp')
       'AngularJS'
       'Karma'
     ]
-    Page.setTitle 'ติดตามนักเรียน'
+    Page.setTitle 'พัฒนาการนักเรียน'

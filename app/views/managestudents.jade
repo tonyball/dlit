@@ -16,7 +16,7 @@ form
 			.card-content
 				span.card-title.black-text เซต (Set)
 				strong.right จำนวนนักเรียน 30 คน
-				table.bordered.hoverable
+				table.bordered.hoverable.tablesorter#studentnametable
 					thead
 						tr.orange.accent-1
 							th(data-field="std_id") รหัสนักเรียน
@@ -66,6 +66,9 @@ form
 				a(href="").waves-effect.waves-orange.btn-flat.black-text 
 					i.material-icons.left description
 					| ติดตามนักเรียน
+				a(href="").waves-effect.waves-orange.btn-flat.black-text 
+					i.material-icons.left mode_edit
+					| แก้ไขห้องเรียน
 				strong.right รหัสห้องเรียน: ABCDF 
 
 
@@ -86,4 +89,5 @@ script.
 	$(document).ready(function(){
 		$('.tooltipped').tooltip({delay: 50});
 		$('select').material_select();
+		$("#studentnametable").tablesorter(); 
 		})

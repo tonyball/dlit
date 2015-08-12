@@ -43,9 +43,7 @@ body
       header.black-text การแจ้งเตือน
     li.divider
     li
-      a.notify-item.black-text
-        img(src='images/physics-logo.png', 'alt'='physics', width="50").noify-logo.circle.left
-        | 13:00 น. | ธัญวรัตม์ อยู่วนิชชานนท์ ได้ส่งคำถามเรื่อง การเคลื่อนที่แนวตรง
+      a.notify-item.black-text 13:00 น. | ธัญวรัตม์ อยู่วนิชชานนท์ ได้ส่งคำถามเรื่อง การเคลื่อนที่แนวตรง
 
 
   nav.white
@@ -68,12 +66,12 @@ body
       li(ng-class="{ active: isActive('/managestudents')}")
         a(href="#/managestudents").black-text.waves-effect.waves-orange 
           i.small.material-icons.left contacts 
-          | นักเรียนของฉัน
+          | จัดการห้องเรียน
 
       li(ng-class="{ active: isActive('/studentprogress')}")
         a(href="#/studentprogress").black-text.waves-effect.waves-orange 
           i.small.material-icons.left local_library
-          | ติดตามนักเรียน
+          | พัฒนาการนักเรียน
 
       li(ng-class="{ active: isActive('/activity')}")
         a(href="#/activity").black-text.waves-effect.waves-orange 
@@ -117,6 +115,7 @@ body
 
   script(src="https://code.jquery.com/jquery-2.1.1.min.js")
   script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.22.5/js/jquery.tablesorter.js")
 
   // build:js scripts/vendor.js
   // bower:js

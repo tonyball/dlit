@@ -62,7 +62,7 @@ nav
 					padding-bottom -0.45em
 		h4 
 			margin-top 0.35em !important
-			margin-left 2.95em !important
+			margin-left 1em !important
 
 .material-icons
 	padding-bottom -0.45em
@@ -88,12 +88,16 @@ ul.notifications
 			
 .notify-item 
 	min-height 50px
+	max-height 75px
 	min-width 250px !important
-	font-size 1em !important
-
+	max-width 550px !important
+	font-size 0.785em !important
+	overflow auto
+	border-bottom 1px solid lightgray
 
 .notify-logo 
 	width 10% !important
+	margin-top -1em !important
 	margin-right 10px
 
 
@@ -134,3 +138,21 @@ a.collection-item:hover
 
 .btn-flat:hover
 	background-color #ffd1ac
+
+th
+	cursor pointer
+
+tr.selected
+	background-color #ffddc3 
+	font-weight bolder
+.tableForStdDetail
+	tr
+		cursor pointer
+	tr:hover
+		background-color #ffddc3
+.collapsible-header.active
+	font-weight bolder
+.dropdown-content li
+	span
+		color black !important
+	 
