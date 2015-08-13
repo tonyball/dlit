@@ -1,1 +1,185 @@
-p This is the studentprogress view.
+//- filter
+form
+	.input-field.col.s12
+		select
+			option(value="1",selected) เซต (Set)
+			option(value="2") Option 2
+			option(value="3") Option 3
+			option(value="4") Option 4
+		label กรุณาเลือกห้องเรียน
+
+//- studentlist card
+.row
+	.col.s12.m4
+		.card.animated.slideInLeft
+			.card-content
+				span.card-title.black-text เซต (Set)
+				table.tableForStdDetail.bordered.tablesorter#studentnametable
+					thead
+						tr.orange.accent-1
+							th(data-field="std_id") รหัส
+							th(data-field="std_fullname") ชื่อ - นามสกุล
+							th(data-field="std_score").right-align คะแนน
+
+					tbody
+						tr.stdname#1
+							td 50509
+							td นายวีรภัทร ศิรไพบูลย์
+							td.right-align 0
+						tr.stdname#2
+							td 50843
+							td นายภัทร ไตรรัตน์
+							td.right-align 0
+						tr.stdname
+							td 50509
+							td นายวีรภัทร ศิรไพบูลย์
+							td.right-align 0
+						tr.stdname
+							td 50843
+							td นายภัทร ไตรรัตน์
+							td.right-align 0
+						tr.stdname
+							td 50509
+							td นายวีรภัทร ศิรไพบูลย์
+							td.right-align 0
+						tr.stdname
+							td 50843
+							td นายภัทร ไตรรัตน์
+							td.right-align 0
+						tr.stdname
+							td 50509
+							td นายวีรภัทร ศิรไพบูลย์
+							td.right-align 0
+						tr.stdname
+							td 50843
+							td นายภัทร ไตรรัตน์
+							td.right-align 0
+			.card-action
+				.row
+					.input-field.col.s12
+						i.material-icons.prefix search
+						input#searchByStdId(type="text")
+						label(for="searchByStdId") กรุณาใส่รหัสนักเรียน
+
+	//- student's details card
+	.col.s12.m8
+		.card.stdDetailCard.animated.rollIn#cardDetailOf1
+			.card-content
+				span.card-title.orange-text.darken-2 นายวีรภัทร ศิรไพบูลย์
+				ul.collapsible.popout(data-collapsible="accordion")
+					li
+						.collapsible-header
+							i.material-icons library_books
+							| บทเรียน
+							span.right.grey-text.darken-3 0 คะแนน
+						.collapsible-body
+							p 
+								strong วัน เดือน ปี
+								|  ชื่อเรื่อง
+							.divider
+							p 
+								strong วัน เดือน ปี
+								|  ชื่อเรื่อง
+					li
+						.collapsible-header
+							i.material-icons beenhere
+							| คะแนนเก็บ
+							span.right.grey-text.darken-3 0 คะแนน
+						.collapsible-body
+							p 
+								strong วัน เดือน ปี
+								|  ชื่อเรื่อง
+					li
+						.collapsible-header
+							i.material-icons verified_user
+							| คะแนนสอบ
+							span.right.grey-text.darken-3 0 คะแนน
+						.collapsible-body
+							p 
+								strong วัน เดือน ปี
+								|  ชื่อเรื่อง
+					li
+						.collapsible-header
+							i.material-icons insert_chart
+							| ภาพรวมการเรียน
+							span.right.grey-text.darken-3 0 คะแนน
+						.collapsible-body
+							p 
+								strong วัน เดือน ปี
+								|  ชื่อเรื่อง
+			.card-action
+				h5.right-align คะแนนรวม 0 คะแนน
+
+		.card.stdDetailCard.animated.rollIn#cardDetailOf2
+			.card-content
+				span.card-title.orange-text.darken-2 นายภัทร ไตรรัตน์
+				ul.collapsible.popout(data-collapsible="accordion")
+					li
+						.collapsible-header
+							i.material-icons library_books
+							| บทเรียน
+							span.right.grey-text.darken-3 0 คะแนน
+						.collapsible-body
+							p 
+								strong วัน เดือน ปี
+								|  ชื่อเรื่อง
+							.divider
+							p 
+								strong วัน เดือน ปี
+								|  ชื่อเรื่อง
+					li
+						.collapsible-header
+							i.material-icons beenhere
+							| คะแนนเก็บ
+							span.right.grey-text.darken-3 0 คะแนน
+						.collapsible-body
+							p 
+								strong วัน เดือน ปี
+								|  ชื่อเรื่อง
+					li
+						.collapsible-header
+							i.material-icons verified_user
+							| คะแนนสอบ
+							span.right.grey-text.darken-3 0 คะแนน
+						.collapsible-body
+							p 
+								strong วัน เดือน ปี
+								|  ชื่อเรื่อง
+					li
+						.collapsible-header
+							i.material-icons insert_chart
+							| ภาพรวมการเรียน
+							span.right.grey-text.darken-3 0 คะแนน
+						.collapsible-body
+							p 
+								strong วัน เดือน ปี
+								|  ชื่อเรื่อง
+			.card-action
+				h5.right-align คะแนนรวม 0 คะแนน
+		
+
+
+script.
+	$(document).ready(function(){
+		$('select').material_select();
+		$("#studentnametable").tablesorter();
+		$('.collapsible').collapsible({ accordion : false });
+
+		//- student's card detail events
+		$('.stdDetailCard').hide();
+		$('.stdDetailCard').first().show();
+		$('.stdname').first().addClass('selected'); 
+		var pre_card = '#cardDetailOf'+$('.stdname').first().attr('id');
+		$('.stdname').click(function(){
+			var card = '#cardDetailOf'+$(this).attr('id');
+			if (pre_card == card){
+				
+			} else {
+				$('.stdDetailCard').addClass('rollOut').hide(1000);
+				$(card).show().removeClass('rollOut');
+				$('.stdname').removeClass('selected');
+				$(this).toggleClass('selected');
+				pre_card = card;
+			}
+		});
+	})

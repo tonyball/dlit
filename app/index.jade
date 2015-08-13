@@ -16,6 +16,7 @@ head
   // endbuild
   link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css")
   link(href="https://fonts.googleapis.com/icon?family=Material+Icons", rel="stylesheet")
+  link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css")
 body
   // Add your site or application content here
   
@@ -42,9 +43,7 @@ body
       header.black-text การแจ้งเตือน
     li.divider
     li
-      a.notify-item.black-text
-        img(src='images/physics-logo.png', 'alt'='physics', width="50").noify-logo.circle.left
-        | 13:00 น. | ธัญวรัตม์ อยู่วนิชชานนท์ ได้ส่งคำถามเรื่อง การเคลื่อนที่แนวตรง
+      a.notify-item.black-text 13:00 น. | ธัญวรัตม์ อยู่วนิชชานนท์ ได้ส่งคำถามเรื่อง การเคลื่อนที่แนวตรง
 
 
   nav.white
@@ -66,13 +65,13 @@ body
 
       li(ng-class="{ active: isActive('/managestudents')}")
         a(href="#/managestudents").black-text.waves-effect.waves-orange 
-          i.small.material-icons.left supervisor_account 
-          | นักเรียนของฉัน
+          i.small.material-icons.left contacts 
+          | จัดการห้องเรียน
 
       li(ng-class="{ active: isActive('/studentprogress')}")
         a(href="#/studentprogress").black-text.waves-effect.waves-orange 
           i.small.material-icons.left local_library
-          | ติดตามนักเรียน
+          | พัฒนาการนักเรียน
 
       li(ng-class="{ active: isActive('/activity')}")
         a(href="#/activity").black-text.waves-effect.waves-orange 
@@ -83,8 +82,12 @@ body
         a(href="#/overview").black-text.waves-effect.waves-orange 
           i.small.material-icons.left poll
           | ภาพรวมนักเรียน
+      br
       div.row
-        img(src="images/dlit-logo.png", alt="dlit logo").hide-on-med-and-up.col.offset-s3
+        .hide-on-med-and-up.col.offset-s3
+          img(src="images/dlit-logo.png",width="100", alt="dlit logo")
+          br
+          img(src="images/newkru-logo-footer.png",width="100", alt="newkru logo")
 
 
     a(href="#", data-activates="slide-out").button-collapse.show-on-large
@@ -98,11 +101,11 @@ body
     div(ng-view).col.m12
   
   div.container
-  footer.row
-      div.text-left.col.m8
+  footer.row.footer-copyright
+      div.text-left.col.m12.grey-text.text-darken-2
         p การพัฒนาคุณภาพการศึกษาด้วยเทคโนโลยีสารสนเทศ (DLIT) โดยสำนักงานคณะกรรมการการศึกษาขั้นพื้นฐาน (สพฐ.) กระทรวงศึกษาธิการ สงวนลิขสิทธิ์ © 2558
 
-      div.col.offset-m4 Powered by 
+      div.center-align.hide-on-small-only 
         img(src="images/newkru-logo-footer.png", width="100")
   
   <!--[if lt IE 9]>
@@ -112,6 +115,7 @@ body
 
   script(src="https://code.jquery.com/jquery-2.1.1.min.js")
   script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.22.5/js/jquery.tablesorter.js")
 
   // build:js scripts/vendor.js
   // bower:js
@@ -145,6 +149,7 @@ body
     $(document).ready(function(){
       $(".button-collapse").sideNav({closeOnClick: true, menuWidth: 300});
       $(".dropdown-button").dropdown({hover: false,belowOrigin: true });
-      $(".noti-dropdown-button").dropdown({hover: true,belowOrigin: true, gutter: 0, constrain_width: true});
+      $(".noti-dropdown-button").dropdown({hover: true,belowOrigin: true, gutter: 0, constrain_width: false});
     })
+
 

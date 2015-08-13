@@ -1,1 +1,44 @@
-p This is the overview view.
+//- filter
+form
+	.input-field.col.s12
+		select
+			option(value="1",selected) เซต (Set)
+			option(value="2") Option 2
+			option(value="3") Option 3
+			option(value="4") Option 4
+		label กรุณาเลือกห้องเรียน
+
+//- card for chart 
+.row
+	.col.s12
+		.card.animated.zoomInDown
+			.card-content
+				span.card-title.black-text เซต (Set)
+				strong.right จำนวนนักเรียน 30 คน
+				#chartid ใส่แผนภูมิ
+			.card-action
+				table.bordered.hoverable.centered
+					thead
+						tr.orange.accent-1
+							th(data-field="std_time_max") เวลาเรียนมากที่สุด (max.)
+							th(data-field="std_time_min") เวลาเรียนน้อยที่สุด (min.)
+							th(data-field="std_time_avg") เวลาเรียนเฉลี่ย (avg.)
+							th(data-field="std_score_max") คะแนนสอบมากทีสุด (max.)
+							th(data-field="std_score_min") คะแนนสอบน้อยที่สุด (min.)
+							th(data-field="std_score_avg") คะแนนสอบเฉลี่ย (avg.)
+
+					tbody
+						tr
+							td 0 นาที
+							td 0 นาที
+							td 0 นาที
+							td 0 คะแนน
+							td 0 คะแนน
+							td 0 คะแนน
+
+				strong.right รหัสห้องเรียน: ABCDF 
+
+script.
+	$(document).ready(function(){
+		$('select').material_select();
+	})
