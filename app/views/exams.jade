@@ -1,1 +1,39 @@
-p This is the exams view.
+//- filter
+form
+	.input-field.col.s12
+		select
+			option(value="1",selected) ทุกวิชา 
+			option(value="2") คณิตศาสตร์
+			option(value="3") วิทยาศาสตร์
+			option(value="4") ภาษาอังกฤษ
+		label เลือกวิชาที่ต้องการ
+
+//- exam list card
+.row
+	.col.s12.m6.l4
+		.card
+			.card-content
+				span.card-title.black-text ข้อสอบ เซต (Set) | N ข้อ
+				br
+				strong วิชา คณิตศาสตร์ | 
+				strong รหัสข้อสอบ EXZY2
+				ul.collection.with-header
+					li.collection-header
+						p เหรียญที่ต้องมีก่อนสอบ
+					li.collection-item
+						img(src="images/badges/earth/5x10.png",data-position="bottom",data-delay="50",data-tooltip="ชื่อหรือคำอธิบาย").have.exam-required-badge.tooltipped
+						img(src="images/badges/sun/kepler.png",data-position="bottom",data-delay="50",data-tooltip="ชื่อหรือคำอธิบาย").not-have.exam-required-badge.tooltipped
+				strong ระยะเวลาทำข้อสอบ 60 นาที
+			.card-action
+				center
+					a.btn-flat.waves-effect.waves-orange.black-text.hide-on-small-only(href="#/exams/EXZY2") 
+						i.material-icons.left send
+						| เข้าสอบ
+					em.hide-on-med-and-up.red-text อุปกรณ์ไม่เหมาะสมในการเข้าทำข้อสอบ
+
+
+script.
+	$(document).ready(function(){
+		$('select').material_select();
+		$('.tooltipped').tooltip({delay: 50});
+	})

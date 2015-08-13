@@ -1,0 +1,113 @@
+//- modal warning before taking the exam
+#exam-modal.modal
+	.modal-content
+		h5.center-align เนื้อหาของข้อสอบ ( N ข้อ | M นาที )
+		ul.collection
+			li.collection-item
+			li.collection-item
+			li.collection-item
+			li.collection-item
+			li.collection-item
+		center
+			a.modal-action.modal-close.waves-effect.waves-light.btn.green.start-exam เริ่มทำการสอบ
+			&nbsp&nbsp&nbsp
+			a(href="#/exams").modal-action.modal-close.waves-effect.waves-light.btn.red.back ยกเลิก 
+			
+		
+
+//- clock timer for exam
+.exam-clock.col.offset-m4
+
+.row
+	//- question sheet card
+	.col.m8.l8
+		.card
+			.card-content
+				span.card-title.black-text กระดาษคำถาม เรื่อง XYZ (N ข้อ)
+				object(width="100%",height="600", data="contents/exam_onet52/math.pdf",type='application/pdf')
+			.card-action
+				b.left รหัสข้อสอบ {{ examId }} | วิชา คณิตศาสตร์
+				b.right สอบเมื่อ วัน เดือน ปี
+				br
+
+	//- answer sheet card
+	.col.m4.l4
+		.card
+			.card-content
+				span.card-title.black-text กระดาษคำตอบ
+				.row
+					h6 ข้อ | 1 &nbsp&nbsp&nbsp&nbsp2 &nbsp&nbsp&nbsp&nbsp3 &nbsp&nbsp&nbsp&nbsp4 &nbsp&nbsp&nbsp&nbsp5
+					.divider
+				.row
+					p.no.left-align 1. |
+					form.answer-set
+						input(name="no1",type="radio",id="ans11")
+						label(for="ans11") 		
+
+						input(name="no1",type="radio",id="ans21")
+						label(for="ans21") 
+
+						input(name="no1",type="radio",id="ans31")
+						label(for="ans31") 
+
+						input(name="no1",type="radio",id="ans41")
+						label(for="ans41") 	
+
+						input(name="no1",type="radio",id="ans51")
+						label(for="ans51") 
+				.row
+					p.no.left-align 2. |
+					form.answer-set
+						input(name="no2",type="radio",id="ans12")
+						label(for="ans12") 						
+						
+						input(name="no2",type="radio",id="ans22")
+						label(for="ans22") 	
+			
+						input(name="no2",type="radio",id="ans32")
+						label(for="ans32") 	
+
+						input(name="no2",type="radio",id="ans42")
+						label(for="ans42") 	
+
+						input(name="no2",type="radio",id="ans52")
+						label(for="ans52") 
+				.row
+					p.no.left-align 3. |
+					form.answer-set
+						input(name="no3",type="radio",id="ans13")
+						label(for="ans13") 						
+						
+						input(name="no3",type="radio",id="ans23")
+						label(for="ans23") 	
+			
+						input(name="no3",type="radio",id="ans33")
+						label(for="ans33") 	
+
+						input(name="no3",type="radio",id="ans43")
+						label(for="ans43") 	
+
+						input(name="no3",type="radio",id="ans53")
+						label(for="ans53") 
+
+
+			.card-action
+				center
+					button(href="",type="submit").btn.orange.waves-effect.waves-light.black-text.finish-exam
+						i.material-icons.left assignment_turned_in
+						| ส่งคำตอบ
+					br
+
+script.
+	$(document).ready(function(){
+		$('#exam-modal').openModal({dismissible: false});
+		var clock = $('.exam-clock').FlipClock({autoStart:false, clockFace:'MinuteCounter'});
+		clock.setTime(7200);
+		clock.setCountdown(true);
+		$('.start-exam').click(function(){
+			clock.start();
+		});
+		$('.finish-exam').click(function(){
+			clock.stop();
+		});
+	})
