@@ -39,6 +39,9 @@ angular
       .when '/subjects',
         templateUrl: 'views/subjects.html'
         controller: 'SubjectsCtrl'
+      .when '/badges',
+        templateUrl: 'views/badges.html'
+        controller: 'BadgesCtrl'
       .otherwise
         redirectTo: '/dashboard'
 
