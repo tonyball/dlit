@@ -1,6 +1,6 @@
 .row
-	//- classroom list
-	.col.s12.m6.l4
+	//- classroom list (for teacher)
+	.col.s12.m6.l4(ng-show="isTeacher")
 		.card.animated.rotateInDownLeft
 			.card-image.waves-effect.waves-block.waves-light				
 				img(src="images/maths-logo.jpg").activator.responsive-img
@@ -33,8 +33,101 @@
 					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange  ติดตามนักเรียน
 					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange  งานนักเรียน
 
-//- studentlist by classroom
-div#studentlist.modal.bottom-sheet
+	//- student's detail list 
+	h4(ng-show="isStudent").center-align.grey-text.text-darken-2 ข้อมูลนักเรียน
+	.col.s12.m12.l12(ng-show="isStudent")
+		.card.animated.zoomInUp
+			.card-content
+				span.card-title.orange-text.text-darken-2 ข้อมูลส่วนตัว @itouchz
+				.row
+					.col.s2.m2.l2.std-avatar
+						img(src="images/avatar/red2.png").avatar.black.circle.responsive-img.hoverable.hide-on-small-only.user-avatar
+						img(src="images/avatar/red-evolution-line.png",width="50%").evolution-line.left
+					.col.s12.m6.l4.std-detail
+						h5.hide-on-small-only นายภัทร ไตรรัตน์ | 50843
+						h6.hide-on-med-and-up นายภัทร ไตรรัตน์ | 50843
+						p ชั้นมัธยมศึกษาปีที่ 4 ห้อง 1 (วิทยาศาสตร์-คณิตศาสตร์)
+						p โรงเรียนสาธิตแห่งมหาวิทยาลัยเกษตรศาสตร์
+						p จตุจักร, กรุงเทพมหานคร
+					.col.s12.m4.l6.std-badges
+
+			.card-action
+				a.btn-flat.waves-effect.waves-orange.black-text
+					i.material-icons mode_edit
+					| แก้ไขข้อมูลส่วนตัว
+				h5.right คะแนนรวม 0 คะแนน
+
+	.col.s12.m6
+		.card.animated.zoomInUp.green
+			.card-content
+				span.card-title.black-text กิจกรรมล่าสุด
+			.card-action.white
+
+	.col.s12.m6
+		.card.animated.zoomInUp.green
+			.card-content
+				span.card-title.black-text บทเรียนที่ดู
+			.card-action.white
+
+	.col.s12.m6
+		.card.animated.zoomInUp.green
+			.card-content
+				span.card-title.black-text คะแนนเก็บ
+			.card-action.white
+
+	.col.s12.m6
+		.card.animated.zoomInUp.green
+			.card-content
+				span.card-title.black-text คะแนนสอบ
+			.card-action.white
+
+	.col.s12
+		.card.animated.zoomInUp.blue
+			.card-content
+				span.card-title.black-text ภาพรวมการเรียน
+			.card-action.white
+
+//- student's learning class list
+h4(ng-show="isStudent").center-align.grey-text.text-darken-2 บทเรียนที่กำลังศึกษา 
+.row
+	.col.s12.m6.l4(ng-show="isStudent")
+		.card.animated.rotateInDownLeft
+			.card-image.waves-effect.waves-block.waves-light				
+				img(src="images/maths-logo.jpg").activator.responsive-img
+			.card-content
+				span.card-title.activator.grey-text.text-darken-4 
+					i.material-icons.right more_vert
+					| เซต (Set)	
+					
+				p
+					em รหัสห้องเรียน: ABCDF
+				.row
+				center 
+					a.waves-effect.waves-orange.btn-flat(href='')
+						i.material-icons.left play_circle_outline
+						|  เข้าเรียน
+					.row
+					.progress.orange.lighten-4
+						.determinate.orange(style="width: 70%")
+					strong.left เรียนแล้ว 70%
+					br
+			.card-reveal
+				span.card-title.activator.grey-text.text-darken-4 
+					| เซต (Set)
+					i.material-icons.right.red-text close
+				
+				h6 เนื้อหาที่เรียน
+				ul.collection
+					li.collection-item 1
+					li.collection-item 2
+					li.collection-item 3
+					li.collection-item 4
+					li.collection-item 5
+					
+
+
+//- studentlist by classroom (for teacher)
+div#studentlist.modal.bottom-sheet(ng-show="isTeacher")
 	div.modal-content
 		h4.hide-on-small-only เซต (Set) 
 			i.material-icons.right.modal-action.modal-close.waves-effect.waves-light.red-text close
@@ -56,13 +149,24 @@ div#studentlist.modal.bottom-sheet
 				a(href="").orange-text ข้อมูลนักเรียน
 
 
-//- action button
-div(style="bottom: 55px; right: 55px;").fixed-action-btn.animated.fadeInDown
+//- action button teacher
+div(style="bottom: 55px; right: 55px;",ng-show="isTeacher").fixed-action-btn.animated.fadeInDown
 	a(data-position="top",data-delay="50",data-tooltip="สร้างห้องเรียน").btn-floating.btn-large.orange.darken-2.waves-effect.waves-light.btn.tooltipped
 		i.large.material-icons add
+//- action button student
+div(style="bottom: 55px; right: 55px;",ng-show="isStudent").fixed-action-btn.animated.fadeInDown
+	a(data-position="top",data-delay="50",data-tooltip="หาห้องเรียน").btn-floating.btn-large.orange.darken-2.waves-effect.waves-light.btn.tooltipped
+		i.large.material-icons.right school
 
 script.
 	$(document).ready(function(){
 		$('.modal-trigger').leanModal();
 		$('.tooltipped').tooltip({delay: 50});
-		});
+		$('.evolution-line').hide();
+		$('.avatar').on('mouseenter',function(){
+			$('.evolution-line').fadeToggle('slow');
+		})
+		$('.avatar').on('mouseleave',function(){
+			$('.evolution-line').fadeToggle('slow');
+		})
+	});
