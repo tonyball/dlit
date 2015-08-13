@@ -8,4 +8,4 @@ angular.module('dlitApp')
       'Karma'
     ]
 
-    Page.setTitle 'เหรียญรางวัล'
+    Page.setTitle 'คลังเหรียญ'
