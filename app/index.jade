@@ -28,10 +28,10 @@ body
       a(href="#/profile").black-text ข้อมูลส่วนตัว
     li.divider
     li
-      a(href="#dashboard").black-text ห้องเรียนของฉัน
+      a(href="#dashboard",ng-show="isTeacher").black-text ห้องเรียนของฉัน
     li
-      a(href="#managestudents").black-text นักเรียนของฉัน
-    li.divider
+      a(href="#managestudents",ng-show="isTeacher").black-text นักเรียนของฉัน
+    li(ng-show="isTeacher").divider
     li
       a(href="#").black-text ตั้งค่า
     li
@@ -65,25 +65,33 @@ body
           i.small.material-icons.left apps 
           | กระดานหลัก
 
-      li(ng-class="{ active: isActive('/managestudents')}")
+      li(ng-class="{ active: isActive('/managestudents')}",ng-show="isTeacher")
         a(href="#/managestudents").black-text.waves-effect.waves-orange 
           i.small.material-icons.left contacts 
           | จัดการห้องเรียน
 
-      li(ng-class="{ active: isActive('/studentprogress')}")
+      li(ng-class="{ active: isActive('/studentprogress')}",ng-show="isTeacher")
         a(href="#/studentprogress").black-text.waves-effect.waves-orange 
           i.small.material-icons.left local_library
           | พัฒนาการนักเรียน
 
-      li(ng-class="{ active: isActive('/activity')}")
+      li(ng-class="{ active: isActive('/activity')}",ng-show="isTeacher")
         a(href="#/activity").black-text.waves-effect.waves-orange 
           i.small.material-icons.left check_box
           | งานนักเรียน
 
-      li(ng-class="{ active: isActive('/overview')}")
+      li(ng-class="{ active: isActive('/overview')}",ng-show="isTeacher")
         a(href="#/overview").black-text.waves-effect.waves-orange 
           i.small.material-icons.left poll
           | ภาพรวมนักเรียน
+      li(ng-class="{ active: isActive('/badges')}",ng-show="isStudent")
+        a(href="#/badges").black-text.waves-effect.waves-orange 
+          i.small.material-icons.left stars
+          | เหรียญรางวัล
+      li(ng-class="{ active: isActive('/subjects')}",ng-show="isStudent")
+        a(href="#/subjects").black-text.waves-effect.waves-orange 
+          i.small.material-icons.left subtitles
+          | รายวิชา
       br
       div.row
         .hide-on-med-and-up.col.offset-s3
@@ -148,6 +156,7 @@ body
   script(src="scripts/controllers/subjects.js")
   script(src="scripts/services/page.js")
   script(src="scripts/controllers/sidenav.js")
+  script(src="scripts/controllers/badges.js")
   // endbuild
   
 
