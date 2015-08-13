@@ -1,6 +1,6 @@
-.row
+.row(ng-show="isTeacher")
 	//- classroom list (for teacher)
-	.col.s12.m6.l4(ng-show="isTeacher")
+	.col.s12.m6.l4
 		.card.animated.rotateInDownLeft
 			.card-image.waves-effect.waves-block.waves-light				
 				img(src="images/maths-logo.jpg").activator.responsive-img
@@ -32,7 +32,7 @@
 					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange จัดการห้องเรียน
 					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange  ติดตามนักเรียน
 					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange  งานนักเรียน
-
+.row(ng-show="isStudent")
 	//- student's detail list 
 	h4(ng-show="isStudent").center-align.grey-text.text-darken-2 ข้อมูลนักเรียน
 	.col.s12.m12.l12(ng-show="isStudent")
@@ -89,8 +89,8 @@
 
 //- student's learning class list
 h4(ng-show="isStudent").center-align.grey-text.text-darken-2 บทเรียนที่กำลังศึกษา 
-.row
-	.col.s12.m6.l4(ng-show="isStudent")
+.row(ng-show="isStudent")
+	.col.s12.m6.l4
 		.card.animated.rotateInDownLeft
 			.card-image.waves-effect.waves-block.waves-light				
 				img(src="images/maths-logo.jpg").activator.responsive-img
