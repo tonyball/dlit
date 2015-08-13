@@ -11,11 +11,11 @@ form
 //- card for chart 
 .row
 	.col.s12
-		.card.animated.zoomInDown
+		.card
 			.card-content
 				span.card-title.black-text เซต (Set)
 				strong.right จำนวนนักเรียน 30 คน
-				#chartid ใส่แผนภูมิ
+				#chart
 			.card-action
 				table.bordered.hoverable.centered.responsive-table
 					thead
@@ -38,6 +38,7 @@ form
 
 				strong.right รหัสห้องเรียน: ABCDF 
 
+script(src="scripts/charts/chart1.js")
 script.
 	$(document).ready(function(){
 		$('select').material_select();

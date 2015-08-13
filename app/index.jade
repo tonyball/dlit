@@ -9,6 +9,7 @@ head
   // Place favicon.ico and apple-touch-icon.png in the root directory
   // build:css styles/vendor.css
   // bower:css
+  link(rel='stylesheet', href='bower_components/c3/c3.css')
   // endbower
   // endbuild
   // build:css(.tmp) styles/main.css
@@ -17,6 +18,7 @@ head
   link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css")
   link(href="https://fonts.googleapis.com/icon?family=Material+Icons", rel="stylesheet")
   link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css")
+  link(rel="stylesheet", href="bower_components/c3/c3.css")
 body
   // Add your site or application content here
   
@@ -124,8 +126,10 @@ body
   script(src="https://code.jquery.com/jquery-2.1.1.min.js")
   script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js")
   script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.22.5/js/jquery.tablesorter.js")
+  script(src="bower_components/d3/d3.min.js", charset="utf-8")
+  script(src="bower_components/c3/c3.min.js")
 
-  // build:js scripts/vendor.js
+    // build:js scripts/vendor.js
   // bower:js
   script(src='bower_components/es5-shim/es5-shim.js')
   script(src='bower_components/angular/angular.js')
@@ -134,6 +138,8 @@ body
   script(src='bower_components/angular-cookies/angular-cookies.js')
   script(src='bower_components/angular-sanitize/angular-sanitize.js')
   script(src='bower_components/angular-route/angular-route.js')
+  script(src='bower_components/d3/d3.js')
+  script(src='bower_components/c3/c3.js')
   // endbower
   // endbuild
 
