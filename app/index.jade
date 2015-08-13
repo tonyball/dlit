@@ -54,8 +54,10 @@ body
         a(href="", data-activates="notifications-dropdown").black-text.noti-dropdown-button
           i.small.material-icons notifications 
       li
-        img(src="images/avatar.png", alt="profile avatar", width="42").circle.responsive-img.left.hide-on-med-and-down
-        a(href="#", data-activates="user-dropdown").black-text.waves-effect.waves-orange.dropdown-button สุขุมาล กิติสิน
+        img(src="images/avatar.png", alt="profile avatar", width="42",ng-show="isTeacher").circle.responsive-img.left.hide-on-med-and-down
+        a(href="#", data-activates="user-dropdown",ng-show="isTeacher").black-text.waves-effect.waves-orange.dropdown-button สุขุมาล กิติสิน
+        img(src="images/avatar/red2.png", alt="profile avatar", width="42",ng-show="isStudent").circle.responsive-img.left.hide-on-med-and-down
+        a(href="#", data-activates="user-dropdown",ng-show="isStudent").black-text.waves-effect.waves-orange.dropdown-button ภัทร ไตรรัตน์
           i.small.material-icons.right arrow_drop_down
 
     ul(ng-controller="SidenavCtrl").side-nav#slide-out
@@ -84,14 +86,19 @@ body
         a(href="#/overview").black-text.waves-effect.waves-orange 
           i.small.material-icons.left poll
           | ภาพรวมนักเรียน
-      li(ng-class="{ active: isActive('/badges')}",ng-show="isStudent")
-        a(href="#/badges").black-text.waves-effect.waves-orange 
-          i.small.material-icons.left stars
-          | เหรียญรางวัล
       li(ng-class="{ active: isActive('/subjects')}",ng-show="isStudent")
         a(href="#/subjects").black-text.waves-effect.waves-orange 
           i.small.material-icons.left subtitles
           | รายวิชา
+      li(ng-class="{ active: isActive('/badges')}",ng-show="isStudent")
+        a(href="#/badges").black-text.waves-effect.waves-orange 
+          i.small.material-icons.left stars
+          | เหรียญรางวัล
+      li(ng-class="{ active: isActive('/exams')}",ng-show="isStudent")
+        a(href="#/exams").black-text.waves-effect.waves-orange 
+          i.small.material-icons.left assignment
+          | คลังข้อสอบ
+      
       br
       div.row
         .hide-on-med-and-up.col.offset-s3
@@ -157,6 +164,8 @@ body
   script(src="scripts/services/page.js")
   script(src="scripts/controllers/sidenav.js")
   script(src="scripts/controllers/badges.js")
+  script(src="scripts/controllers/exams.js")
+  script(src="scripts/controllers/watch.js")
   // endbuild
   
 
