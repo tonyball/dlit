@@ -2,6 +2,7 @@
 	{
 		"id":"",
 		"user_id":"",
-		"badge_id":""
+		"badge_id":"",
+		"show":""
 	}
 ]
