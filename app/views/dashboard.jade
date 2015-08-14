@@ -49,7 +49,8 @@
 						p ชั้นมัธยมศึกษาปีที่ 4 ห้อง 1 (วิทยาศาสตร์-คณิตศาสตร์)
 						p โรงเรียนสาธิตแห่งมหาวิทยาลัยเกษตรศาสตร์
 						p จตุจักร, กรุงเทพมหานคร
-					.col.s12.m4.l6.std-badges
+					.col.s12.m4.l6.std-badges.right
+						img(src="images/badges/earth/5x10.png").exam-required-badge
 
 			.card-action
 				a.btn-flat.waves-effect.waves-orange.black-text
@@ -82,10 +83,11 @@
 			.card-action.white
 
 	.col.s12
-		.card.animated.zoomInUp.blue
+		.card.blue
 			.card-content
 				span.card-title.black-text ภาพรวมการเรียน
-			.card-action.white#chart
+			.card-action.white
+				#chart
 
 //- student's learning class list
 h4(ng-show="isStudent").center-align.grey-text.text-darken-2 บทเรียนที่กำลังศึกษา 
