@@ -11,6 +11,12 @@
 					
 				p
 					em รหัสห้องเรียน: ABCDF
+
+				.row
+				i.material-icons.left local_offer
+				a(href="#").deep-orange-text คณิตศาสตร์
+				b , 
+				a(href="#").deep-orange-text เซต
 				.row
 				center 
 					a.modal-trigger.waves-effect.waves-orange.btn-flat(data-target='studentlist')
@@ -82,7 +88,7 @@
 				span.card-title.black-text คะแนนสอบ
 			.card-action.white
 
-	.col.s12
+	.col.s12.hide-on-small-only
 		.card.blue
 			.card-content
 				span.card-title.black-text ภาพรวมการเรียน
@@ -112,7 +118,12 @@ h4(ng-show="isStudent").center-align.grey-text.text-darken-2 บทเรีย�
 					.progress.orange.lighten-4
 						.determinate.orange(style="width: 70%")
 					strong.left เรียนแล้ว 70%
-					br
+				.row
+				i.material-icons.left local_offer
+				a(href="#").deep-orange-text คณิตศาสตร์
+				b , 
+				a(href="#").deep-orange-text เซต
+
 			.card-reveal
 				span.card-title.activator.grey-text.text-darken-4 
 					| เซต (Set)
@@ -125,6 +136,13 @@ h4(ng-show="isStudent").center-align.grey-text.text-darken-2 บทเรีย�
 					li.collection-item 3
 					li.collection-item 4
 					li.collection-item 5
+					li.collection-item
+						center
+							img(src="images/maths-teacher.jpg",width="50%").circle
+							br
+							b.title ธเนษฐ ชวาลสันตติ
+							br 
+							| คณิตศาสตร์ เล่ม 1
 					
 
 
@@ -169,8 +187,8 @@ script.
 		$('.evolution-line').hide();
 		$('.avatar').on('mouseenter',function(){
 			$('.evolution-line').fadeToggle('slow');
-		})
+		});
 		$('.avatar').on('mouseleave',function(){
 			$('.evolution-line').fadeToggle('slow');
-		})
+		});
 	});
