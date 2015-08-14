@@ -85,7 +85,7 @@
 		.card.animated.zoomInUp.blue
 			.card-content
 				span.card-title.black-text ภาพรวมการเรียน
-			.card-action.white
+			.card-action.white#chart
 
 //- student's learning class list
 h4(ng-show="isStudent").center-align.grey-text.text-darken-2 บทเรียนที่กำลังศึกษา 
@@ -158,6 +158,8 @@ div(style="bottom: 55px; right: 55px;",ng-show="isStudent").fixed-action-btn.ani
 	a(data-position="top",data-delay="50",data-tooltip="หาห้องเรียน").btn-floating.btn-large.orange.darken-2.waves-effect.waves-light.btn.tooltipped
 		i.large.material-icons.right school
 
+
+script(src="scripts/charts/chart2.js")
 script.
 	$(document).ready(function(){
 		$('.modal-trigger').leanModal();
