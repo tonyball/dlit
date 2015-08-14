@@ -5,6 +5,8 @@
 			"subject_id":"",
 			"description":"",
 			"examanswer_id":"",
+			"number_of_question":"",
+			"answer_type":"",
 			"content_url":""
 		}
 ]

@@ -2,6 +2,7 @@
 		{
 			"id":"",
 			"exam_id":"",
-			"content_url":""
+			"answer_type":"",
+			"correct_answers":""
 		}
 ]

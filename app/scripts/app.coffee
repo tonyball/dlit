@@ -27,7 +27,7 @@ angular
       .when '/overview',
         templateUrl: 'views/overview.html'
         controller: 'OverviewCtrl'
-      .when '/profile',
+      .when '/profile/:userId',
         templateUrl: 'views/profile.html'
         controller: 'ProfileCtrl'
       .when '/register',

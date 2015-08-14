@@ -205,13 +205,28 @@
 
 			.card-action
 				center
-					button(href="",type="submit").btn.orange.waves-effect.waves-light.black-text.finish-exam
+					a(href="",type="submit").btn-flat.waves-effect.waves-dark.black-text.finish-exam
 						i.material-icons.left assignment_turned_in
 						| ส่งคำตอบ
 					br
 
+//- action button student (show clipboard)
+div(style="bottom: 55px; right: 55px;",ng-show="isStudent").fixed-action-btn.animated.fadeInDown
+	a(href="#clipboard-modal",data-position="top",data-delay="50",data-tooltip="แสดงกระดาษทด").modal-trigger.btn-floating.btn-large.orange.darken-2.waves-effect.waves-light.btn.tooltipped
+		i.large.material-icons.right content_paste
+
+//- clipboard's modal
+#clipboard-modal.modal.bottom-sheet
+	.modal-content
+		h4
+			i.material-icons.right.red-text.modal-action.modal-close.waves-effect.waves-dark close 
+			| กระดาษทด
+		textarea.materialize-textarea
+
 script.
 	$(document).ready(function(){
+		$('.modal-trigger').leanModal();
+		$('.tooltipped').tooltip({delay: 50});
 		$('#exam-modal').openModal({dismissible: false});
 		var clock = $('.exam-clock').FlipClock({autoStart:false, clockFace:'MinuteCounter'});
 		clock.setTime(7200);

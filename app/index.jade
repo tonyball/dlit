@@ -48,7 +48,7 @@ body
       header.black-text การแจ้งเตือน
     li.divider
     li
-      a.notify-item.black-text(ng-show="isTeacher") 13:00 น. | ธัญวรัตม์ อยู่วนิชชานนท์ ได้ส่งคำถามเรื่อง การเคลื่อนที่แนวตรง
+      a.notify-item.black-text(ng-show="isTeacher") ไม่มีการแจ้งเตือนใหม่
       a.notify-item.black-text(ng-show="isStudent") ไม่มีการแจ้งเตือนใหม่
 
 
@@ -57,13 +57,10 @@ body
       li.notification-icon
         a(href="", data-activates="notifications-dropdown").black-text.noti-dropdown-button
           i.small.material-icons notifications 
-      li
-        img(src="images/avatar.png", alt="profile avatar", width="42",ng-show="isTeacher").circle.responsive-img.left.hide-on-med-and-down
-        a(href="#", data-activates="user-dropdown",ng-show="isTeacher").black-text.waves-effect.waves-orange.dropdown-button สุขุมาล กิติสิน
-          i(ng-show="isTeacher").small.material-icons.right arrow_drop_down
-        img(src="images/avatar/red2.png", alt="profile avatar", width="42",ng-show="isStudent").circle.responsive-img.left.hide-on-med-and-down
-        a(href="#", data-activates="user-dropdown",ng-show="isStudent").black-text.waves-effect.waves-orange.dropdown-button ภัทร ไตรรัตน์
-          i(ng-show="isStudent").small.material-icons.right arrow_drop_down
+      li(ng-show="isTeacher || isStudent")
+        img(ng-src="images/avatar/{{ user.avatar }}.png", alt="profile avatar", width="42").circle.responsive-img.left.hide-on-med-and-down
+        a(href="#", data-activates="user-dropdown").black-text.waves-effect.waves-orange.dropdown-button {{ user.firstname +" "+ user.lastname }}
+          i.small.material-icons.right arrow_drop_down
 
     ul(ng-controller="SidenavCtrl").side-nav#slide-out
     
@@ -128,7 +125,7 @@ body
         h5.black-text.hide-on-med-and-up &nbsp&nbsp&nbsp{{ Page.title() }}
 
   div.row      
-    div(ng-view).col.m12
+    div(ng-view)
   
   div.container
   footer.row.footer-copyright
