@@ -1,22 +1,80 @@
 .row
-	.col.s12.m3.l3
-		.card
-			.card-content
-				.card-image
-					img(src="images/maths-logo.jpg")
-				span.card-title.black
-
-	.col.s12.m9.l9
-		.card
+	.col.s12.m12.l3
+		//- classroom controller's card
+		.card.animated.zoomIn
+			.card-image
+				img(src="images/maths-logo.jpg").hide-on-med-and-down
 			.card-content
 				span.card-title.black-text เซต (Set)
+				ul.collapsible.z-depth-0.classrooom-sidenav(data-collapsible="accordion")
+					li
+						.collapsible-header.active
+							i.material-icons.left keyboard_arrow_down
+							|  เซต (เบื้องต้น)
+						.collapsible-body
+							ul.collection
+								a(href="").video-link.black-text.collection-item.waves-effect.waves-orange.active
+									i.material-icons.left local_movies
+									| วิดีโอที่ 1	
+									.secondary-content
+										i.material-icons.green-text play_arrow
+								a(href="").video-link.black-text.collection-item.waves-effect.waves-orange  
+									i.material-icons.left border_color
+									| แบบฝึกหัดที่ 1	
+									.secondary-content								
+								a(href="").video-link.black-text.collection-item.waves-effect.waves-orange   
+									i.material-icons.left question_answer
+									| เฉลยแบบฝึกหัดที่ 1
+									.secondary-content
+					li
+						.collapsible-header.disabled
+							i.material-icons.left keyboard_arrow_down
+							|  เซต (ตะลุยโจทย์)
+						.collapsible-body
+							ul.collection
+								a(href="").video-link.black-text.collection-item.waves-effect.waves-orange
+									i.material-icons.left description
+									| โจทย์ปัญหาที่ 1	
+									.secondary-content
+								a(href="").video-link.black-text.collection-item.waves-effect.waves-orange  
+									i.material-icons.left check_circle
+									| เฉลยโจทย์ปัญหาที่ 1	
+									.secondary-content								
+
+				
+
+	.col.s12.m12.l9
+		//- video's card
+		.card.animated.zoomIn
+			.card-content
+				span.card-title.black-text ชื่อวิดีโอ
+				video#video_name(controls,preload="auto", width="100%", data-setup="{}")
+					source(src="videos/dlit_maths_set/01.mp4", type="video/mp4")
 			.card-action
 				.left
-					button.btn.orange.waves-effect.waves-light X1
-					button.btn.orange.waves-effect.waves-light X1.5
-					button.btn.orange.waves-effect.waves-light X2
-				.right
-					button.btn.blue.waves-effect.waves-light ดาวน์โหลด
-					button.btn.green.waves-effect.waves-light เอกสารประกอบการเรียน
+					b ความเร็ววิดีโอ
+					br
+					button.btn.pink.waves-effect.waves-light X1
+					button.btn.pink.waves-effect.waves-light X1.5
+					button.btn.pink.waves-effect.waves-light X2
+				.right.hide-on-small-only
+					br
+					button.btn.blue.waves-effect.waves-light
+						i.material-icons.left cloud_download
+						| ดาวน์โหลด
+					button.btn.green.waves-effect.waves-light
+						i.material-icons.left file_download
+						| เอกสารประกอบการเรียน
 				.row
 
+
+script.
+	$(document).ready(function(){
+		$('.collapsible').collapsible({ accordion : false });
+		$('.video-link').click(function(){
+			$('.video-link').removeClass('active');
+			$(this).addClass('active');
+			$('.video-link').find($('.secondary-content')).html('');
+			$(this).find($('.secondary-content')).html('<i class="material-icons green-text">play_arrow</i>');
+		});
+	})
