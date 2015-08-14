@@ -19,6 +19,7 @@ head
   link(href="https://fonts.googleapis.com/icon?family=Material+Icons", rel="stylesheet")
   link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css")
   link(rel="stylesheet", href="bower_components/c3/c3.css")
+  link(rel="stylesheet", href="scripts/flipclock/flipclock.css")
 body
   // Add your site or application content here
   
@@ -45,7 +46,8 @@ body
       header.black-text การแจ้งเตือน
     li.divider
     li
-      a.notify-item.black-text 13:00 น. | ธัญวรัตม์ อยู่วนิชชานนท์ ได้ส่งคำถามเรื่อง การเคลื่อนที่แนวตรง
+      a.notify-item.black-text(ng-show="isTeacher") 13:00 น. | ธัญวรัตม์ อยู่วนิชชานนท์ ได้ส่งคำถามเรื่อง การเคลื่อนที่แนวตรง
+      a.notify-item.black-text(ng-show="isStudent") ไม่มีการแจ้งเตือนใหม่
 
 
   nav.white
@@ -56,9 +58,10 @@ body
       li
         img(src="images/avatar.png", alt="profile avatar", width="42",ng-show="isTeacher").circle.responsive-img.left.hide-on-med-and-down
         a(href="#", data-activates="user-dropdown",ng-show="isTeacher").black-text.waves-effect.waves-orange.dropdown-button สุขุมาล กิติสิน
+          i(ng-show="isTeacher").small.material-icons.right arrow_drop_down
         img(src="images/avatar/red2.png", alt="profile avatar", width="42",ng-show="isStudent").circle.responsive-img.left.hide-on-med-and-down
         a(href="#", data-activates="user-dropdown",ng-show="isStudent").black-text.waves-effect.waves-orange.dropdown-button ภัทร ไตรรัตน์
-          i.small.material-icons.right arrow_drop_down
+          i(ng-show="isStudent").small.material-icons.right arrow_drop_down
 
     ul(ng-controller="SidenavCtrl").side-nav#slide-out
     
@@ -86,14 +89,22 @@ body
         a(href="#/overview").black-text.waves-effect.waves-orange 
           i.small.material-icons.left poll
           | ภาพรวมนักเรียน
+
+      li(ng-class="{ active: isActive('/manageexams')}",ng-show="isTeacher")
+        a(href="#/manageexams").black-text.waves-effect.waves-orange 
+          i.small.material-icons.left assignment
+          | จัดการข้อสอบ
+
       li(ng-class="{ active: isActive('/subjects')}",ng-show="isStudent")
         a(href="#/subjects").black-text.waves-effect.waves-orange 
           i.small.material-icons.left subtitles
           | รายวิชา
+
       li(ng-class="{ active: isActive('/badges')}",ng-show="isStudent")
         a(href="#/badges").black-text.waves-effect.waves-orange 
           i.small.material-icons.left stars
-          | เหรียญรางวัล
+          | คลังเหรียญ
+
       li(ng-class="{ active: isActive('/exams')}",ng-show="isStudent")
         a(href="#/exams").black-text.waves-effect.waves-orange 
           i.small.material-icons.left assignment
@@ -131,6 +142,7 @@ body
   <![endif]-->
 
   script(src="https://code.jquery.com/jquery-2.1.1.min.js")
+  script(src="scripts/flipclock/flipclock.min.js")
   script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js")
   script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.22.5/js/jquery.tablesorter.js")
   script(src="bower_components/d3/d3.min.js", charset="utf-8")
@@ -166,6 +178,8 @@ body
   script(src="scripts/controllers/badges.js")
   script(src="scripts/controllers/exams.js")
   script(src="scripts/controllers/watch.js")
+  script(src="scripts/controllers/manageexams.js")
+  script(src="scripts/controllers/takeexam.js")
   // endbuild
   
 

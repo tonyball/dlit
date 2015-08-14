@@ -1,1 +1,86 @@
-p This is the badges view.
+.row
+	.col.s12.m6.l4
+		.card.green.accent-1
+			.card-image.waves-effect.waves-block.waves-dark
+				.row
+				center
+					img.activator.badge-image(src="images/badges/earth/earth.png")
+			.card-content
+				span.card-title.activator.grey-text.text-darken-4 
+					i.material-icons.right more_vert
+					| Earth Badges
+			.card-reveal
+				span.card-title.activator.grey-text.text-darken-4 
+					i.material-icons.right.red-text close
+					| Earth Badges
+				img(src="images/badges/earth/5x10.png",data-position="bottom",data-delay="50",data-tooltip="5x10").exam-required-badge.tooltipped
+
+	.col.s12.m6.l4
+		.card.teal
+			.card-image.waves-effect.waves-block.waves-dark
+				.row
+				center
+					img.activator.badge-image(src="images/badges/moon/moon.png")
+			.card-content
+				span.card-title.activator.grey-text.text-darken-4 
+					i.material-icons.right more_vert
+					| Moon Badges
+			.card-reveal
+				span.card-title.activator.grey-text.text-darken-4 
+					i.material-icons.right.red-text close
+					| Moon Badges
+				p ยังไม่ได้รับเหรียญในกลุ่มนี้
+
+	.col.s12.m6.l4
+		.card.pink.accent-1
+			.card-image.waves-effect.waves-block.waves-dark
+				.row
+				center
+					img.activator.badge-image(src="images/badges/blackhole/blackhole.png")
+			.card-content
+				span.card-title.activator.grey-text.text-darken-4 
+					i.material-icons.right more_vert
+					| Blackhole Badges
+			.card-reveal
+				span.card-title.activator.grey-text.text-darken-4 
+					i.material-icons.right.red-text close
+					| Blackhole Badges
+				p ยังไม่ได้รับเหรียญในกลุ่มนี้
+
+
+	.col.s12.m6.l4.offset-l2
+		.card.amber.accent-1
+			.card-image.waves-effect.waves-block.waves-dark
+				.row
+				center
+					img.activator.badge-image(src="images/badges/sun/sun.png")
+			.card-content
+				span.card-title.activator.grey-text.text-darken-4 
+					i.material-icons.right more_vert
+					| Sun Badges
+			.card-reveal
+				span.card-title.activator.grey-text.text-darken-4 
+					i.material-icons.right.red-text close
+					| Sun Badges
+				p ยังไม่ได้รับเหรียญในกลุ่มนี้
+
+	.col.s12.m6.l4.offset-m3
+		.card.deep-orange.accent-1
+			.card-image.waves-effect.waves-block.waves-dark
+				.row
+				center
+					img.activator.badge-image(src="images/badges/meteorite/meteorite.png")
+			.card-content
+				span.card-title.activator.grey-text.text-darken-4 
+					i.material-icons.right more_vert
+					| Meteorite Badges
+			.card-reveal
+				span.card-title.activator.grey-text.text-darken-4 
+					i.material-icons.right.red-text close
+					| Meteorite Badges
+				p ยังไม่ได้รับเหรียญในกลุ่มนี้
+
+script.
+	$(document).ready(function(){
+		$('.tooltipped').tooltip({delay: 50});
+	})

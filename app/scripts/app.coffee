@@ -45,9 +45,15 @@ angular
       .when '/exams',
         templateUrl: 'views/exams.html'
         controller: 'ExamsCtrl'
-      .when '/watch',
+      .when '/exams/:examId',
+        templateUrl: 'views/takeexam.html'
+        controller: 'TakeexamCtrl'
+      .when '/watch/:classroomId',
         templateUrl: 'views/watch.html'
         controller: 'WatchCtrl'
+      .when '/manageexams',
+        templateUrl: 'views/manageexams.html'
+        controller: 'ManageexamsCtrl'
       .otherwise
         redirectTo: '/dashboard'
 
