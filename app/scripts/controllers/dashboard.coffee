@@ -10,5 +10,5 @@ angular.module('dlitApp')
     $scope.Page = Page
     Page.setTitle 'กระดานหลัก'
 
-    $scope.isStudent = false;
-    $scope.isTeacher = true;
+    $scope.isStudent = true;
+    $scope.isTeacher = false;
