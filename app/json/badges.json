@@ -193,5 +193,258 @@
 		"image":"tinkerer.png",
 		"condition":"",
 		"group":"mateorite"
+	},
+	{
+		"id":"25",
+		"name":"Going Transonic",
+		"derscription":"Quickly & correctly answer 10 skill problems in a row (time limit depends on skill difficulty)",
+		"image":"going-transonic.png",
+		"condition":"",
+		"group":"moon"
+	},
+	{
+		"id":"26",
+		"name":"Going Supersonic",
+		"derscription":"Quickly & correctly answer 20 skill problems in a row (time limit depends on skill difficulty)
+",
+		"image":"going-supersonic.png",
+		"condition":"",
+		"group":"moon"
+	},
+	{
+		"id":"27",
+		"name":"Good Inspiration",
+		"derscription":"Other users created 10 programs based on one of yours",
+		"image":"good-inspiration.png",
+		"condition":"",
+		"group":"moon"
+	},
+	{
+		"id":"28",
+		"name":"1000 Kelvin",
+		"derscription":"Have a red-hot program at the top of the Community Programs list",
+		"image":"1000-kelvin.png",
+		"condition":"",
+		"group":"moon"
+	},
+	{
+		"id":"29",
+		"name":"Brain Bonanza",
+		"derscription":"By taking the same brain fitness test several times, you are watching yourself learn!",
+		"image":"productive.png",
+		"condition":"",
+		"group":"moon"
+	},
+	{
+		"id":"30",
+		"name":"Productive",
+		"derscription":"Achieve mastery in 15 unique skills",
+		"image":"productive.png",
+		"condition":"",
+		"group":"moon"
+	},
+	{
+		"id":"31",
+		"name":"Hard at Work",
+		"derscription":"Achieve mastery in 25 unique skills",
+		"image":"productive.png",
+		"condition":"",
+		"group":"moon"
+	},
+	{
+		"id":"32",
+		"name":"Geek of the week: practice",
+		"derscription":"Finish 5 practice tasks in a week",
+		"image":"weekly-goal.png",
+		"condition":"",
+		"group":"moon"
+	},
+	{
+		"id":"33",
+		"name":"Geek of the week: mastery",
+		"derscription":"Finish 5 mastery challenges in a week",
+		"image":"weekly-mastery.png",
+		"condition":"",
+		"group":"moon"
+	},
+	{
+		"id":"34",
+		"name":"Parent: Getting Started",
+		"derscription":"Complete all items in the "Parent: Getting Started" checklist",
+		"image":"productive.png",
+		"condition":"",
+		"group":"moon"
+	},
+	{
+		"id":"35",
+		"name":"Coach: Getting Started",
+		"derscription":"Complete all items in the "Coach: Getting Started" checklist",
+		"image":"productive.png",
+		"condition":"",
+		"group":"moon"
+	},
+	{
+		"id":"36",
+		"name":"Like Clockwork",
+		"derscription":"Watch part of any video or work on any skill each day for 15 consecutive days",
+		"image":"like-clockwork.png",
+		"condition":"",
+		"group":"moon"
+	},
+	{
+		"id":"37",
+		"name":"Atomic Clockwork",
+		"derscription":"Watch part of any video or work on any skill each day for 30 consecutive days",
+		"image":"atomic-clockwork.png",
+		"condition":"",
+		"group":"moon"
+	},
+	{
+		"id":"38",
+		"name":"Power Hour",
+		"derscription":"Correctly answer 90 problems and watch 15 minutes of video in 1 hour",
+		"image":"power-hour.png",
+		"condition":"",
+		"group":"moon"
+	},
+	{
+		"id":"39",
+		"name":"Redwood",
+		"derscription":"Remain a member of Khan Academy for 2 years",
+		"image":"redwood.png",
+		"condition":"",
+		"group":"moon"
+	},
+	{
+		"id":"40",
+		"name":"Fact Checker",
+		"derscription":"Have a clarification officially accepted",
+		"image":"fact-checker.png",
+		"condition":"",
+		"group":"moon"
+	},
+	{
+		"id":"41",
+		"name":"Awesome Listener",
+		"derscription":"Watch 1 hour of video in a single topic",
+		"image":"awesome-listener.png",
+		"condition":"",
+		"group":"moon"
+	},
+	{
+		"id":"42",
+		"name":"Ten to the Fifth",
+		"derscription":"Earn 100,000 energy points",
+		"image":"ten-to-fifth.png",
+		"condition":"",
+		"group":"moon"
+	},
+	{
+		"id":"43",
+		"name":"Ridiculous Streak",
+		"derscription":"Correctly answer 80 problems in a row in a single skill",
+		"image":"Ridiculous-streak.png",
+		"condition":"",
+		"group":"moon"
+	},
+	{
+		"id":"44",
+		"name":"Ludicrous Streak",
+		"derscription":"Correctly answer 100 problems in a row in a single skill",
+		"image":"ludicrous-streak.png",
+		"condition":"",
+		"group":"moon"
+	},
+	{
+		"id":"45",
+		"name":"Great Inspiration",
+		"derscription":"Other users created 25 programs based on one of yours",
+		"image":"great-inspiration.png",
+		"condition":"",
+		"group":"earth"
+	},
+	{
+		"id":"46",
+		"name":"Sub-light Speed",
+		"derscription":"Quickly & correctly answer 42 skill problems in a row (time limit depends on skill difficulty)",
+		"image":"sublight-speed.png",
+		"condition":"",
+		"group":"earth"
+	},
+	{
+		"id":"47",
+		"name":"Incredible Inspiration",
+		"derscription":"Other users created 50 programs based on one of yours",
+		"image":"incredible-inspiration.png",
+		"condition":"",
+		"group":"earth"
+	},
+	{
+		"id":"48",
+		"name":"Work Horse",
+		"derscription":"Achieve mastery in 50 unique skills",
+		"image":"work-horse.png",
+		"condition":"",
+		"group":"earth"
+	},
+	{
+		"id":"49",
+		"name":"10,000 Year Clock",
+		"derscription":"Watch part of any video or work on any skill each day for 100 consecutive days",
+		"image":"10000-year-clock.png",
+		"condition":"",
+		"group":"earth"
+	},
+	{
+		"id":"50",
+		"name":"Magellan",
+		"derscription":"Achieve mastery in 100 unique skills",
+		"image":"magellan.png",
+		"condition":"",
+		"group":"sun"
+	},
+	{
+		"id":"51",
+		"name":"Sally Ride",
+		"derscription":"Achieve mastery in 150 unique skills",
+		"image":"sally-ride.png",
+		"condition":"",
+		"group":"sun"
+	},
+	{
+		"id":"52",
+		"name":"Copernicus",
+		"derscription":"Achieve mastery in 200 unique skills",
+		"image":"copernicus.png",
+		"condition":"",
+		"group":"sun"
+	},
+	{
+		"id":"53",
+		"name":"Kepler",
+		"derscription":"Achieve mastery in 300 unique skills",
+		"image":"kepler.png",
+		"condition":"",
+		"group":"sun"
+	},
+	{
+		"id":"54",
+		"name":"Hypatia",
+		"derscription":"Achieve mastery in 350 unique skills",
+		"image":"hypatia.png",
+		"condition":"",
+		"group":"sun"
+	},
+	{
+		"id":"55",
+		"name":"Atlas",
+		"derscription":"???",
+		"image":"blackhole.png",
+		"condition":"",
+		"group":"black_hole"
 	}
+
+
+
+
 ]
