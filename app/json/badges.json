@@ -1,9 +1,197 @@
 [
 	{
-		"id":"",
-		"name":"",
-		"derscription":"",
-		"image":"",
-		"condition":""
+		"id":"1",
+		"name":"Act 1 Scene 1",
+		"derscription":"ดูวีดีโอ ครบ 20 นาที",
+		"image":"act-1-scene-1.png",
+		"condition":"",
+		"group":"mateorite"
+	},
+	{
+		"id":"2",
+		"name":"Express Yourself",
+		"derscription":"ปรับแต่งรูปและข้อมูลโปรไฟล์",
+		"image":"express-yourself.png",
+		"condition":"",
+		"group":"mateorite"
+	},
+	{
+		"id":"3",
+		"name":"Picking Up Steam",
+		"derscription":"Quickly & correctly answer 5 skill problems in a row (time limit depends on skill difficulty)
+",
+		"image":"picking-up-steam.png",
+		"condition":"",
+		"group":"mateorite"
+	},
+	{
+		"id":"4",
+		"name":"Just Getting Started",
+		"derscription":"Achieve mastery in 3 unique skills",
+		"image":"just-getting-started.png",
+		"condition":"",
+		"group":"mateorite"
+	},
+	{
+		"id":"5",
+		"name":"Inspiration",
+		"derscription":"Another user created a program based on one of yours
+",
+		"image":"inspiration.png",
+		"condition":"",
+		"group":"mateorite"
+	},
+	{
+		"id":"6",
+		"name":"Brain Builder",
+		"derscription":"You finished your first brain fitness test. Great job!
+",
+		"image":"math-pretest-champion.png",
+		"condition":"",
+		"group":"mateorite"
+	},
+	{
+		"id":"7",
+		"name":"Making Progress",
+		"derscription":"Achieve mastery in 7 unique skills",
+		"image":"making-progress.png",
+		"condition":"",
+		"group":"mateorite"
+	},
+	{
+		"id":"8",
+		"name":"Good Habits",
+		"derscription":"Watch part of any video or work on any skill each day for 5 consecutive days",
+		"image":"good-habits.png",
+		"condition":"",
+		"group":"mateorite"
+	},
+	{
+		"id":"9",
+		"name":"Flag Duty",
+		"derscription":"Flag your first discussion post on a video or program for a Guardian's attention",
+		"image":".png",
+		"condition":"",
+		"group":"mateorite"
+	},
+	{
+		"id":"10",
+		"name":"Thumbs Up",
+		"derscription":"Cast your first up vote for a helpful discussion post or program",
+		"image":"flag-duty.png",
+		"condition":"",
+		"group":"mateorite"
+	},
+	{
+		"id":"11",
+		"name":"Thumbs Down",
+		"derscription":"Cast your first down vote for an unhelpful discussion post or program",
+		"image":"thumbs-down.png",
+		"condition":"",
+		"group":"mateorite"
+	},
+	{
+		"id":"12",
+		"name":"Evaluator",
+		"derscription":"Evaluate a student's project",
+		"image":"meteorite.png",
+		"condition":"",
+		"group":"mateorite"
+	},
+	{
+		"id":"13",
+		"name":"Researcher",
+		"derscription":"Reference a timestamp when answering a question on a video or program",
+		"image":"Researcher.png",
+		"condition":"",
+		"group":"mateorite"
+	},
+	{
+		"id":"14",
+		"name":"Bibliographer",
+		"derscription":"Reference a timestamp when asking a question on a video or program",
+		"image":"bibliographer.png",
+		"condition":"",
+		"group":"mateorite"
+	},
+	{
+		"id":"15",
+		"name":"You Can Learn Anything",
+		"derscription":"You only have to know one thing -- You can learn anything. Join the movement.",
+		"image":"perseverance.png",
+		"condition":"",
+		"group":"mateorite"
+	},
+	{
+		"id":"16",
+		"name":"Ten to the Fourth",
+		"derscription":"Earn 10,000 energy points",
+		"image":"ten-to-fourth.png",
+		"condition":"",
+		"group":"mateorite"
+	},
+	{
+		"id":"17",
+		"name":"Inspired 15 Minutes",
+		"derscription":"Correctly answer 10 problems and watch 10 minutes of video in 15 minutes",
+		"image":"inspired-15-minutes.png",
+		"condition":"",
+		"group":"mateorite"
+	},
+	{
+		"id":"18",
+		"name":"Express Yourself",
+		"derscription":"Customize your profile avatar and fill up your display case",
+		"image":"express-yourself.png",
+		"condition":"",
+		"group":"mateorite"
+	},
+	{
+		"id":"19",
+		"name":"Persistence",
+		"derscription":"Answer a problem correctly after having some trouble with a few problems and sticking with the skill",
+		"image":"perseverance.png",
+		"condition":"",
+		"group":"mateorite"
+	},
+	{
+		"id":"20",
+		"name":"Nice Streak",
+		"derscription":"Correctly answer 20 problems in a row in a single skill",
+		"image":"nice-streak.png",
+		"condition":"",
+		"group":"mateorite"
+	},
+	{
+		"id":"21",
+		"name":"Cypress",
+		"derscription":"Remain a member of Khan Academy for 1 yearl",
+		"image":"cypress.png",
+		"condition":"",
+		"group":"mateorite"
+	},
+	{
+		"id":"22",
+		"name":"Nice Listener",
+		"derscription":"Watch 15 minutes of video in a single topic",
+		"image":"great-listener.png",
+		"condition":"",
+		"group":"mateorite"
+	},
+	{
+		"id":"23",
+		"name":"Great Listener",
+		"derscription":"Watch 30 minutes of video in a single topic",
+		"image":"great-listener.png",
+		"condition":"",
+		"group":"mateorite"
+	},
+	{
+		"id":"24",
+		"name":"Challenger",
+		"derscription":"Complete a Computer Science Challenge",
+		"image":"tinkerer.png",
+		"condition":"",
+		"group":"mateorite"
 	}
 ]
