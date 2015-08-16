@@ -6,7 +6,7 @@
 		"duration":"",
 		"slide_id":"",
 		"type":"1",
-		"video_url":"private_video_set/01.ogv"
+		"video_url":"private_maths_set/01.ogv"
 	},
 	{
 		"id":"02",
@@ -15,7 +15,7 @@
 		"duration":"",
 		"slide_id":"",
 		"type":"2",
-		"video_url":"private_video_set/01.ogv"
+		"video_url":"private_maths_set/01.ogv"
 	},
 	{
 		"id":"03",
@@ -24,6 +24,6 @@
 		"duration":"",
 		"slide_id":"",
 		"type":"2",
-		"video_url":"private_video_set/01.ogv"
+		"video_url":"private_maths_set/01.ogv"
 	}
 ]
