@@ -37,6 +37,11 @@ form
 						| เข้าสอบ
 					em.hide-on-med-and-up.red-text อุปกรณ์ไม่เหมาะสมในการเข้าทำข้อสอบ
 
+//- action button student (serching exam)
+div(style="bottom: 55px; right: 55px;",ng-show="isStudent").fixed-action-btn.animated.fadeInDown
+	a(data-position="top",data-delay="50",data-tooltip="ค้นหาข้อสอบ").btn-floating.btn-large.orange.darken-2.waves-effect.waves-light.btn.tooltipped
+		i.large.material-icons.right search
+
 
 script.
 	$(document).ready(function(){

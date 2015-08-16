@@ -1,60 +1,78 @@
-.row(ng-show="isTeacher")
+.row(ng-show="isTeacher", ng-repeat="classroom in user_classrooms")
 	//- classroom list (for teacher)
 	.col.s12.m6.l4
 		.card.animated.rotateInDownLeft
 			.card-image.waves-effect.waves-block.waves-light				
-				img(src="images/maths-logo.jpg").activator.responsive-img
+				img(src="images/classroom/{{ classroom.image }}").activator.responsive-img
 			.card-content
 				span.card-title.activator.grey-text.text-darken-4 
 					i.material-icons.right more_vert
-					| เซต (Set)	
+					| {{ classroom.title }}
 					
 				p
-					em รหัสห้องเรียน: ABCDF
+					em รหัสห้องเรียน: {{ classroom.code }}
 
 				.row
 				i.material-icons.left local_offer
-				a(href="#").deep-orange-text คณิตศาสตร์
-				b , 
-				a(href="#").deep-orange-text เซต
+				a(href="#",ng-repeat="tag in classroom.tags").deep-orange-text {{ tag+" " }}
+
 				.row
 				center 
-					a.modal-trigger.waves-effect.waves-orange.btn-flat(data-target='studentlist')
+					a.modal-trigger.waves-effect.waves-orange.btn-flat(data-target='studentlist-{{ classroom.code}}')
 						i.material-icons.left people
 						|  รายชื่อนักเรียน
 			.card-reveal
 				span.card-title.activator.grey-text.text-darken-4 
-					| เซต (Set)
+					| {{ classroom.title }}
 					i.material-icons.right.red-text close
 				
-				h6 เนื้อหาที่เรียน
+				h6 เนื้อหาที่สอน
 				ul.collection
-					li.collection-item 1
-					li.collection-item 2
-					li.collection-item 3
-					li.collection-item 4
-					li.collection-item 5
+					li(ng-repeat="topic in classroom.topics").collection-item {{ topic }}
+
 				ul.collection
 					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange จัดการห้องเรียน
 					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange  ติดตามนักเรียน
 					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange  งานนักเรียน
+
+	//- studentlist by classroom (for teacher)
+	.modal.bottom-sheet(ng-show="isTeacher", id="studentlist-{{classroom.code}}")
+		.modal-content
+			h4.hide-on-small-only {{ classroom.title }} 
+				i.material-icons.right.modal-action.modal-close.waves-effect.waves-light.red-text close
+				| | รายชื่อนักเรียน
+			h5.hide-on-med-and-up {{ classroom.title }} 
+				i.material-icons.right.modal-action.modal-close.waves-effect.waves-light.red-text close
+				| | รายชื่อนักเรียน
+
+			ul.collection
+				li.collection-item.avatar
+					img(src="images/avatar/red1.png").circle
+					span.title 50509
+					p นายวีรภัทร ศิรไพบูลย์
+					a(href="").orange-text ข้อมูลนักเรียน
+				li.collection-item.avatar
+					img(src="images/avatar/red4.png").circle
+					span.title 50843
+					p นายภัทร ไตรรัตน์
+					a(href="").orange-text ข้อมูลนักเรียน
+
 .row(ng-show="isStudent")
 	//- student's detail list 
 	h4(ng-show="isStudent").center-align.grey-text.text-darken-2 ข้อมูลนักเรียน
 	.col.s12.m12.l12(ng-show="isStudent")
 		.card.animated.zoomInUp
 			.card-content
-				span.card-title.orange-text.text-darken-2 ข้อมูลส่วนตัว @itouchz
+				span.card-title.orange-text.text-darken-2 ข้อมูลส่วนตัว @{{user.username}}
 				.row
 					.col.s2.m2.l2.std-avatar
 						img(src="images/avatar/red2.png").avatar.black.circle.responsive-img.hoverable.hide-on-small-only.user-avatar
 						img(src="images/avatar/red-evolution-line.png",width="50%").evolution-line.left
 					.col.s12.m6.l4.std-detail
-						h5.hide-on-small-only นายภัทร ไตรรัตน์ | 50843
-						h6.hide-on-med-and-up นายภัทร ไตรรัตน์ | 50843
-						p ชั้นมัธยมศึกษาปีที่ 4 ห้อง 1 (วิทยาศาสตร์-คณิตศาสตร์)
-						p โรงเรียนสาธิตแห่งมหาวิทยาลัยเกษตรศาสตร์
-						p จตุจักร, กรุงเทพมหานคร
+						h5.hide-on-small-only {{user.firstname +" "+ user.lastname}} | {{user.id}}
+						h6.hide-on-med-and-up {{user.firstname +" "+ user.lastname}} | {{user.id}}
+						p {{user.education_level}} ({{user.major}})
+						p {{user.school}}
 					.col.s12.m4.l6.std-badges.right
 						img(src="images/badges/earth/5x10.png").exam-required-badge
 
@@ -146,36 +164,16 @@ h4(ng-show="isStudent").center-align.grey-text.text-darken-2 บทเรีย�
 					
 
 
-//- studentlist by classroom (for teacher)
-div#studentlist.modal.bottom-sheet(ng-show="isTeacher")
-	div.modal-content
-		h4.hide-on-small-only เซต (Set) 
-			i.material-icons.right.modal-action.modal-close.waves-effect.waves-light.red-text close
-			| | รายชื่อนักเรียน
-		h5.hide-on-med-and-up เซต (Set) 
-			i.material-icons.right.modal-action.modal-close.waves-effect.waves-light.red-text close
-			| | รายชื่อนักเรียน
-
-		ul.collection
-			li.collection-item.avatar
-				img(src="images/avatar/red1.png").circle
-				span.title 50509
-				p นายวีรภัทร ศิรไพบูลย์
-				a(href="").orange-text ข้อมูลนักเรียน
-			li.collection-item.avatar
-				img(src="images/avatar/red4.png").circle
-				span.title 50843
-				p นายภัทร ไตรรัตน์
-				a(href="").orange-text ข้อมูลนักเรียน
 
 
-//- action button teacher
+
+//- action button teacher (add classroom)
 div(style="bottom: 55px; right: 55px;",ng-show="isTeacher").fixed-action-btn.animated.fadeInDown
 	a(data-position="top",data-delay="50",data-tooltip="สร้างห้องเรียน").btn-floating.btn-large.orange.darken-2.waves-effect.waves-light.btn.tooltipped
 		i.large.material-icons add
-//- action button student
+//- action button student (searching classroom)
 div(style="bottom: 55px; right: 55px;",ng-show="isStudent").fixed-action-btn.animated.fadeInDown
-	a(data-position="top",data-delay="50",data-tooltip="หาห้องเรียน").btn-floating.btn-large.orange.darken-2.waves-effect.waves-light.btn.tooltipped
+	a(data-position="top",data-delay="50",data-tooltip="ค้นหาห้องเรียน").btn-floating.btn-large.orange.darken-2.waves-effect.waves-light.btn.tooltipped
 		i.large.material-icons.right school
 
 

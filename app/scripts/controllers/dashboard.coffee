@@ -1,14 +1,37 @@
 'use strict'
 
 angular.module('dlitApp')
-  .controller 'DashboardCtrl', ($scope, Page) ->
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate'
-      'AngularJS'
-      'Karma'
-    ]
+  .controller 'DashboardCtrl', ($scope, Page, $http,$rootScope) ->
+    $scope.isStudent = false
+    $scope.isTeacher = false
+    $scope.user_classrooms = []
+
+    $http.get('json/users.json').success (users_data) ->
+      $scope.users = users_data
+
+      for u in $scope.users 
+        if u.id == '50011'
+          $scope.user = u
+          break
+
+      if $scope.user.role == '1'
+        $scope.isStudent = true
+      else
+        $scope.isTeacher = true
+
+        $http.get('json/classrooms.json').success (classrooms_data) ->
+          $scope.classrooms = classrooms_data
+
+          for c in $scope.classrooms
+            if c.user_id = '99100'
+              $scope.user_classrooms.push c   
+
+          return
+      return
+
+
     $scope.Page = Page
     Page.setTitle 'กระดานหลัก'
 
-    $scope.isStudent = true;
-    $scope.isTeacher = false;
+
+    

@@ -1,23 +1,30 @@
-div.row
-div.row
-div.row
-form(method="Post").card.col.s12.m12.l6.offset-l3.offset-s3.animated.bounceInDown
-	div.row
-	div.row
-		div.input-field.m12
-			i.small.material-icons.prefix account_circle
-			input(id="username",type='text',text='email', required).validate
-			label(for="username") ชื่อผู้ใช้หรืออีเมลล์
-	div.row
-		div.input-field.m12
-			i.small.material-icons.prefix vpn_key
-			input(id="password",type='password', required).validate
-			label(for="password") รหัสผ่าน
-	center
-		div.row
-			div
-				button(type='submit',name='login').waves-effect.waves-light.btn.orange
-					i.material-icons.right send
-					| เข้าสู่ระบบ    
+.row
+.row
+.row
+.row
+	.col.s12.m12.l6.offset-l3.offset-s3
+		form(method="Post").card.col.s12.animated.bounceInDown
+			div.row
+			div.row
+				div.input-field.m12
+					i.small.material-icons.prefix account_circle
+					input(id="username",type='text',text='email', required).validate
+					label(for="username") ชื่อผู้ใช้หรืออีเมลล์
+			div.row
+				div.input-field.m12
+					i.small.material-icons.prefix vpn_key
+					input(id="password",type='password', required).validate
+					label(for="password") รหัสผ่าน
+			center
+				div.row
+					div
+						button(type='submit',name='login').waves-effect.waves-light.btn.orange
+							i.material-icons.right send
+							| เข้าสู่ระบบ    
 
-					
+						
+.row
+.row
+.row
+.row
+.row

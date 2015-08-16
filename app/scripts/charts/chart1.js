@@ -23,7 +23,7 @@ var chart = c3.generate({
 
     axis: {
         x: {
-            label: 'รหัสนิสิต',
+            label: 'รหัสนักเรียน',
             type: 'category',
             categories: [50011,50029,50037,50053,50088,50096,50100,50126,50134,50142,50169,50657,50681,50690,50720],
             tick: {
@@ -42,7 +42,7 @@ var chart = c3.generate({
     tooltip: {
       format: {
        
-        title: function (x,y,num) { return 'ชื่อ ' + x + ' นามสกุล '+y+' รหัสนิสิต ' +num; }
+        title: function (x,y,num) { return 'ชื่อ ' + x + ' นามสกุล '+y+' รหัสนักเรียน ' +num; }
     }
     }
 
