@@ -5,6 +5,7 @@ angular.module('dlitApp')
     $scope.isStudent = false
     $scope.isTeacher = false
     $scope.user_classrooms = []
+    $scope.std_classrooms = []
     $scope.openModalById = (id) ->
       modal = document.getElementById('studentlist-' + id)
       $(modal).openModal()
@@ -30,6 +31,16 @@ angular.module('dlitApp')
             if c.user_id = '99100'
               $scope.user_classrooms.push c   
 
+          $http.get('json/user_classrooms.json').success (user_classrooms_data) ->
+            $scope.std_in_classroom = user_classrooms_data
+
+            for uc in $scope.user_classrooms
+              for sic in $scope.std_in_classroom
+                if uc.id == sic.classroom_id
+                  $scope.std_classrooms.push {'classroom_code': uc.code, 'students': []}
+                  $scope.std_classrooms[$scope.std_classrooms.length-1].students.push sic
+
+            return 
           return
       return
 
