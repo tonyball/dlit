@@ -63,7 +63,7 @@
 				span.card-title.orange-text.text-darken-2 ข้อมูลส่วนตัว @{{user.username}}
 				.row
 					.col.s2.m2.l2.std-avatar
-						img(ng-src="images/avatar/{{ user.avatar }}.png").avatar.black.circle.responsive-img.hoverable.hide-on-small-only.user-avatar
+						img(ng-src="images/avatar/{{ user.avatar }}.png").avatar.black.responsive-img.hoverable.hide-on-small-only.user-avatar
 						img(src="images/avatar/red-evolution-line.png",width="50%").evolution-line.left
 					.col.s12.m6.l4.std-detail
 						h5.hide-on-small-only {{user.firstname +" "+ user.lastname}} | {{user.id}}
@@ -83,18 +83,6 @@
 		.card.animated.zoomInUp.green
 			.card-content
 				span.card-title.black-text กิจกรรมล่าสุด
-			.card-action.white
-
-	.col.s12.m6
-		.card.animated.zoomInUp.green
-			.card-content
-				span.card-title.black-text บทเรียนที่ดู
-			.card-action.white
-
-	.col.s12.m6
-		.card.animated.zoomInUp.green
-			.card-content
-				span.card-title.black-text คะแนนเก็บ
 			.card-action.white
 
 	.col.s12.m6

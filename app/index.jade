@@ -43,13 +43,12 @@ body
     li
       a(href="#").black-text ออกจากระบบ
 
-  ul.notifications.dropdown-content#notifications-dropdown
+  ul(ng-show="isTeacher | isStudent").notifications.dropdown-content#notifications-dropdown
     div.notifications-header
       header.black-text การแจ้งเตือน
     li.divider
     li
-      a.notify-item.black-text(ng-show="isTeacher") ไม่มีการแจ้งเตือนใหม่
-      a.notify-item.black-text(ng-show="isStudent") ไม่มีการแจ้งเตือนใหม่
+      a.notify-item.black-text ไม่มีการแจ้งเตือนใหม่
 
 
   nav.white
@@ -58,7 +57,7 @@ body
         a(href="", data-activates="notifications-dropdown").black-text.noti-dropdown-button
           i.small.material-icons notifications 
       li(ng-show="isTeacher || isStudent")
-        img(ng-src="images/avatar/{{ user.avatar }}.png", alt="profile avatar", width="42").circle.responsive-img.left.hide-on-med-and-down
+        img(ng-src="images/avatar/{{ user.avatar }}.png", alt="profile avatar", width="32").circle.responsive-img.left.hide-on-med-and-down
         a(href="#", data-activates="user-dropdown").black-text.waves-effect.waves-orange.dropdown-button {{ user.firstname +" "+ user.lastname }}
           i.small.material-icons.right arrow_drop_down
 

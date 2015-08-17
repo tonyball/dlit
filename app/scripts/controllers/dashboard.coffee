@@ -16,7 +16,7 @@ angular.module('dlitApp')
       for u in $scope.users 
         if u.id == '50011'
           $scope.user = u
-          $scope.user.score = 120
+          $scope.user.score = 80
           break
 
       if $scope.user.role == '1'
