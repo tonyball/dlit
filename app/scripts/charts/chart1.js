@@ -43,9 +43,9 @@ var chart = c3.generate({
         }
     },
     tooltip: {
-      format: {
-         title: function (x) { return "Data "+x }
-        }   
+      // format: {
+      //    title: function (x) { return "Data "+x }
+      //   }   
     }
 
 });
