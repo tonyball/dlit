@@ -1,7 +1,7 @@
 //- modal warning before taking the exam
 #exam-modal.modal
 	.modal-content
-		h5.center-align ชื่อข้อสอบ ( N ข้อ | M นาที )
+		h5.center-align {{exam.title}} ( {{exam.number_of_question}} ข้อ | {{exam.time}} นาที )
 		center
 			a.modal-action.modal-close.waves-effect.waves-light.btn.green.start-exam เริ่มทำการสอบ
 			&nbsp&nbsp&nbsp
@@ -17,11 +17,11 @@
 	.col.m8.l8
 		.card
 			.card-content
-				span.card-title.black-text กระดาษคำถาม เรื่อง XYZ (N ข้อ)
-				object(width="100%",height="600", data="contents/exam_onet52/math.pdf",type='application/pdf')
+				span.card-title.black-text กระดาษคำถาม เรื่อง {{exam.title}} ({{exam.number_of_question}} ข้อ)
+				object(width="100%",height="600", data="{{exam.content_url}}",type='application/pdf')
 			.card-action
-				b.left รหัสข้อสอบ {{ examId }} | วิชา คณิตศาสตร์
-				b.right สอบเมื่อ วัน เดือน ปี
+				b.left รหัสข้อสอบ {{ exam.code }} | วิชา {{exam.subject_name}}
+				b.right สอบเมื่อวันที่ {{ datetime | date:"dd MMMM yyyy 'เวลา' HH:mm":'+0700' }} น.
 				br
 
 	//- answer sheet card
@@ -32,176 +32,26 @@
 				.row
 					h6 ข้อ | 1 &nbsp&nbsp&nbsp&nbsp2 &nbsp&nbsp&nbsp&nbsp3 &nbsp&nbsp&nbsp&nbsp4 &nbsp&nbsp&nbsp&nbsp5
 					.divider
-				.row
-					p.no.left-align 1. |
+				.row(ng-repeat="answer in answer_box")
+					p.no.left-align {{answer}}. |
 					form.answer-set
-						input(name="no1",type="radio",id="ans11")
-						label(for="ans11") 		
+						input(name="no{{answer}}",type="radio",id="ans{{answer}}1")
+						label(for="ans{{answer}}1")
 
-						input(name="no1",type="radio",id="ans21")
-						label(for="ans21") 
+						input(name="no{{answer}}",type="radio",id="ans{{answer}}2")
+						label(for="ans{{answer}}2") 
 
-						input(name="no1",type="radio",id="ans31")
-						label(for="ans31") 
+						input(name="no{{answer}}",type="radio",id="ans{{answer}}3")
+						label(for="ans{{answer}}3") 
 
-						input(name="no1",type="radio",id="ans41")
-						label(for="ans41") 	
+						input(name="no{{answer}}",type="radio",id="ans{{answer}}4")
+						label(for="ans{{answer}}4")
 
-						input(name="no1",type="radio",id="ans51")
-						label(for="ans51") 
-				.row
-					p.no.left-align 2. |
-					form.answer-set
-						input(name="no2",type="radio",id="ans12")
-						label(for="ans12") 						
-						
-						input(name="no2",type="radio",id="ans22")
-						label(for="ans22") 	
-			
-						input(name="no2",type="radio",id="ans32")
-						label(for="ans32") 	
+						input(name="no{{answer}}",type="radio",id="ans{{answer}}5")
+						label(for="ans{{answer}}5")  		
 
-						input(name="no2",type="radio",id="ans42")
-						label(for="ans42") 	
 
-						input(name="no2",type="radio",id="ans52")
-						label(for="ans52") 
-				.row
-					p.no.left-align 3. |
-					form.answer-set
-						input(name="no3",type="radio",id="ans13")
-						label(for="ans13") 						
-						
-						input(name="no3",type="radio",id="ans23")
-						label(for="ans23") 	
-			
-						input(name="no3",type="radio",id="ans33")
-						label(for="ans33") 	
-
-						input(name="no3",type="radio",id="ans43")
-						label(for="ans43") 	
-
-						input(name="no3",type="radio",id="ans53")
-						label(for="ans53") 
-				.row
-					p.no.left-align 4. |
-					form.answer-set
-						input(name="no3",type="radio",id="ans13")
-						label(for="ans13") 						
-						
-						input(name="no3",type="radio",id="ans23")
-						label(for="ans23") 	
-			
-						input(name="no3",type="radio",id="ans33")
-						label(for="ans33") 	
-
-						input(name="no3",type="radio",id="ans43")
-						label(for="ans43") 	
-
-						input(name="no3",type="radio",id="ans53")
-						label(for="ans53") 
-				.row
-					p.no.left-align 5. |
-					form.answer-set
-						input(name="no3",type="radio",id="ans13")
-						label(for="ans13") 						
-						
-						input(name="no3",type="radio",id="ans23")
-						label(for="ans23") 	
-			
-						input(name="no3",type="radio",id="ans33")
-						label(for="ans33") 	
-
-						input(name="no3",type="radio",id="ans43")
-						label(for="ans43") 	
-
-						input(name="no3",type="radio",id="ans53")
-						label(for="ans53") 
-				.row
-					p.no.left-align 6. |
-					form.answer-set
-						input(name="no3",type="radio",id="ans13")
-						label(for="ans13") 						
-						
-						input(name="no3",type="radio",id="ans23")
-						label(for="ans23") 	
-			
-						input(name="no3",type="radio",id="ans33")
-						label(for="ans33") 	
-
-						input(name="no3",type="radio",id="ans43")
-						label(for="ans43") 	
-
-						input(name="no3",type="radio",id="ans53")
-						label(for="ans53") 
-				.row
-					p.no.left-align 7. |
-					form.answer-set
-						input(name="no3",type="radio",id="ans13")
-						label(for="ans13") 						
-						
-						input(name="no3",type="radio",id="ans23")
-						label(for="ans23") 	
-			
-						input(name="no3",type="radio",id="ans33")
-						label(for="ans33") 	
-
-						input(name="no3",type="radio",id="ans43")
-						label(for="ans43") 	
-
-						input(name="no3",type="radio",id="ans53")
-						label(for="ans53") 
-				.row
-					p.no.left-align 8. |
-					form.answer-set
-						input(name="no3",type="radio",id="ans13")
-						label(for="ans13") 						
-						
-						input(name="no3",type="radio",id="ans23")
-						label(for="ans23") 	
-			
-						input(name="no3",type="radio",id="ans33")
-						label(for="ans33") 	
-
-						input(name="no3",type="radio",id="ans43")
-						label(for="ans43") 	
-
-						input(name="no3",type="radio",id="ans53")
-						label(for="ans53") 
-				.row
-					p.no.left-align 9. |
-					form.answer-set
-						input(name="no3",type="radio",id="ans13")
-						label(for="ans13") 						
-						
-						input(name="no3",type="radio",id="ans23")
-						label(for="ans23") 	
-			
-						input(name="no3",type="radio",id="ans33")
-						label(for="ans33") 	
-
-						input(name="no3",type="radio",id="ans43")
-						label(for="ans43") 	
-
-						input(name="no3",type="radio",id="ans53")
-						label(for="ans53") 
-				.row
-					p.no.left-align 10. |
-					form.answer-set
-						input(name="no3",type="radio",id="ans13")
-						label(for="ans13") 						
-						
-						input(name="no3",type="radio",id="ans23")
-						label(for="ans23") 	
-			
-						input(name="no3",type="radio",id="ans33")
-						label(for="ans33") 	
-
-						input(name="no3",type="radio",id="ans43")
-						label(for="ans43") 	
-
-						input(name="no3",type="radio",id="ans53")
-						label(for="ans53") 
+				
 
 			.card-action
 				center
