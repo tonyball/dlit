@@ -18,7 +18,7 @@
 		"modified":"",
 		"citizenid":"",
 		"user_code":"",
-		"avatar":"red2"
+		"avatar":"red1"
 	},
 		{
 			"id":"50029",
@@ -38,7 +38,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"50037",
@@ -58,7 +58,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"50053",
@@ -78,7 +78,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"50088",
@@ -98,7 +98,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"50096",
@@ -118,7 +118,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"50100",
@@ -138,7 +138,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"50126",
@@ -158,7 +158,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"50134",
@@ -178,7 +178,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"50142",
@@ -198,7 +198,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"50169",
@@ -218,7 +218,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"50657",
@@ -238,7 +238,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"50681",
@@ -258,7 +258,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"50690",
@@ -278,7 +278,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"50703",
@@ -298,7 +298,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"50720",
@@ -318,47 +318,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
-		},
-		{
-			"id":"50134",
-			"username":"chanon",
-			"password":"123456",
-			"firstname":"นายชานน",
-			"lastname":"รุ่งรัศมีเจริญ",
-			"email":"chanon.r@ku.th",
-			"school":"",
-			"role":"1",
-			"gender":"",
-			"birthdate":"1/01/2537",
-			"tel":"",
-			"education_level":"",
-			"address":"",
-			"created":"",
-			"modified":"",
-			"citizenid":"",
-			"user_code":"",
-			"avatar":""
-		},
-		{
-			"id":"50142",
-			"username":"chutipa",
-			"password":"123456",
-			"firstname":"นางสาวชุติภา",
-			"lastname":"สอนเนย",
-			"email":"chutipa.s@ku.th",
-			"school":"",
-			"role":"1",
-			"gender":"",
-			"birthdate":"1/01/2537",
-			"tel":"",
-			"education_level":"",
-			"address":"",
-			"created":"",
-			"modified":"",
-			"citizenid":"",
-			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"50177",
@@ -378,7 +338,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"50207",
@@ -398,7 +358,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"50215",
@@ -418,7 +378,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"50223",
@@ -438,7 +398,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"50231",
@@ -458,7 +418,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"50266",
@@ -478,7 +438,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"50291",
@@ -498,7 +458,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"50304",
@@ -518,7 +478,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"50312",
@@ -538,7 +498,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"50339",
@@ -558,7 +518,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"50380",
@@ -578,7 +538,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"50398",
@@ -598,7 +558,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"50401",
@@ -618,7 +578,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"50410",
@@ -638,7 +598,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"50428",
@@ -658,7 +618,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"50461",
@@ -678,7 +638,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"50479",
@@ -698,7 +658,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"50487",
@@ -718,7 +678,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"50509",
@@ -738,7 +698,7 @@
 			"modified":"",
 			"citizenid":"",
 			"user_code":"",
-			"avatar":""
+			"avatar":"red2"
 		},
 		{
 			"id":"99100",

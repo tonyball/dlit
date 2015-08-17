@@ -1,10 +1,9 @@
-
 [
 	{
 		"id":"1",
 		"user_id":"50011",
 		"classroom_id":"1",
-		"finished":"0",
+		"finished":"70",
 		"time":"0",
 		"classroom_code":"MATH7K345"
 	},
