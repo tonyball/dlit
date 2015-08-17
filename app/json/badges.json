@@ -270,7 +270,7 @@
 	{
 		"id":"34",
 		"name":"Parent: Getting Started",
-		"derscription":"Complete all items in the "Parent: Getting Started" checklist",
+		"derscription":"Complete all items in the 'Parent: Getting Started' checklist",
 		"image":"productive.png",
 		"condition":"",
 		"group":"moon"
@@ -278,7 +278,7 @@
 	{
 		"id":"35",
 		"name":"Coach: Getting Started",
-		"derscription":"Complete all items in the "Coach: Getting Started" checklist",
+		"derscription":"Complete all items in the 'Coach: Getting Started' checklist",
 		"image":"productive.png",
 		"condition":"",
 		"group":"moon"
