@@ -6,7 +6,7 @@
 			"duration":"",
 			"slide_id":"",
 			"type":"1",
-			"video_url":"video_dlit_math_set/01.mp4"
+			"video_url":"dlit_maths_set/01.mp4"
 		},
 		{
 			"id":"02",
@@ -15,7 +15,7 @@
 			"duration":"",
 			"slide_id":"",
 			"type":"2",
-			"video_url":"video_dlit_math_set/02.mp4"
+			"video_url":"dlit_maths_set/02.mp4"
 		},
 		{
 			"id":"03",
@@ -24,7 +24,7 @@
 			"duration":"",
 			"slide_id":"",
 			"type":"1",
-			"video_url":"video_dlit_math_set/03.mp4"
+			"video_url":"dlit_maths_set/03.mp4"
 		},
 		{
 			"id":"04",
@@ -33,7 +33,7 @@
 			"duration":"",
 			"slide_id":"",
 			"type":"2",
-			"video_url":"video_dlit_math_set/04.mp4"
+			"video_url":"dlit_maths_set/04.mp4"
 		},
 		{
 			"id":"05",
@@ -42,7 +42,7 @@
 			"duration":"",
 			"slide_id":"",
 			"type":"2",
-			"video_url":"video_dlit_math_set/05.mp4"
+			"video_url":"dlit_maths_set/05.mp4"
 		},
 		{
 			"id":"06",
@@ -51,7 +51,7 @@
 			"duration":"",
 			"slide_id":"",
 			"type":"1",
-			"video_url":"video_dlit_math_set/06.mp4"
+			"video_url":"dlit_maths_set/06.mp4"
 		},
 		{
 			"id":"07",
@@ -60,7 +60,7 @@
 			"duration":"",
 			"slide_id":"",
 			"type":"1",
-			"video_url":"video_dlit_math_set/07.mp4"
+			"video_url":"dlit_maths_set/07.mp4"
 		},
 		{
 			"id":"08",
@@ -69,7 +69,7 @@
 			"duration":"",
 			"slide_id":"",
 			"type":"2",
-			"video_url":"video_dlit_math_set/08.mp4"
+			"video_url":"dlit_maths_set/08.mp4"
 		},
 		{
 			"id":"09",
@@ -78,7 +78,7 @@
 			"duration":"",
 			"slide_id":"",
 			"type":"2",
-			"video_url":"video_dlit_math_set/09.mp4"
+			"video_url":"dlit_maths_set/09.mp4"
 		},
 		{
 			"id":"10",
@@ -87,7 +87,7 @@
 			"duration":"",
 			"slide_id":"",
 			"type":"1",
-			"video_url":"video_dlit_math_set/10.mp4"
+			"video_url":"dlit_maths_set/10.mp4"
 		},
 		{
 			"id":"11",
@@ -96,6 +96,6 @@
 			"duration":"",
 			"slide_id":"",
 			"type":"2",
-			"video_url":"video_dlit_math_set/11.mp4"
+			"video_url":"dlit_maths_set/11.mp4"
 		}
 ]

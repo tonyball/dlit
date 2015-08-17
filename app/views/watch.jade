@@ -53,8 +53,8 @@
 		.card.animated.zoomIn
 			.card-content
 				span.card-title.black-text ชื่อวิดีโอ
-				video#video_name(controls,preload="auto", width="100%", data-setup="{}")
-					source(src="videos/dlit_maths_set/01.mp4", type="video/mp4")
+				.video-container
+					video#video-item(src="videos/dlit_maths_set/01.mp4", controls, width="100%")
 			.card-action
 				.left
 					b ความเร็ววิดีโอ
@@ -75,6 +75,13 @@
 
 script.
 	$(document).ready(function(){
+		$('#video-item').click(function(){
+			var vid = document.getElementById('video-item');
+			if(vid.paused)
+				vid.play();
+			else
+				vid.pause();
+		});
 		$('.collapsible').collapsible({ accordion : false });
 		$('.video-link').click(function(){
 			$('.video-link').removeClass('active');

@@ -1,9 +1,10 @@
-.row(ng-show="isTeacher", ng-repeat="classroom in user_classrooms")
+a.btn.modal-trigger(data-target="studentlist-MATH7K345") modal
+.row(ng-show="isTeacher",ng-repeat="classroom in user_classrooms")
 	//- classroom list (for teacher)
 	.col.s12.m6.l4
 		.card.animated.rotateInDownLeft
 			.card-image.waves-effect.waves-block.waves-light				
-				img(src="images/classroom/{{ classroom.image }}").activator.responsive-img
+				img(ng-src="images/classroom/{{ classroom.image }}").activator.responsive-img
 			.card-content
 				span.card-title.activator.grey-text.text-darken-4 
 					i.material-icons.right more_vert
@@ -16,11 +17,6 @@
 				i.material-icons.left local_offer
 				a(href="#",ng-repeat="tag in classroom.tags").deep-orange-text {{ tag+" " }}
 
-				.row
-				center 
-					a.modal-trigger.waves-effect.waves-orange.btn-flat(data-target='studentlist-{{ classroom.code}}')
-						i.material-icons.left people
-						|  รายชื่อนักเรียน
 			.card-reveal
 				span.card-title.activator.grey-text.text-darken-4 
 					| {{ classroom.title }}
@@ -34,6 +30,12 @@
 					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange จัดการห้องเรียน
 					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange  ติดตามนักเรียน
 					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange  งานนักเรียน
+
+			.card-action
+				center
+					a.modal-trigger.waves-effect.waves-orange.btn-flat.black-text(data-target="studentlist-{{classroom.code}}")
+						i.material-icons.left people
+						|  รายชื่อนักเรียน
 
 	//- studentlist by classroom (for teacher)
 	.modal.bottom-sheet(ng-show="isTeacher", id="studentlist-{{classroom.code}}")
@@ -66,7 +68,7 @@
 				span.card-title.orange-text.text-darken-2 ข้อมูลส่วนตัว @{{user.username}}
 				.row
 					.col.s2.m2.l2.std-avatar
-						img(src="images/avatar/red2.png").avatar.black.circle.responsive-img.hoverable.hide-on-small-only.user-avatar
+						img(ng-src="images/avatar/{{ user.avatar }}.png").avatar.black.circle.responsive-img.hoverable.hide-on-small-only.user-avatar
 						img(src="images/avatar/red-evolution-line.png",width="50%").evolution-line.left
 					.col.s12.m6.l4.std-detail
 						h5.hide-on-small-only {{user.firstname +" "+ user.lastname}} | {{user.id}}
