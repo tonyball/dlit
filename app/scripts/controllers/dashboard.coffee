@@ -7,7 +7,6 @@ angular.module('dlitApp')
     $scope.user_classrooms = []
     $scope.openModalById = (id) ->
       modal = document.getElementById('studentlist-' + id)
-      alert(id)
       $(modal).openModal()
       return
 
