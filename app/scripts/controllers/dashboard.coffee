@@ -15,7 +15,7 @@ angular.module('dlitApp')
       $scope.users = users_data
 
       for u in $scope.users 
-        if u.id == '99100'
+        if u.id == '50011'
           $scope.user = u
           break
 
