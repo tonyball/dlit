@@ -1,195 +1,186 @@
-{{ std_classrooms}}
-//- .row(ng-show="isTeacher",ng-repeat="classroom in user_classrooms")
-//- 	//- classroom list (for teacher)
-//- 	.col.s12.m6.l4
-//- 		.card.animated.rotateInDownLeft
-//- 			.card-image.waves-effect.waves-block.waves-light				
-//- 				img(ng-src="images/classroom/{{ classroom.image }}").activator.responsive-img
-//- 			.card-content
-//- 				span.card-title.activator.grey-text.text-darken-4 
-//- 					i.material-icons.right more_vert
-//- 					| {{ classroom.title }}
+.row(ng-show="isTeacher",ng-repeat="classroom in user_classrooms")
+	//- classroom list (for teacher)
+	.col.s12.m6.l4
+		.card.animated.rotateInDownLeft
+			.card-image.waves-effect.waves-block.waves-light				
+				img(ng-src="images/classroom/{{ classroom.image }}").activator.responsive-img
+			.card-content
+				span.card-title.activator.grey-text.text-darken-4 
+					i.material-icons.right more_vert
+					| {{ classroom.title }}
 					
-//- 				p
-//- 					em รหัสห้องเรียน: {{ classroom.code }}
+				p
+					em รหัสห้องเรียน: {{ classroom.code }}
 
-//- 				.row
-//- 				i.material-icons.left local_offer
-//- 				a(href="#",ng-repeat="tag in classroom.tags").deep-orange-text {{ tag+" " }}
+				.row
+				i.material-icons.left local_offer
+				a(href="#",ng-repeat="tag in classroom.tags").deep-orange-text {{ tag+" " }}
 
-//- 				.row
-//- 				center
-//- 					a.modal-trigger.waves-effect.waves-orange.btn-flat.black-text(ng-click="openModalById(classroom.code)")
-//- 						i.material-icons.left people
-//- 						|  รายชื่อนักเรียน
+				.row
+				center
+					a.modal-trigger.waves-effect.waves-orange.btn-flat.black-text(ng-click="openModalById(classroom.code)")
+						i.material-icons.left people
+						|  รายชื่อนักเรียน
 
-//- 			.card-reveal
-//- 				span.card-title.activator.grey-text.text-darken-4 
-//- 					| {{ classroom.title }}
-//- 					i.material-icons.right.red-text close
+			.card-reveal
+				span.card-title.activator.grey-text.text-darken-4 
+					| {{ classroom.title }}
+					i.material-icons.right.red-text close
 				
-//- 				h6 เนื้อหาที่สอน
-//- 				ul.collection
-//- 					li(ng-repeat="topic in classroom.topics").collection-item {{ topic }}
+				h6 เนื้อหาที่สอน
+				ul.collection
+					li(ng-repeat="topic in classroom.topics").collection-item {{ topic }}
 
-//- 				ul.collection
-//- 					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange จัดการห้องเรียน
-//- 					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange  ติดตามนักเรียน
-//- 					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange  งานนักเรียน
+				ul.collection
+					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange จัดการห้องเรียน
+					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange  ติดตามนักเรียน
+					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange  งานนักเรียน
 				
 
-//- 	//- studentlist by classroom (for teacher)
-//- 	.modal.bottom-sheet(ng-show="isTeacher", id="studentlist-{{classroom.code}}")
-//- 		.modal-content
-//- 			h4.hide-on-small-only {{ classroom.title }} 
-//- 				i.material-icons.right.modal-action.modal-close.waves-effect.waves-light.red-text close
-//- 				| | รายชื่อนักเรียน
-//- 			h5.hide-on-med-and-up {{ classroom.title }} 
-//- 				i.material-icons.right.modal-action.modal-close.waves-effect.waves-light.red-text close
-//- 				| | รายชื่อนักเรียน
+	//- studentlist by classroom (for teacher)
+	.modal.bottom-sheet(ng-repeat="std in std_classrooms",ng-show="isTeacher", id="studentlist-{{classroom.code}}")
+		.modal-content
+			h4.hide-on-small-only {{ classroom.title }} 
+				i.material-icons.right.modal-action.modal-close.waves-effect.waves-light.red-text close
+				| | รายชื่อนักเรียน
+			h5.hide-on-med-and-up {{ classroom.title }} 
+				i.material-icons.right.modal-action.modal-close.waves-effect.waves-light.red-text close
+				| | รายชื่อนักเรียน
 
-//- 			ul.collection
-//- 				li.collection-item.avatar
-//- 					img(src="images/avatar/red1.png").circle
-//- 					span.title 50509
-//- 					p นายวีรภัทร ศิรไพบูลย์
-//- 					a(href="").orange-text ข้อมูลนักเรียน
-//- 				li.collection-item.avatar
-//- 					img(src="images/avatar/red4.png").circle
-//- 					span.title 50843
-//- 					p นายภัทร ไตรรัตน์
-//- 					a(href="").orange-text ข้อมูลนักเรียน
+			ul.collection
+				li(ng-repeat="student in std.students").collection-item.avatar
+					img(ng-src="images/avatar/{{student.avatar}}.png").circle
+					span.title {{student.id}}
+					p {{student.firstname+" "+student.lastname}}
+					a(href="").orange-text ข้อมูลนักเรียน
 
-//- .row(ng-show="isStudent")
-//- 	//- student's detail list 
-//- 	h4(ng-show="isStudent").center-align.grey-text.text-darken-2 ข้อมูลนักเรียน
-//- 	.col.s12.m12.l12(ng-show="isStudent")
-//- 		.card.animated.zoomInUp
-//- 			.card-content
-//- 				span.card-title.orange-text.text-darken-2 ข้อมูลส่วนตัว @{{user.username}}
-//- 				.row
-//- 					.col.s2.m2.l2.std-avatar
-//- 						img(ng-src="images/avatar/{{ user.avatar }}.png").avatar.black.circle.responsive-img.hoverable.hide-on-small-only.user-avatar
-//- 						img(src="images/avatar/red-evolution-line.png",width="50%").evolution-line.left
-//- 					.col.s12.m6.l4.std-detail
-//- 						h5.hide-on-small-only {{user.firstname +" "+ user.lastname}} | {{user.id}}
-//- 						h6.hide-on-med-and-up {{user.firstname +" "+ user.lastname}} | {{user.id}}
-//- 						p {{user.education_level}} ({{user.major}})
-//- 						p {{user.school}}
-//- 					.col.s12.m4.l6.std-badges.right
-//- 						img(src="images/badges/earth/5x10.png").exam-required-badge
+.row(ng-show="isStudent")
+	//- student's detail list 
+	h4(ng-show="isStudent").center-align.grey-text.text-darken-2 ข้อมูลนักเรียน
+	.col.s12.m12.l12(ng-show="isStudent")
+		.card.animated.zoomInUp
+			.card-content
+				span.card-title.orange-text.text-darken-2 ข้อมูลส่วนตัว @{{user.username}}
+				.row
+					.col.s2.m2.l2.std-avatar
+						img(ng-src="images/avatar/{{ user.avatar }}.png").avatar.black.circle.responsive-img.hoverable.hide-on-small-only.user-avatar
+						img(src="images/avatar/red-evolution-line.png",width="50%").evolution-line.left
+					.col.s12.m6.l4.std-detail
+						h5.hide-on-small-only {{user.firstname +" "+ user.lastname}} | {{user.id}}
+						h6.hide-on-med-and-up {{user.firstname +" "+ user.lastname}} | {{user.id}}
+						p {{user.education_level}} ({{user.major}})
+						p {{user.school}}
+					.col.s12.m4.l6.std-badges.right
+						img(src="images/badges/earth/5x10.png").exam-required-badge
 
-//- 			.card-action
-//- 				a.btn-flat.waves-effect.waves-orange.black-text
-//- 					i.material-icons mode_edit
-//- 					| แก้ไขข้อมูลส่วนตัว
-//- 				h5.right คะแนนรวม 0 คะแนน
+			.card-action
+				a(href="#/profile/{{user.id}}").btn-flat.waves-effect.waves-orange.black-text
+					i.material-icons mode_edit
+					| แก้ไขข้อมูลส่วนตัว
+				h5.right คะแนนรวม {{user.score}} คะแนน
 
-//- 	.col.s12.m6
-//- 		.card.animated.zoomInUp.green
-//- 			.card-content
-//- 				span.card-title.black-text กิจกรรมล่าสุด
-//- 			.card-action.white
+	.col.s12.m6
+		.card.animated.zoomInUp.green
+			.card-content
+				span.card-title.black-text กิจกรรมล่าสุด
+			.card-action.white
 
-//- 	.col.s12.m6
-//- 		.card.animated.zoomInUp.green
-//- 			.card-content
-//- 				span.card-title.black-text บทเรียนที่ดู
-//- 			.card-action.white
+	.col.s12.m6
+		.card.animated.zoomInUp.green
+			.card-content
+				span.card-title.black-text บทเรียนที่ดู
+			.card-action.white
 
-//- 	.col.s12.m6
-//- 		.card.animated.zoomInUp.green
-//- 			.card-content
-//- 				span.card-title.black-text คะแนนเก็บ
-//- 			.card-action.white
+	.col.s12.m6
+		.card.animated.zoomInUp.green
+			.card-content
+				span.card-title.black-text คะแนนเก็บ
+			.card-action.white
 
-//- 	.col.s12.m6
-//- 		.card.animated.zoomInUp.green
-//- 			.card-content
-//- 				span.card-title.black-text คะแนนสอบ
-//- 			.card-action.white
+	.col.s12.m6
+		.card.animated.zoomInUp.green
+			.card-content
+				span.card-title.black-text คะแนนสอบ
+			.card-action.white
 
-//- 	.col.s12.hide-on-small-only
-//- 		.card.blue
-//- 			.card-content
-//- 				span.card-title.black-text ภาพรวมการเรียน
-//- 			.card-action.white
-//- 				#chart
+	.col.s12.hide-on-small-only
+		.card.blue
+			.card-content
+				span.card-title.black-text ภาพรวมการเรียน
+			.card-action.white
+				#chart
 
-//- //- student's learning class list
-//- h4(ng-show="isStudent").center-align.grey-text.text-darken-2 บทเรียนที่กำลังศึกษา 
-//- .row(ng-show="isStudent")
-//- 	.col.s12.m6.l4
-//- 		.card.animated.rotateInDownLeft
-//- 			.card-image.waves-effect.waves-block.waves-light				
-//- 				img(src="images/classroom/maths-logo.jpg").activator.responsive-img
-//- 			.card-content
-//- 				span.card-title.activator.grey-text.text-darken-4 
-//- 					i.material-icons.right more_vert
-//- 					| เซต (Set)	
+//- student's learning class list
+h4(ng-show="isStudent").center-align.grey-text.text-darken-2 บทเรียนที่กำลังศึกษา 
+.row(ng-show="isStudent",ng-repeat="classroom in std_classrooms")
+	.col.s12.m6.l4
+		.card.animated.rotateInDownLeft
+			.card-image.waves-effect.waves-block.waves-light				
+				img(src="images/classroom/maths-logo.jpg").activator.responsive-img
+			.card-content
+				span.card-title.activator.grey-text.text-darken-4 
+					i.material-icons.right more_vert
+					| {{classroom.title}}
 					
-//- 				p
-//- 					em รหัสห้องเรียน: ABCDF
-//- 				.row
-//- 				center 
-//- 					a.waves-effect.waves-orange.btn-flat(href='#/watch/ABCDF')
-//- 						i.material-icons.left play_circle_outline
-//- 						|  เข้าเรียน
-//- 					.row
-//- 					.progress.orange.lighten-4
-//- 						.determinate.orange(style="width: 70%")
-//- 					strong.left เรียนแล้ว 70%
-//- 				.row
-//- 				i.material-icons.left local_offer
-//- 				a(href="#").deep-orange-text คณิตศาสตร์
-//- 				b , 
-//- 				a(href="#").deep-orange-text เซต
+				p
+					em รหัสห้องเรียน: {{classroom.code}}
+				.row
+				center 
+					a.waves-effect.waves-orange.btn-flat(href='#/watch/{{classroom.code}}')
+						i.material-icons.left play_circle_outline
+						|  เข้าเรียน
+					.row
+					.progress.orange.lighten-4
+						.determinate.orange(style="width: {{classroom.finished}}%")
+					strong.left เรียนแล้ว {{classroom.finished}}%
+				.row
+				i.material-icons.left local_offer
+				a(href="#").deep-orange-text คณิตศาสตร์
+				b , 
+				a(href="#").deep-orange-text เซต
 
-//- 			.card-reveal
-//- 				span.card-title.activator.grey-text.text-darken-4 
-//- 					| เซต (Set)
-//- 					i.material-icons.right.red-text close
+			.card-reveal
+				span.card-title.activator.grey-text.text-darken-4 
+					| {{classroom.title}}
+					i.material-icons.right.red-text close
 				
-//- 				h6 เนื้อหาที่เรียน
-//- 				ul.collection
-//- 					li.collection-item 1
-//- 					li.collection-item 2
-//- 					li.collection-item 3
-//- 					li.collection-item 4
-//- 					li.collection-item 5
-//- 					li.collection-item
-//- 						center
-//- 							img(src="images/maths-teacher.jpg",width="50%").circle
-//- 							br
-//- 							b.title ธเนษฐ ชวาลสันตติ
-//- 							br 
-//- 							| คณิตศาสตร์ เล่ม 1
+				h6 เนื้อหาที่เรียน
+				ul.collection
+					li(ng-repeat="topic in classroom.topics").collection-item {{topic}}
+	
+					center
+						img(ng-src="images/{{classroom.teacher_image}}",width="50%").circle
+						br
+						b.title {{classroom.teacher_name}}
+						br 
+						| ครูผู้สอน
+
 					
 
 
 
 
 
-//- //- action button teacher (add classroom)
-//- div(style="bottom: 55px; right: 55px;",ng-show="isTeacher").fixed-action-btn.animated.fadeInDown
-//- 	a(data-position="top",data-delay="50",data-tooltip="สร้างห้องเรียน").btn-floating.btn-large.orange.darken-2.waves-effect.waves-light.btn.tooltipped
-//- 		i.large.material-icons add
-//- //- action button student (searching classroom)
-//- div(style="bottom: 55px; right: 55px;",ng-show="isStudent").fixed-action-btn.animated.fadeInDown
-//- 	a(data-position="top",data-delay="50",data-tooltip="ค้นหาห้องเรียน").btn-floating.btn-large.orange.darken-2.waves-effect.waves-light.btn.tooltipped
-//- 		i.large.material-icons.right school
+//- action button teacher (add classroom)
+div(style="bottom: 55px; right: 55px;",ng-show="isTeacher").fixed-action-btn.animated.fadeInDown
+	a(data-position="top",data-delay="50",data-tooltip="สร้างห้องเรียน").btn-floating.btn-large.orange.darken-2.waves-effect.waves-light.btn.tooltipped
+		i.large.material-icons add
+//- action button student (searching classroom)
+div(style="bottom: 55px; right: 55px;",ng-show="isStudent").fixed-action-btn.animated.fadeInDown
+	a(data-position="top",data-delay="50",data-tooltip="ค้นหาห้องเรียน").btn-floating.btn-large.orange.darken-2.waves-effect.waves-light.btn.tooltipped
+		i.large.material-icons.right school
 
 
-//- script(src="scripts/charts/chart2.js")
-//- script.
-//- 	$(document).ready(function(){
-//- 		$('.modal-trigger').leanModal();
-//- 		$('.tooltipped').tooltip({delay: 50});
-//- 		$('.evolution-line').hide();
-//- 		$('.avatar').on('mouseenter',function(){
-//- 			$('.evolution-line').fadeToggle('slow');
-//- 		});
-//- 		$('.avatar').on('mouseleave',function(){
-//- 			$('.evolution-line').fadeToggle('slow');
-//- 		});
-//- 	});
+script(src="scripts/charts/chart2.js")
+script.
+	$(document).ready(function(){
+		$('.modal-trigger').leanModal();
+		$('.tooltipped').tooltip({delay: 50});
+		$('.evolution-line').hide();
+		$('.avatar').on('mouseenter',function(){
+			$('.evolution-line').fadeToggle('slow');
+		});
+		$('.avatar').on('mouseleave',function(){
+			$('.evolution-line').fadeToggle('slow');
+		});
+	});

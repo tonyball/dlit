@@ -7,7 +7,8 @@
 			"duration":12600,
 			"image":"maths-logo.jpg",
 			"user_id":"99100",
-			"teacher_name":"",
+			"teacher_name":"ธเนษฐ ชวาลสันตติ",
+			"teacher_image":"maths-teacher.jpg",
 			"subject_id":"1",
 			"grade":"M4",
 			"tags":["คณิตศาสตร์", "เซต"]
