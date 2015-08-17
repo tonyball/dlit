@@ -16,6 +16,12 @@
 				i.material-icons.left local_offer
 				a(href="#",ng-repeat="tag in classroom.tags").deep-orange-text {{ tag+" " }}
 
+				.row
+				center
+					a.modal-trigger.waves-effect.waves-orange.btn-flat.black-text(ng-click="openModalById(classroom.code)")
+						i.material-icons.left people
+						|  รายชื่อนักเรียน
+
 			.card-reveal
 				span.card-title.activator.grey-text.text-darken-4 
 					| {{ classroom.title }}
@@ -29,12 +35,7 @@
 					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange จัดการห้องเรียน
 					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange  ติดตามนักเรียน
 					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange  งานนักเรียน
-
-			.card-action
-				center
-					a.modal-trigger.waves-effect.waves-orange.btn-flat.black-text(onclick="openModalById('MATH7K345');")
-						i.material-icons.left people
-						|  รายชื่อนักเรียน
+				
 
 	//- studentlist by classroom (for teacher)
 	.modal.bottom-sheet(ng-show="isTeacher", id="studentlist-{{classroom.code}}")
@@ -180,10 +181,6 @@ div(style="bottom: 55px; right: 55px;",ng-show="isStudent").fixed-action-btn.ani
 
 script(src="scripts/charts/chart2.js")
 script.
-	var openModalById = function(id){
-		var modal = $('#studentlist-'+id);
-		$(modal).openModal();
-	}
 	$(document).ready(function(){
 		$('.modal-trigger').leanModal();
 		$('.tooltipped').tooltip({delay: 50});

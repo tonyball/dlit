@@ -5,6 +5,11 @@ angular.module('dlitApp')
     $scope.isStudent = false
     $scope.isTeacher = false
     $scope.user_classrooms = []
+    $scope.openModalById = (id) ->
+      modal = document.getElementById('studentlist-' + id)
+      alert(id)
+      $(modal).openModal()
+      return
 
     $http.get('json/users.json').success (users_data) ->
       $scope.users = users_data
