@@ -13,16 +13,16 @@
 							|  เซต (เบื้องต้น)
 						.collapsible-body
 							ul.collection
-								a(href="").video-link.black-text.collection-item.waves-effect.waves-orange.active
+								a(data-href="videos/dlit_maths_set/01.mp4").video-link.black-text.collection-item.waves-effect.waves-orange.active
 									i.material-icons.left local_movies
 									| วิดีโอที่ 1	
 									.secondary-content
 										i.material-icons.green-text play_arrow
-								a(href="").video-link.black-text.collection-item.waves-effect.waves-orange  
+								a(data-href="videos/dlit_maths_set/02.mp4").video-link.black-text.collection-item.waves-effect.waves-orange  
 									i.material-icons.left border_color
 									| แบบฝึกหัดที่ 1	
 									.secondary-content								
-								a(href="").video-link.black-text.collection-item.waves-effect.waves-orange   
+								a(data-href="videos/dlit_maths_set/03.mp4").video-link.black-text.collection-item.waves-effect.waves-orange   
 									i.material-icons.left question_answer
 									| เฉลยแบบฝึกหัดที่ 1
 									.secondary-content
@@ -88,5 +88,6 @@ script.
 			$(this).addClass('active');
 			$('.video-link').find($('.secondary-content')).html('');
 			$(this).find($('.secondary-content')).html('<i class="material-icons green-text">play_arrow</i>');
+			$('#video-item').attr('src',$(this).attr('data-href'));
 		});
 	})
