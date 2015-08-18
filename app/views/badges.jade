@@ -1,21 +1,22 @@
 .row
 	.col.s12.m6.l4
-		.card.green.accent-1
+		.card.deep-orange.accent-1
 			.card-image.waves-effect.waves-block.waves-dark
 				.row
 				center
-					img.activator.badge-image(src="images/badges/earth/earth.png")
+					img.activator.badge-image(src="images/badges/meteorite/meteorite.png")
 			.card-content
 				span.card-title.activator.grey-text.text-darken-4 
 					i.material-icons.right more_vert
-					| Earth Badges
+					| Meteorite Badges
+				p.grey-text.text-darken-4 Meteorite badges are common and easy to earn when just getting started.
 			.card-reveal
 				span.card-title.activator.grey-text.text-darken-4 
 					i.material-icons.right.red-text close
-					| Earth Badges
+					| Meteorite Badges
 				ul.collection
-					li.collection-item.avatar(ng-repeat="badge in earths")
-						img(ng-src="images/badges/earth/{{badge.image}}",title="{{badge.description}}",data-position="bottom",data-delay="50",data-tooltip="{{badge.name}}").circle.tooltipped
+					li.collection-item.avatar(ng-repeat="badge in meteorites")
+						img(ng-src="images/badges/meteorite/{{badge.image}}",title="{{badge.description}}",data-position="bottom",data-delay="50",data-tooltip="{{badge.name}}").circle.tooltipped
 						b.title {{badge.name}}
 						br
 						em.grey-text {{badge.description}}
@@ -29,6 +30,8 @@
 				span.card-title.activator.grey-text.text-darken-4 
 					i.material-icons.right more_vert
 					| Moon Badges
+				p.grey-text.text-darken-4 Moon badges are uncommon and represent an investment in learning.
+
 			.card-reveal
 				span.card-title.activator.grey-text.text-darken-4 
 					i.material-icons.right.red-text close
@@ -50,6 +53,7 @@
 				span.card-title.activator.grey-text.text-darken-4 
 					i.material-icons.right more_vert
 					| Blackhole Badges
+				p.grey-text.text-darken-4 Black Hole badges are legendary and unknown. They are the rarest Khan Academy awards.
 			.card-reveal
 				span.card-title.activator.grey-text.text-darken-4 
 					i.material-icons.right.red-text close
@@ -72,6 +76,7 @@
 				span.card-title.activator.grey-text.text-darken-4 
 					i.material-icons.right more_vert
 					| Sun Badges
+				p.grey-text.text-darken-4 Sun badges are epic. Earning them is a true challenge, and they require impressive dedication
 			.card-reveal
 				span.card-title.activator.grey-text.text-darken-4 
 					i.material-icons.right.red-text close
@@ -82,24 +87,24 @@
 						b.title {{badge.name}}
 						br
 						em.grey-text {{badge.description}}
-
 	.col.s12.m6.l4.offset-m3
-		.card.deep-orange.accent-1
+		.card.green.accent-1
 			.card-image.waves-effect.waves-block.waves-dark
 				.row
 				center
-					img.activator.badge-image(src="images/badges/meteorite/meteorite.png")
+					img.activator.badge-image(src="images/badges/earth/earth.png")
 			.card-content
 				span.card-title.activator.grey-text.text-darken-4 
 					i.material-icons.right more_vert
-					| Meteorite Badges
+					| Earth Badges
+				p.grey-text.text-darken-4 Earth badges are rare. They require a significant amount of learning.
 			.card-reveal
 				span.card-title.activator.grey-text.text-darken-4 
 					i.material-icons.right.red-text close
-					| Meteorite Badges
+					| Earth Badges
 				ul.collection
-					li.collection-item.avatar(ng-repeat="badge in meteorites")
-						img(ng-src="images/badges/meteorite/{{badge.image}}",title="{{badge.description}}",data-position="bottom",data-delay="50",data-tooltip="{{badge.name}}").circle.tooltipped
+					li.collection-item.avatar(ng-repeat="badge in earths")
+						img(ng-src="images/badges/earth/{{badge.image}}",title="{{badge.description}}",data-position="bottom",data-delay="50",data-tooltip="{{badge.name}}").circle.tooltipped
 						b.title {{badge.name}}
 						br
 						em.grey-text {{badge.description}}
