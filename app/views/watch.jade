@@ -5,17 +5,17 @@
 			.card-image
 				img(src="images/classroom/maths-logo.jpg").hide-on-med-and-down
 			.card-content
-				span.card-title.black-text เซต (Set)
+				span.card-title.black-text {{classroom.title +" | "+classroom.code}}
 				ul.collapsible.z-depth-0.classrooom-sidenav(data-collapsible="accordion")
 					li
 						.collapsible-header.active
 							i.material-icons.left keyboard_arrow_down
-							|  เซต (เบื้องต้น)
+							|  {{classroom.title}} (เบื้องต้น)
 						.collapsible-body
 							ul.collection
-								a(data-href="videos/dlit_maths_set/01.mp4").video-link.black-text.collection-item.waves-effect.waves-orange.active
+								a(data-href="{{video.video_url}}").video-link.black-text.collection-item.waves-effect.waves-orange.active
 									i.material-icons.left local_movies
-									| วิดีโอที่ 1	
+									| {{video.title}}
 									.secondary-content
 										i.material-icons.green-text play_arrow
 								a(data-href="videos/dlit_maths_set/02.mp4").video-link.black-text.collection-item.waves-effect.waves-orange  
@@ -29,7 +29,7 @@
 					li
 						.collapsible-header
 							i.material-icons.left keyboard_arrow_down
-							|  เซต (ตะลุยโจทย์)
+							|  {{classroom.title}} (ตะลุยโจทย์)
 						.collapsible-body
 							ul.collection
 								a(href="").video-link.black-text.collection-item.waves-effect.waves-orange
@@ -39,12 +39,15 @@
 								a(href="").video-link.black-text.collection-item.waves-effect.waves-orange  
 									i.material-icons.left check_circle
 									| เฉลยโจทย์ปัญหาที่ 1	
-									.secondary-content		
+									.secondary-content
+					li
+						.collapsible-header
+							a(href="").black-text
+								i.material-icons.left insert_drive_file
+								|  {{classroom.title}} (แบบทดสอบ)
 			.card-action
 				i.material-icons.left local_offer
-				a(href="#").deep-orange-text คณิตศาสตร์
-				b ,
-				a(href="#").deep-orange-text เซต						
+				a(href="#",ng-repeat="tag in classroom.tags").deep-orange-text {{tag+" "}}				
 
 				
 

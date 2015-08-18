@@ -1,0 +1,152 @@
+[
+		{
+			"id":"1",
+			"score":"80",
+			"exercise_id":"1",
+			"classroom_id":"1",
+			"subject_id":"1",
+			"type":"1",
+			"datetime":"15-7-2015 11:30",
+			"user_id":"50011"
+		},
+		{
+			"id":"2",
+			"score":"70",
+			"exercise_id":"1",
+			"classroom_id":"1",
+			"subject_id":"1",
+			"type":"1",
+			"datetime":"15-7-2015 11:30",
+			"user_id":"50029"
+		},
+		{
+			"id":"3",
+			"score":"75",
+			"exercise_id":"1",
+			"classroom_id":"1",
+			"subject_id":"1",
+			"type":"1",
+			"datetime":"15-7-2015 11:30",
+			"user_id":"50037"
+		},
+		{
+			"id":"4",
+			"score":"70",
+			"exercise_id":"1",
+			"classroom_id":"1",
+			"subject_id":"1",
+			"type":"1",
+			"datetime":"15-7-2015 11:30",
+			"user_id":"50053"
+		},
+		{
+			"id":"5",
+			"score":"60",
+			"exercise_id":"1",
+			"classroom_id":"1",
+			"subject_id":"1",
+			"type":"1",
+			"datetime":"15-7-2015 11:30",
+			"user_id":"50088"
+		},
+		{
+			"id":"6",
+			"score":"50",
+			"exercise_id":"1",
+			"classroom_id":"1",
+			"subject_id":"1",
+			"type":"1",
+			"datetime":"15-7-2015 11:30",
+			"user_id":"50096"
+		},
+		{
+			"id":"7",
+			"score":"98",
+			"exercise_id":"1",
+			"classroom_id":"1",
+			"subject_id":"1",
+			"type":"1",
+			"datetime":"15-7-2015 11:30",
+			"user_id":"50100"
+		},
+		{
+			"id":"8",
+			"score":"53",
+			"exercise_id":"1",
+			"classroom_id":"1",
+			"subject_id":"1",
+			"type":"1",
+			"datetime":"15-7-2015 11:30",
+			"user_id":"50126"
+		},
+		{
+			"id":"9",
+			"score":"42",
+			"exercise_id":"1",
+			"classroom_id":"1",
+			"subject_id":"1",
+			"type":"1",
+			"datetime":"15-7-2015 11:30",
+			"user_id":"50134"
+		},
+		{
+			"id":"10",
+			"score":"42",
+			"exercise_id":"1",
+			"classroom_id":"1",
+			"subject_id":"1",
+			"type":"1",
+			"datetime":"15-7-2015 11:30",
+			"user_id":"50142"
+		},
+		{
+			"id":"11",
+			"score":"54",
+			"exercise_id":"1",
+			"classroom_id":"1",
+			"subject_id":"1",
+			"type":"1",
+			"datetime":"15-7-2015 11:30",
+			"user_id":"50169"
+		},
+		{
+			"id":"12",
+			"score":"65",
+			"exercise_id":"1",
+			"classroom_id":"1",
+			"subject_id":"1",
+			"type":"1",
+			"datetime":"15-7-2015 11:30",
+			"user_id":"50657"
+		},
+		{
+			"id":"13",
+			"score":"42",
+			"exercise_id":"1",
+			"classroom_id":"1",
+			"subject_id":"1",
+			"type":"1",
+			"datetime":"15-7-2015 11:30",
+			"user_id":"50681"
+		},
+		{
+			"id":"14",
+			"score":"88",
+			"exercise_id":"1",
+			"classroom_id":"1",
+			"subject_id":"1",
+			"type":"1",
+			"datetime":"15-7-2015 11:30",
+			"user_id":"50690"
+		},
+		{
+			"id":"15",
+			"score":"77",
+			"exercise_id":"1",
+			"classroom_id":"1",
+			"subject_id":"1",
+			"type":"1",
+			"datetime":"15-7-2015 11:30",
+			"user_id":"50720"
+		}
+]

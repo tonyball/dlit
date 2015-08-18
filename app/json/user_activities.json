@@ -3,45 +3,35 @@
 			"id":"1",
 			"user_id":"50011",
 			"activity_type":"1",
-			"activity_description":"เข้าเรียน เซต (Set)(MATH7K345) : ทำแบบทดสอบ",
+			"description":"เข้าเรียน เซต (Set)(MATH7K345) : ทำแบบทดสอบ",
 			"datetime":"15-07-2015 10:00"
 		},
 		{
 			"id":"2",
 			"user_id":"50011",
 			"activity_type":"1",
-			"activity_description":"เข้าเรียน เซต (Set)(MATH7K345) : แนะนำเซต",
+			"description":"เข้าเรียน เซต (Set)(MATH7K345) : แนะนำเซต",
 			"datetime":"14-07-2015 13:30"
 		},
 		{
 			"id":"3",
 			"user_id":"50011",
 			"activity_type":"1",
-			"activity_description":"เข้าเรียน เซต (Set)(MATH7K345) : เอกภพสัมพัทธ์",
+			"description":"เข้าเรียน เซต (Set)(MATH7K345) : เอกภพสัมพัทธ์",
 			"datetime":"14-07-2015 13:00"
 		},
 		{
 			"id":"4",
 			"user_id":"50011",
 			"activity_type":"1",
-			"activity_description":"เข้าเรียน เซต (Set)(MATH7K345) : การเท่ากันของเซต",
+			"description":"เข้าเรียน เซต (Set)(MATH7K345) : การเท่ากันของเซต",
 			"datetime":"14-07-2015 12:00"
 		},
 		{
 			"id":"5",
 			"user_id":"50011",
 			"activity_type":"1",
-			"activity_description":"เข้าเรียน เซต (Set)(MATH7K345) : เซตจำกัดและเซตอนัน",
+			"description":"เข้าเรียน เซต (Set)(MATH7K345) : เซตจำกัดและเซตอนัน",
 			"datetime":"13-07-2015 10:00"
-		},
-		{
-			"id":"6",
-			"user_id":"50011",
-			"activity_type":"1",
-			"activity_description":"เข้าเรียน เซต (Set)(MATH7K345) : เซตจำกัดและเซตอนัน",
-			"datetime":"15-07-2015 10:00"
 		}
-
-
-
 ]

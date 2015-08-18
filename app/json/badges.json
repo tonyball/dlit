@@ -2,202 +2,199 @@
 	{
 		"id":"1",
 		"name":"Act 1 Scene 1",
-		"derscription":"ดูวีดีโอ ครบ 20 นาที",
+		"description":"ดูวีดีโอ ครบ 20 นาที",
 		"image":"act-1-scene-1.png",
 		"condition":"",
-		"group":"mateorite"
+		"group":"meteorite"
 	},
 	{
 		"id":"2",
 		"name":"Express Yourself",
-		"derscription":"ปรับแต่งรูปและข้อมูลโปรไฟล์",
+		"description":"ปรับแต่งรูปและข้อมูลโปรไฟล์",
 		"image":"express-yourself.png",
 		"condition":"",
-		"group":"mateorite"
+		"group":"meteorite"
 	},
 	{
 		"id":"3",
 		"name":"Picking Up Steam",
-		"derscription":"Quickly & correctly answer 5 skill problems in a row (time limit depends on skill difficulty)
-",
+		"description":"Quickly & correctly answer 5 skill problems in a row (time limit depends on skill difficulty)",
 		"image":"picking-up-steam.png",
 		"condition":"",
-		"group":"mateorite"
+		"group":"meteorite"
 	},
 	{
 		"id":"4",
 		"name":"Just Getting Started",
-		"derscription":"Achieve mastery in 3 unique skills",
+		"description":"Achieve mastery in 3 unique skills",
 		"image":"just-getting-started.png",
 		"condition":"",
-		"group":"mateorite"
+		"group":"meteorite"
 	},
 	{
 		"id":"5",
 		"name":"Inspiration",
-		"derscription":"Another user created a program based on one of yours
-",
+		"description":"Another user created a program based on one of yours",
 		"image":"inspiration.png",
 		"condition":"",
-		"group":"mateorite"
+		"group":"meteorite"
 	},
 	{
 		"id":"6",
 		"name":"Brain Builder",
-		"derscription":"You finished your first brain fitness test. Great job!
-",
+		"description":"You finished your first brain fitness test. Great job!",
 		"image":"math-pretest-champion.png",
 		"condition":"",
-		"group":"mateorite"
+		"group":"meteorite"
 	},
 	{
 		"id":"7",
 		"name":"Making Progress",
-		"derscription":"Achieve mastery in 7 unique skills",
+		"description":"Achieve mastery in 7 unique skills",
 		"image":"making-progress.png",
 		"condition":"",
-		"group":"mateorite"
+		"group":"meteorite"
 	},
 	{
 		"id":"8",
 		"name":"Good Habits",
-		"derscription":"Watch part of any video or work on any skill each day for 5 consecutive days",
+		"description":"Watch part of any video or work on any skill each day for 5 consecutive days",
 		"image":"good-habits.png",
 		"condition":"",
-		"group":"mateorite"
+		"group":"meteorite"
 	},
 	{
 		"id":"9",
 		"name":"Flag Duty",
-		"derscription":"Flag your first discussion post on a video or program for a Guardian's attention",
-		"image":".png",
+		"description":"Flag your first discussion post on a video or program for a Guardian's attention",
+		"image":"flag-duty.png",
 		"condition":"",
-		"group":"mateorite"
+		"group":"meteorite"
 	},
 	{
 		"id":"10",
 		"name":"Thumbs Up",
-		"derscription":"Cast your first up vote for a helpful discussion post or program",
-		"image":"flag-duty.png",
+		"description":"Cast your first up vote for a helpful discussion post or program",
+		"image":"thumbs-up.png",
 		"condition":"",
-		"group":"mateorite"
+		"group":"meteorite"
 	},
 	{
 		"id":"11",
 		"name":"Thumbs Down",
-		"derscription":"Cast your first down vote for an unhelpful discussion post or program",
+		"description":"Cast your first down vote for an unhelpful discussion post or program",
 		"image":"thumbs-down.png",
 		"condition":"",
-		"group":"mateorite"
+		"group":"meteorite"
 	},
 	{
 		"id":"12",
 		"name":"Evaluator",
-		"derscription":"Evaluate a student's project",
+		"description":"Evaluate a student's project",
 		"image":"meteorite.png",
 		"condition":"",
-		"group":"mateorite"
+		"group":"meteorite"
 	},
 	{
 		"id":"13",
 		"name":"Researcher",
-		"derscription":"Reference a timestamp when answering a question on a video or program",
+		"description":"Reference a timestamp when answering a question on a video or program",
 		"image":"Researcher.png",
 		"condition":"",
-		"group":"mateorite"
+		"group":"meteorite"
 	},
 	{
 		"id":"14",
 		"name":"Bibliographer",
-		"derscription":"Reference a timestamp when asking a question on a video or program",
+		"description":"Reference a timestamp when asking a question on a video or program",
 		"image":"bibliographer.png",
 		"condition":"",
-		"group":"mateorite"
+		"group":"meteorite"
 	},
 	{
 		"id":"15",
 		"name":"You Can Learn Anything",
-		"derscription":"You only have to know one thing -- You can learn anything. Join the movement.",
+		"description":"You only have to know one thing -- You can learn anything. Join the movement.",
 		"image":"perseverance.png",
 		"condition":"",
-		"group":"mateorite"
+		"group":"meteorite"
 	},
 	{
 		"id":"16",
 		"name":"Ten to the Fourth",
-		"derscription":"Earn 10,000 energy points",
+		"description":"Earn 10,000 energy points",
 		"image":"ten-to-fourth.png",
 		"condition":"",
-		"group":"mateorite"
+		"group":"meteorite"
 	},
 	{
 		"id":"17",
 		"name":"Inspired 15 Minutes",
-		"derscription":"Correctly answer 10 problems and watch 10 minutes of video in 15 minutes",
+		"description":"Correctly answer 10 problems and watch 10 minutes of video in 15 minutes",
 		"image":"inspired-15-minutes.png",
 		"condition":"",
-		"group":"mateorite"
+		"group":"meteorite"
 	},
 	{
 		"id":"18",
 		"name":"Express Yourself",
-		"derscription":"Customize your profile avatar and fill up your display case",
+		"description":"Customize your profile avatar and fill up your display case",
 		"image":"express-yourself.png",
 		"condition":"",
-		"group":"mateorite"
+		"group":"meteorite"
 	},
 	{
 		"id":"19",
 		"name":"Persistence",
-		"derscription":"Answer a problem correctly after having some trouble with a few problems and sticking with the skill",
+		"description":"Answer a problem correctly after having some trouble with a few problems and sticking with the skill",
 		"image":"perseverance.png",
 		"condition":"",
-		"group":"mateorite"
+		"group":"meteorite"
 	},
 	{
 		"id":"20",
 		"name":"Nice Streak",
-		"derscription":"Correctly answer 20 problems in a row in a single skill",
+		"description":"Correctly answer 20 problems in a row in a single skill",
 		"image":"nice-streak.png",
 		"condition":"",
-		"group":"mateorite"
+		"group":"meteorite"
 	},
 	{
 		"id":"21",
 		"name":"Cypress",
-		"derscription":"Remain a member of Khan Academy for 1 yearl",
+		"description":"Remain a member of Khan Academy for 1 yearl",
 		"image":"cypress.png",
 		"condition":"",
-		"group":"mateorite"
+		"group":"meteorite"
 	},
 	{
 		"id":"22",
 		"name":"Nice Listener",
-		"derscription":"Watch 15 minutes of video in a single topic",
+		"description":"Watch 15 minutes of video in a single topic",
 		"image":"great-listener.png",
 		"condition":"",
-		"group":"mateorite"
+		"group":"meteorite"
 	},
 	{
 		"id":"23",
 		"name":"Great Listener",
-		"derscription":"Watch 30 minutes of video in a single topic",
+		"description":"Watch 30 minutes of video in a single topic",
 		"image":"great-listener.png",
 		"condition":"",
-		"group":"mateorite"
+		"group":"meteorite"
 	},
 	{
 		"id":"24",
 		"name":"Challenger",
-		"derscription":"Complete a Computer Science Challenge",
+		"description":"Complete a Computer Science Challenge",
 		"image":"tinkerer.png",
 		"condition":"",
-		"group":"mateorite"
+		"group":"meteorite"
 	},
 	{
 		"id":"25",
 		"name":"Going Transonic",
-		"derscription":"Quickly & correctly answer 10 skill problems in a row (time limit depends on skill difficulty)",
+		"description":"Quickly & correctly answer 10 skill problems in a row (time limit depends on skill difficulty)",
 		"image":"going-transonic.png",
 		"condition":"",
 		"group":"moon"
@@ -205,8 +202,7 @@
 	{
 		"id":"26",
 		"name":"Going Supersonic",
-		"derscription":"Quickly & correctly answer 20 skill problems in a row (time limit depends on skill difficulty)
-",
+		"description":"Quickly & correctly answer 20 skill problems in a row (time limit depends on skill difficulty)",
 		"image":"going-supersonic.png",
 		"condition":"",
 		"group":"moon"
@@ -214,7 +210,7 @@
 	{
 		"id":"27",
 		"name":"Good Inspiration",
-		"derscription":"Other users created 10 programs based on one of yours",
+		"description":"Other users created 10 programs based on one of yours",
 		"image":"good-inspiration.png",
 		"condition":"",
 		"group":"moon"
@@ -222,7 +218,7 @@
 	{
 		"id":"28",
 		"name":"1000 Kelvin",
-		"derscription":"Have a red-hot program at the top of the Community Programs list",
+		"description":"Have a red-hot program at the top of the Community Programs list",
 		"image":"1000-kelvin.png",
 		"condition":"",
 		"group":"moon"
@@ -230,7 +226,7 @@
 	{
 		"id":"29",
 		"name":"Brain Bonanza",
-		"derscription":"By taking the same brain fitness test several times, you are watching yourself learn!",
+		"description":"By taking the same brain fitness test several times, you are watching yourself learn!",
 		"image":"productive.png",
 		"condition":"",
 		"group":"moon"
@@ -238,7 +234,7 @@
 	{
 		"id":"30",
 		"name":"Productive",
-		"derscription":"Achieve mastery in 15 unique skills",
+		"description":"Achieve mastery in 15 unique skills",
 		"image":"productive.png",
 		"condition":"",
 		"group":"moon"
@@ -246,7 +242,7 @@
 	{
 		"id":"31",
 		"name":"Hard at Work",
-		"derscription":"Achieve mastery in 25 unique skills",
+		"description":"Achieve mastery in 25 unique skills",
 		"image":"productive.png",
 		"condition":"",
 		"group":"moon"
@@ -254,7 +250,7 @@
 	{
 		"id":"32",
 		"name":"Geek of the week: practice",
-		"derscription":"Finish 5 practice tasks in a week",
+		"description":"Finish 5 practice tasks in a week",
 		"image":"weekly-goal.png",
 		"condition":"",
 		"group":"moon"
@@ -262,7 +258,7 @@
 	{
 		"id":"33",
 		"name":"Geek of the week: mastery",
-		"derscription":"Finish 5 mastery challenges in a week",
+		"description":"Finish 5 mastery challenges in a week",
 		"image":"weekly-mastery.png",
 		"condition":"",
 		"group":"moon"
@@ -270,7 +266,7 @@
 	{
 		"id":"34",
 		"name":"Parent: Getting Started",
-		"derscription":"Complete all items in the 'Parent: Getting Started' checklist",
+		"description":"Complete all items in the 'Parent: Getting Started' checklist",
 		"image":"productive.png",
 		"condition":"",
 		"group":"moon"
@@ -278,7 +274,7 @@
 	{
 		"id":"35",
 		"name":"Coach: Getting Started",
-		"derscription":"Complete all items in the 'Coach: Getting Started' checklist",
+		"description":"Complete all items in the 'Coach: Getting Started' checklist",
 		"image":"productive.png",
 		"condition":"",
 		"group":"moon"
@@ -286,7 +282,7 @@
 	{
 		"id":"36",
 		"name":"Like Clockwork",
-		"derscription":"Watch part of any video or work on any skill each day for 15 consecutive days",
+		"description":"Watch part of any video or work on any skill each day for 15 consecutive days",
 		"image":"like-clockwork.png",
 		"condition":"",
 		"group":"moon"
@@ -294,7 +290,7 @@
 	{
 		"id":"37",
 		"name":"Atomic Clockwork",
-		"derscription":"Watch part of any video or work on any skill each day for 30 consecutive days",
+		"description":"Watch part of any video or work on any skill each day for 30 consecutive days",
 		"image":"atomic-clockwork.png",
 		"condition":"",
 		"group":"moon"
@@ -302,7 +298,7 @@
 	{
 		"id":"38",
 		"name":"Power Hour",
-		"derscription":"Correctly answer 90 problems and watch 15 minutes of video in 1 hour",
+		"description":"Correctly answer 90 problems and watch 15 minutes of video in 1 hour",
 		"image":"power-hour.png",
 		"condition":"",
 		"group":"moon"
@@ -310,7 +306,7 @@
 	{
 		"id":"39",
 		"name":"Redwood",
-		"derscription":"Remain a member of Khan Academy for 2 years",
+		"description":"Remain a member of Khan Academy for 2 years",
 		"image":"redwood.png",
 		"condition":"",
 		"group":"moon"
@@ -318,7 +314,7 @@
 	{
 		"id":"40",
 		"name":"Fact Checker",
-		"derscription":"Have a clarification officially accepted",
+		"description":"Have a clarification officially accepted",
 		"image":"fact-checker.png",
 		"condition":"",
 		"group":"moon"
@@ -326,7 +322,7 @@
 	{
 		"id":"41",
 		"name":"Awesome Listener",
-		"derscription":"Watch 1 hour of video in a single topic",
+		"description":"Watch 1 hour of video in a single topic",
 		"image":"awesome-listener.png",
 		"condition":"",
 		"group":"moon"
@@ -334,7 +330,7 @@
 	{
 		"id":"42",
 		"name":"Ten to the Fifth",
-		"derscription":"Earn 100,000 energy points",
+		"description":"Earn 100,000 energy points",
 		"image":"ten-to-fifth.png",
 		"condition":"",
 		"group":"moon"
@@ -342,7 +338,7 @@
 	{
 		"id":"43",
 		"name":"Ridiculous Streak",
-		"derscription":"Correctly answer 80 problems in a row in a single skill",
+		"description":"Correctly answer 80 problems in a row in a single skill",
 		"image":"Ridiculous-streak.png",
 		"condition":"",
 		"group":"moon"
@@ -350,7 +346,7 @@
 	{
 		"id":"44",
 		"name":"Ludicrous Streak",
-		"derscription":"Correctly answer 100 problems in a row in a single skill",
+		"description":"Correctly answer 100 problems in a row in a single skill",
 		"image":"ludicrous-streak.png",
 		"condition":"",
 		"group":"moon"
@@ -358,7 +354,7 @@
 	{
 		"id":"45",
 		"name":"Great Inspiration",
-		"derscription":"Other users created 25 programs based on one of yours",
+		"description":"Other users created 25 programs based on one of yours",
 		"image":"great-inspiration.png",
 		"condition":"",
 		"group":"earth"
@@ -366,7 +362,7 @@
 	{
 		"id":"46",
 		"name":"Sub-light Speed",
-		"derscription":"Quickly & correctly answer 42 skill problems in a row (time limit depends on skill difficulty)",
+		"description":"Quickly & correctly answer 42 skill problems in a row (time limit depends on skill difficulty)",
 		"image":"sublight-speed.png",
 		"condition":"",
 		"group":"earth"
@@ -374,7 +370,7 @@
 	{
 		"id":"47",
 		"name":"Incredible Inspiration",
-		"derscription":"Other users created 50 programs based on one of yours",
+		"description":"Other users created 50 programs based on one of yours",
 		"image":"incredible-inspiration.png",
 		"condition":"",
 		"group":"earth"
@@ -382,7 +378,7 @@
 	{
 		"id":"48",
 		"name":"Work Horse",
-		"derscription":"Achieve mastery in 50 unique skills",
+		"description":"Achieve mastery in 50 unique skills",
 		"image":"work-horse.png",
 		"condition":"",
 		"group":"earth"
@@ -390,7 +386,7 @@
 	{
 		"id":"49",
 		"name":"10,000 Year Clock",
-		"derscription":"Watch part of any video or work on any skill each day for 100 consecutive days",
+		"description":"Watch part of any video or work on any skill each day for 100 consecutive days",
 		"image":"10000-year-clock.png",
 		"condition":"",
 		"group":"earth"
@@ -398,7 +394,7 @@
 	{
 		"id":"50",
 		"name":"Magellan",
-		"derscription":"Achieve mastery in 100 unique skills",
+		"description":"Achieve mastery in 100 unique skills",
 		"image":"magellan.png",
 		"condition":"",
 		"group":"sun"
@@ -406,7 +402,7 @@
 	{
 		"id":"51",
 		"name":"Sally Ride",
-		"derscription":"Achieve mastery in 150 unique skills",
+		"description":"Achieve mastery in 150 unique skills",
 		"image":"sally-ride.png",
 		"condition":"",
 		"group":"sun"
@@ -414,7 +410,7 @@
 	{
 		"id":"52",
 		"name":"Copernicus",
-		"derscription":"Achieve mastery in 200 unique skills",
+		"description":"Achieve mastery in 200 unique skills",
 		"image":"copernicus.png",
 		"condition":"",
 		"group":"sun"
@@ -422,7 +418,7 @@
 	{
 		"id":"53",
 		"name":"Kepler",
-		"derscription":"Achieve mastery in 300 unique skills",
+		"description":"Achieve mastery in 300 unique skills",
 		"image":"kepler.png",
 		"condition":"",
 		"group":"sun"
@@ -430,7 +426,7 @@
 	{
 		"id":"54",
 		"name":"Hypatia",
-		"derscription":"Achieve mastery in 350 unique skills",
+		"description":"Achieve mastery in 350 unique skills",
 		"image":"hypatia.png",
 		"condition":"",
 		"group":"sun"
@@ -438,13 +434,9 @@
 	{
 		"id":"55",
 		"name":"Atlas",
-		"derscription":"???",
+		"description":"???",
 		"image":"blackhole.png",
 		"condition":"",
-		"group":"black_hole"
+		"group":"blackhole"
 	}
-
-
-
-
 ]

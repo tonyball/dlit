@@ -6,9 +6,14 @@ angular.module('dlitApp')
     $scope.isTeacher = false
     $scope.user_classrooms = []
     $scope.std_classrooms = []
+    $scope.user_activities = []  
+    $scope.user_scores = []
+    $scope.user_badges = []
     $scope.openModalById = (id) ->
       modal = document.getElementById('studentlist-' + id)
       $(modal).openModal()
+
+    $scope.tooltipOver = -> $('.tooltipped').tooltip delay: 50
 
     $http.get('json/users.json').success (users_data) ->
       $scope.users = users_data
@@ -16,9 +21,10 @@ angular.module('dlitApp')
       for u in $scope.users 
         if u.id == '99100'
           $scope.user = u
-          $scope.user.score = 80
           break
+      $rootScope.current_user = $scope.user
 
+      # student's logics
       if $scope.user.role == '1'
         $scope.isStudent = true
         $http.get('json/classrooms.json').success (classrooms_data) ->
@@ -33,7 +39,41 @@ angular.module('dlitApp')
                     c.finished = uc.finished
                     $scope.std_classrooms.push c
 
+            $http.get('json/user_activities.json').success (user_activities_data) ->
+              for uad in user_activities_data
+                if $scope.user.id == uad.user_id
+                  $scope.user_activities.push uad 
 
+            $http.get('json/user_scores.json').success (user_scores_data) -> 
+              $http.get('json/exercises.json').success (exercises_data) ->
+                for us in user_scores_data
+                  if $scope.user.id == us.user_id
+                    for ed in exercises_data
+                      if us.exercise_id == ed.id
+                        us.title = ed.title
+                        $scope.user_scores.push us
+                        
+                $scope.user.score = 0
+                $scope.user.score += parseInt(s.score) for s in $scope.user_scores
+
+            $http.get('json/user_badges.json').success (user_badges_data) ->
+              $http.get('json/badges.json').success (badges_data) ->
+                for ubd in user_badges_data
+                  if ubd.user_id == $scope.user.id && ubd.show == 1
+                    for bd in badges_data
+                      if ubd.badge_id == bd.id
+                        ubd.name = bd.name
+                        ubd.description = bd.description
+                        ubd.image = bd.image
+                        ubd.group = bd.group
+                        $scope.user_badges.push ubd
+                $scope.user_show_badges = $scope.user_badges
+                over = $scope.user_show_badges.length - 10
+                if (over > 0)
+                  $scope.user_show_badges = $scope.user_badges[($scope.user_badges.length-10)..$scope.user_badges.length]
+
+
+      # teacher's logics
       else
         $scope.isTeacher = true
         $http.get('json/classrooms.json').success (classrooms_data) ->

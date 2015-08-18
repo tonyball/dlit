@@ -1,38 +1,39 @@
 //- filter
 form
 	.input-field.col.s12
-		select
-			option(value="1",selected) ทุกวิชา 
-			option(value="2") คณิตศาสตร์
-			option(value="3") วิทยาศาสตร์
-			option(value="4") ภาษาอังกฤษ
+		select(name="show-filter").show-filter
+			option(value="0",selected) ทุกวิชา 
+			option(value="1") คณิตศาสตร์
+			option(value="2") วิทยาศาสตร์
+			option(value="3") ภาษาอังกฤษ
 		label เลือกวิชาที่ต้องการ
 
 //- exam list card
 .row
-	.col.s12.m6.l4
+	.col.s12.m6.l4.exam(ng-repeat="exam in exams", data-subject-id="{{exam.subject_id}}")
 		.card
 			.card-content
-				span.card-title.black-text ข้อสอบ O-Net คณิตศาสตร์ 2552 | 40 ข้อ
+				span.card-title.black-text {{exam.title}} | {{exam.number_of_question}} ข้อ
 				br
-				strong วิชา คณิตศาสตร์ | 
-				strong รหัสข้อสอบ EXZY2
-				ul.collection.with-header
-					li.collection-header
-						p เนื้อหาข้อสอบ
-					li.collection-item 1
-					li.collection-item 2
-					li.collection-item 3
-					li.collection-item 4
-				strong ระยะเวลาทำข้อสอบ 120 นาที
+				b วิชา {{exam.subject_name}} | 
+				b รหัสข้อสอบ {{exam.code}}
+				ul.collapsible(data-collapsible="accordion",ng-click="click()")
+					li
+						.collapsible-header(style="border-bottom:0px")
+							i.material-icons.left keyboard_arrow_down
+							| เนื้อหาข้อสอบ
+						.collapsible-body
+							ul.collection.with-header
+								li.collection-item(ng-repeat="topic in exam.topics") {{topic}}
+
+				b ระยะเวลาทำข้อสอบ {{exam.time}} นาที
 				.row
 				i.material-icons.left local_offer
-				a(href="#").deep-orange-text คณิตศาสตร์
-				b , 
-				a(href="#").deep-orange-text เซต
+				a(href="",ng-repeat="tag in exam.tags").deep-orange-text {{tag+" "}}
+
 			.card-action
 				center
-					a.btn-flat.waves-effect.waves-orange.black-text.hide-on-small-only(href="#/exams/EXZY2") 
+					a.btn-flat.waves-effect.waves-orange.black-text.hide-on-small-only(href="#/exams/{{exam.code}}") 
 						i.material-icons.left send
 						| เข้าสอบ
 					em.hide-on-med-and-up.red-text อุปกรณ์ไม่เหมาะสมในการเข้าทำข้อสอบ
@@ -44,7 +45,8 @@ div(style="bottom: 55px; right: 55px;",ng-show="isStudent").fixed-action-btn.ani
 
 
 script.
-	$(document).ready(function(){
+	$(document).ready(function(){	
+		$('.collapsible').collapsible({ accordion : false });
 		$('select').material_select();
 		$('.tooltipped').tooltip({delay: 50});
 	})

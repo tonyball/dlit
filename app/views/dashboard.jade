@@ -65,13 +65,20 @@
 					.col.s2.m2.l2.std-avatar
 						img(ng-src="images/avatar/{{ user.avatar }}.png").avatar.black.responsive-img.hoverable.hide-on-small-only.user-avatar
 						img(src="images/avatar/red-evolution-line.png",width="50%").evolution-line.left
-					.col.s12.m6.l4.std-detail
+					.col.s12.m12.l4.std-detail
 						h5.hide-on-small-only {{user.firstname +" "+ user.lastname}} | {{user.id}}
 						h6.hide-on-med-and-up {{user.firstname +" "+ user.lastname}} | {{user.id}}
 						p {{user.education_level}} ({{user.major}})
 						p {{user.school}}
-					.col.s12.m4.l6.std-badges.right
-						img(src="images/badges/earth/5x10.png").exam-required-badge
+					.col.s12.m12.l6.std-badges.right
+						.badge-box(ng-repeat="badge in user_show_badges")	 
+							b {{badge.name}}
+							br
+							img(ng-src="images/badges/{{badge.group}}/{{badge.image}}",alt="{{badge.name}}",title="{{badge.description}}",data-position="top",data-delay="50",data-tooltip="{{badge.description}}",ng-click="tooltipOver()").user-badges.tooltipped
+						.row
+						a(data-target="all-badges-modal").btn-flat.waves-effect.waves-orange.right.hoverable.modal-trigger
+							i.material-icons.left stars
+							| ดูทั้งหมด						
 
 			.card-action
 				a(href="#/profile/{{user.id}}").btn-flat.waves-effect.waves-orange.black-text
@@ -79,27 +86,64 @@
 					| แก้ไขข้อมูลส่วนตัว
 				h5.right คะแนนรวม {{user.score}} คะแนน
 
+	//- all badges modal
+	.modal.modal-fixed-footer(ng-show="isStudent")#all-badges-modal
+		.modal-content
+			h5 เหรียญทั้งหมดของ {{user.firstname+" "+user.lastname}}
+
+			ul.collection
+				li(ng-repeat="badge in user_badges").collection-item.avatar
+					img(ng-src="images/badges/{{badge.group}}/{{badge.image}}").circle
+					b.title {{badge.name}}
+					p.grey-text.lighten-1 {{badge.description}}
+
+		.modal-footer
+			a.modal-action.modal-close.waves-effect.waves-red.btn-flat.red-text  
+				i.material-icons.left close
+				| ปิด
+
 	.col.s12.m6
 		.card.animated.zoomInUp.green
 			.card-content
 				span.card-title.black-text กิจกรรมล่าสุด
 			.card-action.white
+				div(ng-repeat="activity in user_activities") 
+					b.grey-text {{activity.datetime}}
+					br
+					| {{activity.description}}
+					br
+					br
+					li.divider
+					br
 
 	.col.s12.m6
 		.card.animated.zoomInUp.green
 			.card-content
 				span.card-title.black-text คะแนน
 			.card-action.white
+				div(ng-repeat="score in user_scores")
+					b.grey-text {{score.datetime}}
+					br
+					b.left {{score.title}} 
+					b.deep-orange-text.right {{score.score}} คะแนน
+					br
+					br
+					li.divider
+
 
 	.col.s12.hide-on-small-only
 		.card.blue
 			.card-content
 				span.card-title.black-text ภาพรวมการเรียน
 			.card-action.white
+				center
+					h5 เดือนกรกฏาคม 2558
 				#chart
 
 //- student's learning class list
 h4(ng-show="isStudent").center-align.grey-text.text-darken-2 บทเรียนที่กำลังศึกษา 
+center(ng-show="std_classrooms.length == 0") 
+	em ไม่มีบทเรียนที่กำลังศึกษาอยู่
 .row(ng-show="isStudent",ng-repeat="classroom in std_classrooms")
 	.col.s12.m6.l4
 		.card.animated.rotateInDownLeft
@@ -114,7 +158,7 @@ h4(ng-show="isStudent").center-align.grey-text.text-darken-2 บทเรีย�
 					em รหัสห้องเรียน: {{classroom.code}}
 				.row
 				center 
-					a.waves-effect.waves-orange.btn-flat(href='#/watch/{{classroom.code}}')
+					a.waves-effect.waves-orange.btn-flat.hoverable(href='#/watch/{{classroom.code}}')
 						i.material-icons.left play_circle_outline
 						|  เข้าเรียน
 					.row

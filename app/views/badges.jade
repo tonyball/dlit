@@ -13,8 +13,12 @@
 				span.card-title.activator.grey-text.text-darken-4 
 					i.material-icons.right.red-text close
 					| Earth Badges
-				img(src="images/badges/earth/5x10.png",data-position="bottom",data-delay="50",data-tooltip="5x10").exam-required-badge.tooltipped
-
+				ul.collection
+					li.collection-item.avatar(ng-repeat="badge in earths")
+						img(ng-src="images/badges/earth/{{badge.image}}",title="{{badge.description}}",data-position="bottom",data-delay="50",data-tooltip="{{badge.name}}").circle.tooltipped
+						b.title {{badge.name}}
+						br
+						em.grey-text {{badge.description}}
 	.col.s12.m6.l4
 		.card.teal
 			.card-image.waves-effect.waves-block.waves-dark
@@ -29,7 +33,12 @@
 				span.card-title.activator.grey-text.text-darken-4 
 					i.material-icons.right.red-text close
 					| Moon Badges
-				p ยังไม่ได้รับเหรียญในกลุ่มนี้
+				ul.collection
+					li.collection-item.avatar(ng-repeat="badge in moons")
+						img(ng-src="images/badges/moon/{{badge.image}}",title="{{badge.description}}",data-position="bottom",data-delay="50",data-tooltip="{{badge.name}}").circle.tooltipped
+						b.title {{badge.name}}
+						br
+						em.grey-text {{badge.description}}
 
 	.col.s12.m6.l4
 		.card.pink.accent-1
@@ -45,7 +54,12 @@
 				span.card-title.activator.grey-text.text-darken-4 
 					i.material-icons.right.red-text close
 					| Blackhole Badges
-				p ยังไม่ได้รับเหรียญในกลุ่มนี้
+				ul.collection
+					li.collection-item.avatar(ng-repeat="badge in blackholes")
+						img(ng-src="images/badges/blackhole/{{badge.image}}",title="{{badge.description}}",data-position="bottom",data-delay="50",data-tooltip="{{badge.name}}").circle.tooltipped
+						b.title {{badge.name}}
+						br
+						em.grey-text {{badge.description}}
 
 
 	.col.s12.m6.l4.offset-l2
@@ -62,7 +76,12 @@
 				span.card-title.activator.grey-text.text-darken-4 
 					i.material-icons.right.red-text close
 					| Sun Badges
-				p ยังไม่ได้รับเหรียญในกลุ่มนี้
+				ul.collection
+					li.collection-item.avatar(ng-repeat="badge in suns")
+						img(ng-src="images/badges/sun/{{badge.image}}",title="{{badge.description}}",data-position="bottom",data-delay="50",data-tooltip="{{badge.name}}").circle.tooltipped
+						b.title {{badge.name}}
+						br
+						em.grey-text {{badge.description}}
 
 	.col.s12.m6.l4.offset-m3
 		.card.deep-orange.accent-1
@@ -78,7 +97,12 @@
 				span.card-title.activator.grey-text.text-darken-4 
 					i.material-icons.right.red-text close
 					| Meteorite Badges
-				p ยังไม่ได้รับเหรียญในกลุ่มนี้
+				ul.collection
+					li.collection-item.avatar(ng-repeat="badge in meteorites")
+						img(ng-src="images/badges/meteorite/{{badge.image}}",title="{{badge.description}}",data-position="bottom",data-delay="50",data-tooltip="{{badge.name}}").circle.tooltipped
+						b.title {{badge.name}}
+						br
+						em.grey-text {{badge.description}}
 
 script.
 	$(document).ready(function(){
