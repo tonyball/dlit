@@ -4,7 +4,6 @@ angular.module('dlitApp')
   .controller 'WatchCtrl', ($scope,Page,$routeParams, $http) ->
   	$scope.videos = []
   	$scope.private_videos = []
-
   	$scope.classroom_id = $routeParams.classroomId
   	$http.get('json/classrooms.json').success (classroom_data) ->
   		for c in classroom_data
@@ -15,7 +14,9 @@ angular.module('dlitApp')
     		$http.get('json/private_videos.json').success (private_videos_data) ->
     			for vid in videos_data
     				if $scope.classroom_id == vid.classroom_code
-    					$scope.videos.push vid
+              if vid.type == "1" 
+                console.log vid
+                $scope.videos.push vid
     			for pvid in private_videos_data
     				if $scope.classroom_id == pvid.classroom_code
     					$scope.private_videos.push pvid

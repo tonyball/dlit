@@ -15,12 +15,22 @@
 			"classroom_id":"1",
 			"classroom_code":"MATH7K345",
 			"duration":"",
+			"slide_id":"contents/dlit_exercise_set/1.png",
+			"type":"3",
+			"video_url":""
+		},
+		{
+			"id":"03",
+			"title":"เฉลย ตัวอย่างที่ 1 ",
+			"classroom_id":"1",
+			"classroom_code":"MATH7K345",
+			"duration":"",
 			"slide_id":"",
 			"type":"2",
 			"video_url":"dlit_maths_set/02.mp4"
 		},
 		{
-			"id":"03",
+			"id":"04",
 			"title":"วีธีการเขียนเซต",
 			"classroom_id":"1",
 			"classroom_code":"MATH7K345",
@@ -30,8 +40,18 @@
 			"video_url":"dlit_maths_set/03.mp4"
 		},
 		{
-			"id":"04",
-			"title":"ตัวอย่างที่ 2",
+			"id":"05",
+			"title":"ตัวอย่างที่ 2 ",
+			"classroom_id":"1",
+			"classroom_code":"MATH7K345",
+			"duration":"",
+			"slide_id":"contents/dlit_exercise_set/2.png",
+			"type":"3",
+			"video_url":""
+		},
+		{
+			"id":"06",
+			"title":"เฉลย ตัวอย่างที่ 2",
 			"classroom_id":"1",
 			"classroom_code":"MATH7K345",
 			"duration":"",
@@ -40,8 +60,18 @@
 			"video_url":"dlit_maths_set/04.mp4"
 		},
 		{
-			"id":"05",
+			"id":"07",
 			"title":"ตัวอย่างที่ 3 ",
+			"classroom_id":"1",
+			"classroom_code":"MATH7K345",
+			"duration":"",
+			"slide_id":"contents/dlit_exercise_set/3.png",
+			"type":"3",
+			"video_url":""
+		},
+		{
+			"id":"08",
+			"title":"เฉลย ตัวอย่างที่ 3 ",
 			"classroom_id":"1",
 			"classroom_code":"MATH7K345",
 			"duration":"",
@@ -50,7 +80,7 @@
 			"video_url":"dlit_maths_set/05.mp4"
 		},
 		{
-			"id":"06",
+			"id":"09",
 			"title":"เอกภพสัมพัทธ์",
 			"classroom_id":"1",
 			"classroom_code":"MATH7K345",
@@ -60,7 +90,7 @@
 			"video_url":"dlit_maths_set/06.mp4"
 		},
 		{
-			"id":"07",
+			"id":"10",
 			"title":"เซตจำกัดและเซตอนันต์",
 			"classroom_id":"1",
 			"classroom_code":"MATH7K345",
@@ -70,8 +100,18 @@
 			"video_url":"dlit_maths_set/07.mp4"
 		},
 		{
-			"id":"08",
-			"title":"ตัวอย่างที่ 4",
+			"id":"11",
+			"title":"ตัวอย่างที่ 4 ",
+			"classroom_id":"1",
+			"classroom_code":"MATH7K345",
+			"duration":"",
+			"slide_id":"contents/dlit_exercise_set/4.png",
+			"type":"3",
+			"video_url":""
+		},
+		{
+			"id":"12",
+			"title":"เฉลย ตัวอย่างที่ 4",
 			"classroom_id":"1",
 			"classroom_code":"MATH7K345",
 			"duration":"",
@@ -80,8 +120,18 @@
 			"video_url":"dlit_maths_set/08.mp4"
 		},
 		{
-			"id":"09",
-			"title":"ตัวอย่างที่ 5",
+			"id":"13",
+			"title":"ตัวอย่างที่ 5 ",
+			"classroom_id":"1",
+			"classroom_code":"MATH7K345",
+			"duration":"",
+			"slide_id":"contents/dlit_exercise_set/5.png",
+			"type":"3",
+			"video_url":""
+		},
+		{
+			"id":"14",
+			"title":"เฉลย ตัวอย่างที่ 5",
 			"classroom_id":"1",
 			"classroom_code":"MATH7K345",
 			"duration":"",
@@ -90,7 +140,7 @@
 			"video_url":"dlit_maths_set/09.mp4"
 		},
 		{
-			"id":"10",
+			"id":"15",
 			"title":"การเท่ากันของเซต",
 			"classroom_id":"1",
 			"classroom_code":"MATH7K345",
@@ -100,8 +150,8 @@
 			"video_url":"dlit_maths_set/10.mp4"
 		},
 		{
-			"id":"11",
-			"title":"ตัวอย่างที่ 6",
+			"id":"16",
+			"title":"สรุป",
 			"classroom_id":"1",
 			"classroom_code":"MATH7K345",
 			"duration":"",
