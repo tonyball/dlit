@@ -13,18 +13,18 @@
 							|  {{classroom.title}} (เบื้องต้น)
 						.collapsible-body
 							ul.collection
-								a(data-href="{{video.video_url}}").video-link.black-text.collection-item.waves-effect.waves-orange.active
+								a(ng-repeat="video in videos",data-href="{{video.video_url}}").video-link.black-text.collection-item.waves-effect.waves-orange.active
 									i.material-icons.left local_movies
 									| {{video.title}}
 									.secondary-content
 										i.material-icons.green-text play_arrow
-								a(data-href="videos/dlit_maths_set/02.mp4").video-link.black-text.collection-item.waves-effect.waves-orange  
+								a(data-href="{{video_exs.video_url}}").video-link.black-text.collection-item.waves-effect.waves-orange  
 									i.material-icons.left border_color
-									| แบบฝึกหัดที่ 1	
+									| {{video_exs.title}}
 									.secondary-content								
-								a(data-href="videos/dlit_maths_set/03.mp4").video-link.black-text.collection-item.waves-effect.waves-orange   
+								a(data-href="{{video_exs.video_url}}").video-link.black-text.collection-item.waves-effect.waves-orange   
 									i.material-icons.left question_answer
-									| เฉลยแบบฝึกหัดที่ 1
+									| {{video_exs.title}}
 									.secondary-content
 					li
 						.collapsible-header
