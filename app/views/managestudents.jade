@@ -2,10 +2,7 @@
 form
 	.input-field.col.s12
 		select
-			option(value="1",selected) เซต (Set)
-			option(value="2") Option 2
-			option(value="3") Option 3
-			option(value="4") Option 4
+			option(ng-repeat="classroom in classrooms",value="{{classroom.code}}",selected) {{classroom.title}}
 		label กรุณาเลือกห้องเรียน
 
 
@@ -14,8 +11,8 @@ form
 	.col.m12
 		.card.animated.slideInDown
 			.card-content
-				span.card-title.black-text เซต (Set)
-				strong.right จำนวนนักเรียน 30 คน
+				span.card-title.black-text {{classroom.title}} 
+				strong.right จำนวนนักเรียน {{students.length}} คน
 				table.bordered.hoverable.tablesorter#studentnametable
 					thead
 						tr.orange.accent-1
@@ -24,52 +21,25 @@ form
 							th(data-field="std_email") อีเมลล์
 
 					tbody
-						tr
-							td 50509
-							td นายวีรภัทร ศิรไพบูลย์
-							td weeraphat.s@ku.th
-						tr
-							td 50843
-							td นายภัทร ไตรรัตน์
-							td patara.t@ku.th
-						tr
-							td 50509
-							td นายวีรภัทร ศิรไพบูลย์
-							td weeraphat.s@ku.th
-						tr
-							td 50843
-							td นายภัทร ไตรรัตน์
-							td patara.t@ku.th
-						tr
-							td 50509
-							td นายวีรภัทร ศิรไพบูลย์
-							td weeraphat.s@ku.th
-						tr
-							td 50843
-							td นายภัทร ไตรรัตน์
-							td patara.t@ku.th
-						tr
-							td 50509
-							td นายวีรภัทร ศิรไพบูลย์
-							td weeraphat.s@ku.th
-						tr
-							td 50843
-							td นายภัทร ไตรรัตน์
-							td patara.t@ku.th
+						tr(ng-repeat="student in students")
+							td {{student.id}}
+							td {{student.firstname+" "+student.lastname}}
+							td {{student.email}}
+						
 			.card-action
-				a(href="").waves-effect.waves-orange.btn-flat.black-text
+				a(href="#/overview/{{classroom.code}}").waves-effect.waves-orange.btn-flat.black-text
 					i.material-icons.left insert_chart
 					| ภาพรวมนักเรียน
-				a(href="").waves-effect.waves-orange.btn-flat.black-text
+				a(href="#/activity/{{classroom.code}}").waves-effect.waves-orange.btn-flat.black-text
 					i.material-icons.left local_library 
 					| งานนักเรียน
-				a(href="").waves-effect.waves-orange.btn-flat.black-text 
+				a(href="#/studentprogress/{{classroom.code}}").waves-effect.waves-orange.btn-flat.black-text 
 					i.material-icons.left description
 					| ติดตามนักเรียน
 				a(href="").waves-effect.waves-orange.btn-flat.black-text 
 					i.material-icons.left mode_edit
 					| แก้ไขห้องเรียน
-				strong.right รหัสห้องเรียน: ABCDF 
+				strong.right รหัสห้องเรียน: {{ classroom.code }} 
 
 
 //- action button
@@ -90,4 +60,4 @@ script.
 		$('.tooltipped').tooltip({delay: 50});
 		$('select').material_select();
 		$("#studentnametable").tablesorter(); 
-		})
+	})

@@ -32,9 +32,9 @@
 					li(ng-repeat="topic in classroom.topics").collection-item {{ topic }}
 
 				ul.collection
-					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange จัดการห้องเรียน
-					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange  ติดตามนักเรียน
-					a(href="").collection-item.orange-text.center-align.waves-effect.waves-orange  งานนักเรียน
+					a(href="#/managestudents/{{classroom.code}}").collection-item.orange-text.center-align.waves-effect.waves-orange จัดการห้องเรียน
+					a(href="#/studentprogress/{{classroom.code}}").collection-item.orange-text.center-align.waves-effect.waves-orange  ติดตามนักเรียน
+					a(href="#/activity/{{classroom.code}}").collection-item.orange-text.center-align.waves-effect.waves-orange  งานนักเรียน
 				
 
 	//- studentlist by classroom (for teacher)

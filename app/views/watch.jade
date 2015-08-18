@@ -13,18 +13,9 @@
 							|  {{classroom.title}} (เบื้องต้น)
 						.collapsible-body
 							ul.collection
-								a(ng-repeat="video in videos",data-href="{{video.video_url}}").video-link.black-text.collection-item.waves-effect.waves-orange.active
-									i.material-icons.left local_movies
+								a(ng-repeat="video in videos",data-href="{{video.content_url}}",data-index="{{$index}}").video-link.black-text.collection-item.waves-effect.waves-orange
+									i.material-icons.left {{video.logo}}
 									| {{video.title}}
-									.secondary-content
-										i.material-icons.green-text play_arrow
-								a(data-href="{{video_exs.video_url}}").video-link.black-text.collection-item.waves-effect.waves-orange  
-									i.material-icons.left border_color
-									| {{video_exs.title}}
-									.secondary-content								
-								a(data-href="{{video_exs.video_url}}").video-link.black-text.collection-item.waves-effect.waves-orange   
-									i.material-icons.left question_answer
-									| {{video_exs.title}}
 									.secondary-content
 					li
 						.collapsible-header
@@ -62,9 +53,9 @@
 				.left
 					b ความเร็ววิดีโอ
 					br
-					button.btn.pink.waves-effect.waves-light X1
-					button.btn.pink.waves-effect.waves-light X1.5
-					button.btn.pink.waves-effect.waves-light X2
+					button(onclick="adjustSpeed(1);").btn.pink.waves-effect.waves-light X1
+					button(onclick="adjustSpeed(1.5);").btn.pink.waves-effect.waves-light X1.5
+					button(onclick="adjustSpeed(2);").btn.pink.waves-effect.waves-light X2
 				.right.hide-on-small-only
 					br
 					button.btn.blue.waves-effect.waves-light
@@ -77,6 +68,10 @@
 
 
 script.
+	var adjustSpeed = function(speed){
+		var vid = document.getElementById('video-item');
+		vid.playbackRate = speed;
+	}
 	$(document).ready(function(){
 		$('#video-item').click(function(){
 			var vid = document.getElementById('video-item');
@@ -86,11 +81,14 @@ script.
 				vid.pause();
 		});
 		$('.collapsible').collapsible({ accordion : false });
+		if($('.video-link').attr('data-index') == "0"){
+			alert(0);
+		}
 		$('.video-link').click(function(){
 			$('.video-link').removeClass('active');
 			$(this).addClass('active');
 			$('.video-link').find($('.secondary-content')).html('');
 			$(this).find($('.secondary-content')).html('<i class="material-icons green-text">play_arrow</i>');
 			$('#video-item').attr('src',$(this).attr('data-href'));
-		});
+		});		
 	})

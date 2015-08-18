@@ -1,13 +1,13 @@
 [
 		{
 			"id":"01",
-			"title":"intro",
+			"title":"แนะนำเซต",
 			"classroom_id":"1",
 			"classroom_code":"MATH7K345",
 			"duration":"",
-			"slide_id":"",
 			"type":"1",
-			"video_url":"dlit_maths_set/01.mp4"
+			"logo":"local_movies",
+			"content_url":"dlit_maths_set/01.mp4"
 		},
 		{
 			"id":"02",
@@ -15,9 +15,9 @@
 			"classroom_id":"1",
 			"classroom_code":"MATH7K345",
 			"duration":"",
-			"slide_id":"contents/dlit_exercise_set/1.png",
-			"type":"3",
-			"video_url":""
+			"content_url":"contents/dlit_exercise_set/1.png",
+			"type":"1",
+			"logo":"border_color"
 		},
 		{
 			"id":"03",
@@ -25,9 +25,9 @@
 			"classroom_id":"1",
 			"classroom_code":"MATH7K345",
 			"duration":"",
-			"slide_id":"",
-			"type":"2",
-			"video_url":"dlit_maths_set/02.mp4"
+			"type":"1",
+			"logo":"question_answer",
+			"content_url":"dlit_maths_set/02.mp4"
 		},
 		{
 			"id":"04",
@@ -35,9 +35,9 @@
 			"classroom_id":"1",
 			"classroom_code":"MATH7K345",
 			"duration":"",
-			"slide_id":"",
 			"type":"1",
-			"video_url":"dlit_maths_set/03.mp4"
+			"logo":"local_movies",
+			"content_url":"dlit_maths_set/03.mp4"
 		},
 		{
 			"id":"05",
@@ -45,9 +45,9 @@
 			"classroom_id":"1",
 			"classroom_code":"MATH7K345",
 			"duration":"",
-			"slide_id":"contents/dlit_exercise_set/2.png",
-			"type":"3",
-			"video_url":""
+			"content_url":"contents/dlit_exercise_set/2.png",
+			"type":"1",
+			"logo":"border_color"
 		},
 		{
 			"id":"06",
@@ -55,9 +55,9 @@
 			"classroom_id":"1",
 			"classroom_code":"MATH7K345",
 			"duration":"",
-			"slide_id":"",
-			"type":"2",
-			"video_url":"dlit_maths_set/04.mp4"
+			"type":"1",
+			"logo":"question_answer",
+			"content_url":"dlit_maths_set/04.mp4"
 		},
 		{
 			"id":"07",
@@ -65,9 +65,9 @@
 			"classroom_id":"1",
 			"classroom_code":"MATH7K345",
 			"duration":"",
-			"slide_id":"contents/dlit_exercise_set/3.png",
-			"type":"3",
-			"video_url":""
+			"content_url":"contents/dlit_exercise_set/3.png",
+			"type":"1",
+			"logo":"border_color"
 		},
 		{
 			"id":"08",
@@ -75,19 +75,19 @@
 			"classroom_id":"1",
 			"classroom_code":"MATH7K345",
 			"duration":"",
-			"slide_id":"",
-			"type":"2",
-			"video_url":"dlit_maths_set/05.mp4"
+			"type":"1",
+			"logo":"question_answer",
+			"content_url":"dlit_maths_set/05.mp4"
 		},
 		{
 			"id":"09",
 			"title":"เอกภพสัมพัทธ์",
 			"classroom_id":"1",
 			"classroom_code":"MATH7K345",
-			"duration":"",
-			"slide_id":"",
+			"duration":"",	
 			"type":"1",
-			"video_url":"dlit_maths_set/06.mp4"
+			"logo":"local_movies",
+			"content_url":"dlit_maths_set/06.mp4"
 		},
 		{
 			"id":"10",
@@ -95,9 +95,9 @@
 			"classroom_id":"1",
 			"classroom_code":"MATH7K345",
 			"duration":"",
-			"slide_id":"",
 			"type":"1",
-			"video_url":"dlit_maths_set/07.mp4"
+			"logo":"local_movies",
+			"content_url":"dlit_maths_set/07.mp4"
 		},
 		{
 			"id":"11",
@@ -105,9 +105,9 @@
 			"classroom_id":"1",
 			"classroom_code":"MATH7K345",
 			"duration":"",
-			"slide_id":"contents/dlit_exercise_set/4.png",
-			"type":"3",
-			"video_url":""
+			"content_url":"contents/dlit_exercise_set/4.png",
+			"type":"1",
+			"logo":"border_color"
 		},
 		{
 			"id":"12",
@@ -115,9 +115,9 @@
 			"classroom_id":"1",
 			"classroom_code":"MATH7K345",
 			"duration":"",
-			"slide_id":"",
-			"type":"2",
-			"video_url":"dlit_maths_set/08.mp4"
+			"type":"1",
+			"logo":"question_answer",
+			"content_url":"dlit_maths_set/08.mp4"
 		},
 		{
 			"id":"13",
@@ -125,9 +125,9 @@
 			"classroom_id":"1",
 			"classroom_code":"MATH7K345",
 			"duration":"",
-			"slide_id":"contents/dlit_exercise_set/5.png",
-			"type":"3",
-			"video_url":""
+			"content_url":"contents/dlit_exercise_set/5.png",
+			"type":"1",
+			"logo":"border_color"
 		},
 		{
 			"id":"14",
@@ -135,9 +135,9 @@
 			"classroom_id":"1",
 			"classroom_code":"MATH7K345",
 			"duration":"",
-			"slide_id":"",
-			"type":"2",
-			"video_url":"dlit_maths_set/09.mp4"
+			"type":"1",
+			"logo":"question_answer",
+			"content_url":"dlit_maths_set/09.mp4"
 		},
 		{
 			"id":"15",
@@ -145,9 +145,9 @@
 			"classroom_id":"1",
 			"classroom_code":"MATH7K345",
 			"duration":"",
-			"slide_id":"",
 			"type":"1",
-			"video_url":"dlit_maths_set/10.mp4"
+			"logo":"local_movies",
+			"content_url":"dlit_maths_set/10.mp4"
 		},
 		{
 			"id":"16",
@@ -155,8 +155,8 @@
 			"classroom_id":"1",
 			"classroom_code":"MATH7K345",
 			"duration":"",
-			"slide_id":"",
-			"type":"2",
-			"video_url":"dlit_maths_set/11.mp4"
+			"type":"1",
+			"logo":"local_movies",
+			"content_url":"dlit_maths_set/11.mp4"
 		}
 ]
