@@ -8,17 +8,17 @@
 			div.row
 				div.input-field.m12
 					i.small.material-icons.prefix account_circle
-					input(id="username",type='text',text='email', required).validate
+					input(id="username",type='text', required,ng-model="username").validate
 					label(for="username") ชื่อผู้ใช้หรืออีเมลล์
 			div.row
 				div.input-field.m12
 					i.small.material-icons.prefix vpn_key
-					input(id="password",type='password', required).validate
+					input(id="password",type='password', required,ng-model="password").validate
 					label(for="password") รหัสผ่าน
 			center
 				div.row
 					div
-						button(type='submit',name='login').waves-effect.waves-light.btn.orange
+						button(type='submit',name='login',ng-click="login()").waves-effect.waves-light.btn.orange
 							i.material-icons.right send
 							| เข้าสู่ระบบ    
 

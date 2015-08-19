@@ -41,9 +41,9 @@ body
       a(href="#").black-text ความช่วยเหลือ
     li.divider
     li
-      a(href="#").black-text ออกจากระบบ
+      a(ng-click="logout()").black-text ออกจากระบบ
 
-  ul(ng-show="isTeacher | isStudent").notifications.dropdown-content#notifications-dropdown
+  ul(ng-show="isTeacher || isStudent").notifications.dropdown-content#notifications-dropdown
     div.notifications-header
       header.black-text การแจ้งเตือน
     li.divider
@@ -53,7 +53,7 @@ body
 
   nav.white
     ul.right  
-      li.notification-icon
+      li(ng-show="isTeacher || isStudent").notification-icon
         a(href="", data-activates="notifications-dropdown").black-text.noti-dropdown-button
           i.small.material-icons notifications 
       li(ng-show="isTeacher || isStudent")
@@ -117,7 +117,7 @@ body
 
 
     a(href="#", data-activates="slide-out").button-collapse.show-on-large
-      i.mdi-navigation-menu.black-text
+      i(ng-show="isTeacher || isStudent").mdi-navigation-menu.black-text
     ul
       li.page-title
         h4.black-text.hide-on-small-only {{ Page.title() }}
