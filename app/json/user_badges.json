@@ -64,5 +64,42 @@
 		"user_id":"50011",
 		"badge_id":"50",
 		"show":1
+	},
+	{
+		"id":"12",
+		"user_id":"50029",
+		"badge_id":"1",
+		"show":1
+	},
+	{
+		"id":"13",
+		"user_id":"50029",
+		"badge_id":"2",
+		"show":1
+	}
+	,
+	{
+		"id":"14",
+		"user_id":"50037",
+		"badge_id":"1",
+		"show":1
+	},
+	{
+		"id":"15",
+		"user_id":"50037",
+		"badge_id":"2",
+		"show":1
+	},
+	{
+		"id":"12",
+		"user_id":"50053",
+		"badge_id":"1",
+		"show":1
+	},
+	{
+		"id":"13",
+		"user_id":"50053",
+		"badge_id":"2",
+		"show":1
 	}
 ]

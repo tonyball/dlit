@@ -9,4 +9,5 @@ angular.module('dlitApp')
     ]
 
    	$scope.isActive = (viewLocation) ->
-  	  viewLocation == $location.path()
+   		location = $location.path().split '/'
+   		viewLocation == "/"+location[1]

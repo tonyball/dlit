@@ -88,15 +88,15 @@ body
           i.small.material-icons.left poll
           | ภาพรวมนักเรียน
 
-      li(ng-class="{ active: isActive('/manageexams')}",ng-show="isTeacher")
-        a(href="#/manageexams").black-text.waves-effect.waves-orange 
-          i.small.material-icons.left assignment
-          | จัดการข้อสอบ
+      //- li(ng-class="{ active: isActive('/manageexams')}",ng-show="isTeacher")
+      //-   a(href="#/manageexams").black-text.waves-effect.waves-orange 
+      //-     i.small.material-icons.left assignment
+      //-     | จัดการข้อสอบ
 
-      li(ng-class="{ active: isActive('/subjects')}",ng-show="isStudent")
-        a(href="#/subjects").black-text.waves-effect.waves-orange 
-          i.small.material-icons.left subtitles
-          | รายวิชา
+      //- li(ng-class="{ active: isActive('/subjects')}",ng-show="isStudent")
+      //-   a(href="#/subjects").black-text.waves-effect.waves-orange 
+      //-     i.small.material-icons.left subtitles
+      //-     | รายวิชา
 
       li(ng-class="{ active: isActive('/badges')}",ng-show="isStudent")
         a(href="#/badges").black-text.waves-effect.waves-orange 
@@ -160,6 +160,8 @@ body
   script(src='bower_components/c3/c3.js')
   // endbower
   // endbuild
+
+  script(src="bower_components/ng-simplePagination/simplePagination.js")
 
   // build:js(.tmp) scripts/main.js
   script(src="scripts/app.js")

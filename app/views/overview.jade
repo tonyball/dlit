@@ -2,16 +2,22 @@
 form
 	.input-field.col.s12
 		select
-			option(value="1",selected) เซต (Set)
+			option(ng-repeat="classroom in classrooms",value="{{classroom.code}}",selected) {{classroom.title}}
 		label กรุณาเลือกห้องเรียน
-
+.center-align
+	button(data-report-type="charts-report").active.btn.orange.waves-effect.waves-light.black-text.report-type-btn 
+		i.material-icons.left insert_chart
+		| แผนภูมิคะแนน:เวลา 
+	button(data-report-type="badges-report").btn.orange.waves-effect.waves-light.report-type-btn  
+		i.material-icons.left stars
+		| สรุปเหรียญรางวัล
 //- card for chart 
-.row
+.row.charts-report
 	.col.s12
-		.card
+		.card.animated.fadeIn
 			.card-content
-				span.card-title.black-text เซต (Set)
-				strong.right จำนวนนักเรียน 30 คน
+				span.card-title.black-text {{classroom.title}}
+				b.right จำนวนนักเรียน {{students.length}} คน
 				#chart
 			.card-action
 				table.bordered.hoverable.centered.responsive-table
@@ -33,10 +39,52 @@ form
 							td 42 คะแนน
 							td 80 คะแนน
 
-				strong.right รหัสห้องเรียน: ABCDF 
+				b.right รหัสห้องเรียน: {{classroom.code}} 
+
+.row.badges-report
+	.col.s12
+		.card.animated.fadeIn
+			.card-content
+				span.card-title.black-text {{classroom.title}}
+				b.right จำนวนนักเรียน {{students.length}} คน
+
+				table.bordered.responsive-table
+					thead
+						tr.orange.accent-1
+							th นักเรียน
+							th เหรียญรางวัลที่ได้
+
+
+					tbody
+						tr(ng-repeat="student in students")
+							{{student.badges}}
+							td(width="25%") 
+								a(href="#/dashboard/{{student.id}}").deep-orange-text {{student.id+" "+student.firstname+" "+student.lastname}}
+							td 
+								.show-summary-badges
+									.badge-box(ng-repeat="badge in student.badges")	 
+										b {{badge.name}}
+										br
+										img(ng-src="images/badges/{{badge.group}}/{{badge.image}}",alt="{{badge.name}}",data-position="top",data-delay="50",title="{{badge.description}}",data-tooltip="{{badge.description}}",ng-click="click()").user-badges.tooltipped
+
+			.card-action
+				b.right รหัสห้องเรียน: {{classroom.code}} 
+
 
 script(src="scripts/charts/chart1.js")
 script.
 	$(document).ready(function(){
 		$('select').material_select();
+		$('.badges-report').hide();
+		$('.report-type-btn').click(function(){
+			$('.report-type-btn').removeClass('black-text');
+			$(this).addClass('black-text');
+			if ($(this).attr('data-report-type') == "charts-report"){
+				$('.badges-report').hide();
+				$('.charts-report').show();
+			} else {
+				$('.badges-report').show();
+				$('.charts-report').hide();
+			}
+		});
 	})

@@ -32,7 +32,7 @@
 				.row
 					h6 ข้อ | 1 &nbsp&nbsp&nbsp&nbsp2 &nbsp&nbsp&nbsp&nbsp3 &nbsp&nbsp&nbsp&nbsp4 &nbsp&nbsp&nbsp&nbsp5
 					.divider
-				.row(ng-repeat="answer in answer_box")
+				.row(ng-repeat="answer in answer_box | startFrom: pagination.page * pagination.perPage | limitTo: pagination.perPage")
 					p.no.left-align {{answer}}. |
 					form.answer-set
 						input(name="no{{answer}}",type="radio",id="ans{{answer}}1")
@@ -49,13 +49,20 @@
 
 						input(name="no{{answer}}",type="radio",id="ans{{answer}}5")
 						label(for="ans{{answer}}5")  		
-
-
-				
-
+		
+				ul.pagination
+					li(ng-class="{disabled: pagination.page == 0}",ng-click="pagination.prevPage()")
+						a
+							i.material-icons chevron_left
+					li.waves-effect.waves-orange(ng-repeat="n in [] | range: pagination.numPages", ng-class="{active: n == pagination.page}",ng-click="pagination.toPageId(n)")
+						a {{n+1}}
+					li(ng-class="{disabled: pagination.page + 1 >= pagination.numPages}",ng-click="pagination.nextPage()")
+						a
+							i.material-icons chevron_right
+				br
 			.card-action
 				center
-					a(href="",type="submit").btn-flat.waves-effect.waves-dark.black-text.finish-exam
+					a(href="",type="submit").btn-flat.waves-effect.waves-orange.black-text.finish-exam
 						i.material-icons.left assignment_turned_in
 						| ส่งคำตอบ
 					br

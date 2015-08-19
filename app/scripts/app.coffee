@@ -5,7 +5,8 @@ angular
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ngRoute'
+    'ngRoute',
+    'simplePagination'
   ])
   .config ($routeProvider) ->
     $routeProvider

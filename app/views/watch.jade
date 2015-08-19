@@ -13,27 +13,100 @@
 							|  {{classroom.title}} (เบื้องต้น)
 						.collapsible-body
 							ul.collection
-								a(ng-repeat="video in videos",data-href="{{video.content_url}}",data-index="{{$index}}").video-link.black-text.collection-item.waves-effect.waves-orange
-									i.material-icons.left {{video.logo}}
-									| {{video.title}}
+								a(data-title="แนะนำเซต",data-href="videos/dlit_maths_set/01.mp4",data-type="1").video-link.black-text.collection-item.waves-effect.waves-orange
+									i.material-icons.left local_movies
+									| แนะนำเซต
 									.secondary-content
+								a(data-index="1",data-title="ตัวอย่างที่ 1",data-href="contents/dlit_exercise_set/1.png",data-type="2").video-link.black-text.collection-item.waves-effect.waves-orange
+									i.material-icons.left border_color
+									| ตัวอย่างที่ 1
+									.secondary-content
+								a(data-title="เฉลยตัวอย่างที่ 1",data-href="videos/dlit_maths_set/02.mp4",data-type="1").video-link.black-text.collection-item.waves-effect.waves-orange
+									i.material-icons.left question_answer
+									| เฉลยตัวอย่างที่ 1
+									.secondary-content
+								a(data-title="วิธีการเขียนเซต",data-href="videos/dlit_maths_set/03.mp4",data-type="1").video-link.black-text.collection-item.waves-effect.waves-orange
+									i.material-icons.left local_movies
+									| วิธีการเขียนเซต
+									.secondary-content
+								a(data-index="2",data-title="ตัวอย่างที่ 2",data-href="contents/dlit_exercise_set/2.png",data-type="2").video-link.black-text.collection-item.waves-effect.waves-orange
+									i.material-icons.left border_color
+									| ตัวอย่างที่ 2
+									.secondary-content
+								a(data-title="เฉลยตัวอย่างที่ 2",data-href="videos/dlit_maths_set/04.mp4",data-type="1").video-link.black-text.collection-item.waves-effect.waves-orange
+									i.material-icons.left question_answer
+									| เฉลย ตัวอย่างที่ 2
+									.secondary-content
+								a(data-index="3",data-title="ตัวอย่างที่ 3",data-href="contents/dlit_exercise_set/3.png",data-type="2").video-link.black-text.collection-item.waves-effect.waves-orange
+									i.material-icons.left border_color
+									| ตัวอย่างที่ 3 
+									.secondary-content
+								a(data-title="เฉลยตัวอย่างที่ 3",data-href="videos/dlit_maths_set/05.mp4",data-type="1").video-link.black-text.collection-item.waves-effect.waves-orange
+									i.material-icons.left question_answer
+									| เฉลย ตัวอย่างที่ 3 
+									.secondary-content
+								a(data-title="เอกภพสัมพัทธ์",data-href="videos/dlit_maths_set/06.mp4",data-type="1").video-link.black-text.collection-item.waves-effect.waves-orange
+									i.material-icons.left local_movies
+									| เอกภพสัมพัทธ์
+									.secondary-content
+								a(data-title="เซตจำกัดและเซตอนันต์",data-href="videos/dlit_maths_set/07.mp4",data-type="1").video-link.black-text.collection-item.waves-effect.waves-orange
+									i.material-icons.left local_movies
+									| เซตจำกัดและเซตอนันต์
+									.secondary-content
+								a(data-index="4",data-title="ตัวอย่างที่ 4",data-href="contents/dlit_exercise_set/4.png",data-type="2").video-link.black-text.collection-item.waves-effect.waves-orange
+									i.material-icons.left border_color
+									| ตัวอย่างที่ 4 
+									.secondary-content
+								a(data-title="เฉลยตัวอย่างที่ 4",data-href="videos/dlit_maths_set/08.mp4").video-link.black-text.collection-item.waves-effect.waves-orange
+									i.material-icons.left question_answer
+									| เฉลย ตัวอย่างที่ 4
+									.secondary-content
+								a(data-index="5",data-title="ตัวอย่างที่ 5",data-href="contents/dlit_exercise_set/5.png",data-type="2").video-link.black-text.collection-item.waves-effect.waves-orange
+									i.material-icons.left border_color
+									| ตัวอย่างที่ 5
+									.secondary-content
+								a(data-title="เฉลยตัวอย่างที่ 5",data-href="videos/dlit_maths_set/09.mp4",data-type="1").video-link.black-text.collection-item.waves-effect.waves-orange
+									i.material-icons.left question_answer
+									| เฉลย ตัวอย่างที่ 5
+									.secondary-content
+								a(data-title="การเท่ากันของเซต",data-href="videos/dlit_maths_set/10.mp4",data-type="1").video-link.black-text.collection-item.waves-effect.waves-orange
+									i.material-icons.left local_movies
+									| การเท่ากันของเซต
+									.secondary-content
+								a(data-title="สรุป",data-href="videos/dlit_maths_set/11.mp4",data-type="1").video-link.black-text.collection-item.waves-effect.waves-orange
+									i.material-icons.left local_movies
+									| สรุป
+									.secondary-content
+
 					li
 						.collapsible-header
 							i.material-icons.left keyboard_arrow_down
 							|  {{classroom.title}} (ตะลุยโจทย์)
 						.collapsible-body
 							ul.collection
-								a(href="").video-link.black-text.collection-item.waves-effect.waves-orange
-									i.material-icons.left description
-									| โจทย์ปัญหาที่ 1	
+								a(data-title="Introduction to Set",data-href="videos/private_maths_set/01.ogv",data-type="1").video-link.black-text.collection-item.waves-effect.waves-orange
+									i.material-icons.left local_movies
+									| Intro
 									.secondary-content
-								a(href="").video-link.black-text.collection-item.waves-effect.waves-orange  
+								a(data-index="d1",data-title="Drill 1",data-href="contents/private_drill/1.pdf",data-type="2").video-link.black-text.collection-item.waves-effect.waves-orange
+									i.material-icons.left description
+									| Drill 1	
+									.secondary-content
+								a(data-title="Solution Drill 1",data-href="videos/private_maths_set/02.ogv",data-type="1").video-link.black-text.collection-item.waves-effect.waves-orange  
 									i.material-icons.left check_circle
-									| เฉลยโจทย์ปัญหาที่ 1	
+									| Sol. Drill 1	
+									.secondary-content
+								a(data-index="d2",data-title="Drill 2",data-href="contents/private_drill/2.pdf",data-type="2").video-link.black-text.collection-item.waves-effect.waves-orange
+									i.material-icons.left description
+									| Drill 2	
+									.secondary-content
+								a(data-title="Solution Drill 2",data-href="videos/private_maths_set/03.ogv",data-type="1").video-link.black-text.collection-item.waves-effect.waves-orange  
+									i.material-icons.left check_circle
+									| Sol. Drill 2	
 									.secondary-content
 					li
 						.collapsible-header
-							a(href="").black-text
+							a(data-index="t",data-title="แบบทดสอบ",data-href="contents/challenge_set/Set-1.pdf,contents/challenge_set/Set-2.pdf",data-type="3").black-text.video-link
 								i.material-icons.left insert_drive_file
 								|  {{classroom.title}} (แบบทดสอบ)
 			.card-action
@@ -46,10 +119,81 @@
 		//- video's card
 		.card.animated.zoomIn
 			.card-content
-				span.card-title.black-text ชื่อวิดีโอ
+				span.card-title.black-text.content-title
 				.video-container
-					video#video-item(src="videos/dlit_maths_set/01.mp4", controls, width="100%")
-			.card-action
+					video#video-item(src="videos/dlit_maths_set/01.mp4",controls, width="100%", type="video/*")
+				.practice-container
+					
+				.test-container
+
+				.answer-container
+				
+				
+				.answer-container-of-test-1.center-align
+					.row
+						h6 ข้อ | 1 &nbsp&nbsp&nbsp&nbsp2 &nbsp&nbsp&nbsp&nbsp3 &nbsp&nbsp&nbsp&nbsp4 &nbsp&nbsp&nbsp&nbsp5
+						.divider
+					.row(ng-repeat="answer in number_of_question[0] | startFrom: pagination1.page * pagination1.perPage | limitTo: pagination1.perPage")
+						p.no.left-align {{answer+1}}. |
+						form.answer-set
+							input(name="no{{answer}}",type="radio",id="ans{{answer}}1")
+							label(for="ans{{answer}}1")
+
+							input(name="no{{answer}}",type="radio",id="ans{{answer}}2")
+							label(for="ans{{answer}}2") 	
+
+							input(name="no{{answer}}",type="radio",id="ans{{answer}}3")
+							label(for="ans{{answer}}3") 
+
+							input(name="no{{answer}}",type="radio",id="ans{{answer}}4")
+							label(for="ans{{answer}}4")
+
+							input(name="no{{answer}}",type="radio",id="ans{{answer}}5")
+							label(for="ans{{answer}}5") 
+					.row 
+						ul.pagination.col.offset-m4
+							li(ng-class="{disabled: pagination1.page == 0}",ng-click="pagination1.prevPage()")
+								a
+									i.material-icons chevron_left
+							li.waves-effect.waves-orange(ng-repeat="n in [] | range: pagination1.numPages", ng-class="{active: n == pagination1.page}",ng-click="pagination1.toPageId(n)")
+								a {{n+1}}
+							li(ng-class="{disabled: pagination1.page + 1 >= pagination1.numPages}",ng-click="pagination1.nextPage()")
+								a
+									i.material-icons chevron_right	
+
+				.answer-container-of-test-2.center-align
+					.row
+						h6 ข้อ | 1 &nbsp&nbsp&nbsp&nbsp2 &nbsp&nbsp&nbsp&nbsp3 &nbsp&nbsp&nbsp&nbsp4 &nbsp&nbsp&nbsp&nbsp5
+						.divider
+					.row(ng-repeat="answer in number_of_question[1] | startFrom: pagination2.page * pagination2.perPage | limitTo: pagination2.perPage")
+						p.no.left-align {{answer+1}}. |
+						form.answer-set
+							input(name="no{{answer}}",type="radio",id="ans{{answer}}1")
+							label(for="ans{{answer}}1")
+
+							input(name="no{{answer}}",type="radio",id="ans{{answer}}2")
+							label(for="ans{{answer}}2") 
+
+							input(name="no{{answer}}",type="radio",id="ans{{answer}}3")
+							label(for="ans{{answer}}3") 
+
+							input(name="no{{answer}}",type="radio",id="ans{{answer}}4")
+							label(for="ans{{answer}}4")
+
+							input(name="no{{answer}}",type="radio",id="ans{{answer}}5")
+							label(for="ans{{answer}}5")  
+					.row 
+						ul.pagination.col.offset-m4
+							li(ng-class="{disabled: pagination2.page == 0}",ng-click="pagination2.prevPage()")
+								a
+									i.material-icons chevron_left
+							li.waves-effect.waves-orange(ng-repeat="n in [] | range: pagination1.numPages", ng-class="{active: n == pagination2.page}",ng-click="pagination2.toPageId(n)")
+								a {{n+1}}
+							li(ng-class="{disabled: pagination2.page + 1 >= pagination2.numPages}",ng-click="pagination2.nextPage()")
+								a
+									i.material-icons chevron_right	
+
+			.card-action.video-container-action
 				.left
 					b ความเร็ววิดีโอ
 					br
@@ -64,6 +208,10 @@
 					button.btn.green.waves-effect.waves-light
 						i.material-icons.left file_download
 						| เอกสารประกอบการเรียน
+				.row
+			.card-action.answer-container-action
+				.right
+					button.btn.green.waves-effect.waves-light ตรวจคำตอบ
 				.row
 
 
@@ -81,14 +229,80 @@ script.
 				vid.pause();
 		});
 		$('.collapsible').collapsible({ accordion : false });
-		if($('.video-link').attr('data-index') == "0"){
-			alert(0);
-		}
+		$('.video-link').first().addClass('active').find($('.secondary-content')).html('<i class="material-icons green-text">play_arrow</i>');
+		$('.content-title').text($('.video-link').first().attr('data-title'));
+		$('.practice-container,.test-container,.answer-container,.answer-container-action,.answer-container-of-test-1,.answer-container-of-test-2').hide();
 		$('.video-link').click(function(){
+			var url = $(this).attr('data-href');
+			var index = $(this).attr('data-index');
 			$('.video-link').removeClass('active');
 			$(this).addClass('active');
 			$('.video-link').find($('.secondary-content')).html('');
 			$(this).find($('.secondary-content')).html('<i class="material-icons green-text">play_arrow</i>');
-			$('#video-item').attr('src',$(this).attr('data-href'));
+			$('.content-title').text($(this).attr('data-title'));
+
+			if($(this).attr('data-type') == "1") {
+				$('#video-item').attr('src',url);
+				$('.practice-container,.test-container,.answer-container,.answer-container-action,.answer-container-of-test-1,.answer-container-of-test-2').hide();
+				$('.video-container,.video-container-action').show();
+			} else if ($(this).attr('data-type') == "2"){
+				$('.video-container,.test-container,.video-container-action,.answer-container-of-test-1,.answer-container-of-test-2').hide();
+				if (url.split('.').pop() == 'pdf') {
+					$('.practice-container').html('<object width="100%" height="350" data="'+url+'" type="application/pdf"></object>');
+					$('.answer-container').html("<div class='input-field'><input id='answer' type='text' maxlength='1'><label for='answer'>ใส่เลขข้อที่ต้องการจะตอบ </label></div>")
+				} else {
+					$('.practice-container').html("<img src='"+url+"' width='100%'>");
+					if (index == 1) {
+						$('.answer-container').html("<h6><u>ตอบ<u></h6><div class='input-field'><input id='no1' type='text' placeholder='เป็นเซตตอบ true ไม่เป็นตอบ false'><label for='no1'>ข้อ 1 </label></div>");
+						$('.answer-container').append("<div class='input-field'><input id='no2' type='text' placeholder='เป็นเซตตอบ true ไม่เป็นตอบ false'><label for='no2'>ข้อ 2 </label></div>");
+						$('.answer-container').append("<div class='input-field'><input id='no3' type='text' placeholder='เป็นเซตตอบ true ไม่เป็นตอบ false'><label for='no3'>ข้อ 3 </label></div>");
+						$('.answer-container').append("<div class='input-field'><input id='no4' type='text' placeholder='เป็นเซตตอบ true ไม่เป็นตอบ false'><label for='no4'>ข้อ 4 </label></div>");
+						$('.answer-container').append("<div class='input-field'><input id='no5' type='text' placeholder='เป็นเซตตอบ true ไม่เป็นตอบ false'><label for='no5'>ข้อ 5 </label></div>");
+						$('.answer-container').append("<div class='input-field'><input id='no6' type='text' placeholder='เป็นเซตตอบ true ไม่เป็นตอบ false'><label for='no6'>ข้อ 6 </label></div>");
+						$('.answer-container').append("<div class='input-field'><input id='no7' type='text' placeholder='เป็นเซตตอบ true ไม่เป็นตอบ false'><label for='no7'>ข้อ 7 </label></div>");
+						$('.answer-container').append("<div class='input-field'><input id='no8' type='text' placeholder='เป็นเซตตอบ true ไม่เป็นตอบ false'><label for='no8'>ข้อ 8 </label></div>");
+
+					} else if (index == 2) {
+						$('.answer-container').html("<h6><u>ตอบ<u></h6><div class='input-field'><input id='no1' type='text' ><label for='no1'>ข้อ 1 </label></div>");
+						$('.answer-container').append("<div class='input-field'><input id='no2' type='text' ><label for='no2'>ข้อ 2 </label></div>");
+						$('.answer-container').append("<div class='input-field'><input id='no3' type='text' ><label for='no3'>ข้อ 3 </label></div>");
+						$('.answer-container').append("<div class='input-field'><input id='no4' type='text' ><label for='no4'>ข้อ 4 </label></div>");
+						$('.answer-container').append("<div class='input-field'><input id='no5' type='text' ><label for='no5'>ข้อ 5 </label></div>");
+						$('.answer-container').append("<div class='input-field'><input id='no6' type='text' ><label for='no6'>ข้อ 6 </label></div>");
+						$('.answer-container').append("<div class='input-field'><input id='no7' type='text' ><label for='no7'>ข้อ 7 </label></div>");
+					} else if (index == 3) {
+						$('.answer-container').html("<h6><u>ตอบ<u></h6><div class='input-field'><input id='no1' type='text' ><label for='no1'>ข้อ 1 </label></div>");
+						$('.answer-container').append("<div class='input-field'><input id='no2' type='text' ><label for='no2'>ข้อ 2 </label></div>");
+						$('.answer-container').append("<div class='input-field'><input id='no3' type='text' ><label for='no3'>ข้อ 3 </label></div>");
+						$('.answer-container').append("<div class='input-field'><input id='no4' type='text' ><label for='no4'>ข้อ 4 </label></div>");
+					} else if (index == 4) {
+						$('.answer-container').html("<h6><u>ตอบ<u></h6><div class='input-field'><input id='no1' type='text' placeholder='ตอบแค่ จำกัด หรือ อนันต์'><label for='no1'>ข้อ 1 </label></div>");
+						$('.answer-container').append("<div class='input-field'><input id='no2' type='text' placeholder='ตอบแค่ จำกัด หรือ อนันต์'><label for='no2'>ข้อ 2 </label></div>");
+						$('.answer-container').append("<div class='input-field'><input id='no3' type='text' placeholder='ตอบแค่ จำกัด หรือ อนันต์'><label for='no3'>ข้อ 3 </label></div>");
+						$('.answer-container').append("<div class='input-field'><input id='no4' type='text' placeholder='ตอบแค่ จำกัด หรือ อนันต์'><label for='no4'>ข้อ 4 </label></div>");
+						$('.answer-container').append("<div class='input-field'><input id='no5' type='text' placeholder='ตอบแค่ จำกัด หรือ อนันต์'><label for='no5'>ข้อ 5 </label></div>");
+						$('.answer-container').append("<div class='input-field'><input id='no6' type='text' placeholder='ตอบแค่ จำกัด หรือ อนันต์'><label for='no6'>ข้อ 6 </label></div>");
+						$('.answer-container').append("<div class='input-field'><input id='no7' type='text' placeholder='ตอบแค่ จำกัด หรือ อนันต์'><label for='no7'>ข้อ 7 </label></div>");
+					} else {
+						$('.answer-container').html("<h6><u>ตอบ<u></h6><div class='input-field'><input id='no1' type='number' ><label for='no1'>ข้อ 1 </label></div>");
+						$('.answer-container').append("<div class='input-field'><input id='no2' type='number' ><label for='no2'>ข้อ 2 </label></div>");
+						$('.answer-container').append("<div class='input-field'><input id='no3' type='number' ><label for='no3'>ข้อ 3 </label></div>");
+						$('.answer-container').append("<div class='input-field'><input id='no4' type='number' ><label for='no4'>ข้อ 4 </label></div>");
+					}
+				}
+				$('.practice-container,.answer-container,.answer-container-action').show();
+			} else {
+				$('.video-container,.practice-container,.video-container-action').hide();
+				var testNo = Math.round(Math.random()*1);
+				$('.test-container').html('<object width="100%" height="500px" data="'+url.split(",")[testNo]+'" type="application/pdf"></object>');
+				$('.test-container,.answer-container,.answer-container-action').show();
+				if (testNo == 0){
+					$('.answer-container-of-test-1').show();
+					$('.answer-container-of-test-2').hide(); 
+				} else {
+					$('.answer-container-of-test-2').show();
+					$('.answer-container-of-test-1').hide(); 
+				}
+			}
 		});		
 	})

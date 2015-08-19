@@ -3,9 +3,6 @@ form
 	.input-field.col.s12
 		select
 			option(value="1",selected) เซต (Set)
-			option(value="2") Option 2
-			option(value="3") Option 3
-			option(value="4") Option 4
 		label กรุณาเลือกห้องเรียน
 
 //- studentlist card
@@ -23,49 +20,77 @@ form
 
 					tbody
 						tr.stdname#1
-							td 50509
-							td นายวีรภัทร ศิรไพบูลย์
-							td.right-align 0
+							td 50011
+							td นางสาวธัญวรัตม์ อยู่วนิชชานนท์
+							td.right-align 80
 						tr.stdname#2
-							td 50843
-							td นายภัทร ไตรรัตน์
-							td.right-align 0
-						tr.stdname
-							td 50509
-							td นายวีรภัทร ศิรไพบูลย์
-							td.right-align 0
-						tr.stdname
-							td 50843
-							td นายภัทร ไตรรัตน์
-							td.right-align 0
-						tr.stdname
-							td 50509
-							td นายวีรภัทร ศิรไพบูลย์
-							td.right-align 0
-						tr.stdname
-							td 50843
-							td นายภัทร ไตรรัตน์
-							td.right-align 0
-						tr.stdname
-							td 50509
-							td นายวีรภัทร ศิรไพบูลย์
-							td.right-align 0
-						tr.stdname
-							td 50843
-							td นายภัทร ไตรรัตน์
-							td.right-align 0
-			.card-action
-				.row
-					.input-field.col.s12
-						i.material-icons.prefix search
-						input#searchByStdId(type="text")
-						label(for="searchByStdId") กรุณาใส่รหัสนักเรียน
+							td 50029
+							td นายกฤตวัฒน์ สอนวิริยะ
+							td.right-align 70
+						tr.stdname#3
+							td 50037
+							td นายกฤษดา แม่นธนู
+							td.right-align 75
+						tr.stdname#4
+							td 50053
+							td นายกีรณัฐ ทัศนเอกจิต
+							td.right-align 70
+						tr.stdname#5
+							td 50088
+							td นางสาวจารีวรรณ สาระพล
+							td.right-align 60
+						tr.stdname#6
+							td 50096
+							td นายณัฎฐ์เดชา ลัยวิรัตน์
+							td.right-align 50
+						tr.stdname#7
+							td 50100
+							td นายจิรภัทร อินทเอื้อ
+							td.right-align 98
+						tr.stdname#8
+							td 50126
+							td นางสาวชาฏิญญา จันทร์ดิษฐ
+							td.right-align 53
+						tr.stdname#9
+							td 50134
+							td นายชานน รุ่งรัศมีเจริญ
+							td.right-align 42
+						tr.stdname#10
+							td 50142
+							td นางสาวชุติภา สอนเนย
+							td.right-align 42
+						tr.stdname#11
+							td 50169
+							td นายณัฐนนท์ ลาวัง
+							td.right-align 54
+						tr.stdname#12
+							td 50657
+							td นางสาวกันตพร นริสศิริกุล
+							td.right-align 65
+						tr.stdname#13
+							td 50681
+							td นางสาวกุลภัสสร์ รัตนตยารมณ์
+							td.right-align 42
+						tr.stdname#14
+							td 50690
+							td นางสาวคริษฐา สุขเกษม
+							td.right-align 88
+						tr.stdname#15
+							td 50703
+							td นางสาวจิตรา จารุภา
+							td.right-align 77
+			//- .card-action
+			//- 	.row
+			//- 		.input-field.col.s12
+			//- 			i.material-icons.prefix search
+			//- 			input#searchByStdId(type="text",ng-model="search")
+			//- 			label(for="searchByStdId") กรุณาใส่รหัสนักเรียน
 
 	//- student's details card
 	.col.s12.m8
-		.card.stdDetailCard.animated.rollIn#cardDetailOf1
+		.card.stdDetailCard.animated.fadeIn#cardDetailOf1
 			.card-content
-				span.card-title.orange-text.darken-2 นายวีรภัทร ศิรไพบูลย์
+				span.card-title.orange-text.darken-2 นางสาวธัญวรัตม์ อยู่วนิชชานนท์
 				ul.collapsible.popout(data-collapsible="accordion")
 					li
 						.collapsible-header
@@ -73,91 +98,553 @@ form
 							| บทเรียน
 						.collapsible-body
 							p 
-								strong วัน เดือน ปี
-								|  ชื่อเรื่อง
+								b.grey-text 14-07-2015 13:30
+								br
+								|  เข้าเรียน เซต (Set)(MATH7K345) : แบบทดสอบ
 							.divider
 							p 
-								strong วัน เดือน ปี
-								|  ชื่อเรื่อง
+								b.grey-text 14-07-2015 13:00
+								br
+								|  เข้าเรียน เซต (Set)(MATH7K345) : เอกภพสัมพัทธ์
+							.divider
+							p 
+								b.grey-text 14-07-2015 13:30
+								br
+								|  เข้าเรียน เซต (Set)(MATH7K345) : เซตจำกัดและเซตอนัน
+							.divider
+							p 
+								b.grey-text 14-07-2015 13:00
+								br
+								|  เข้าเรียน เซต (Set)(MATH7K345) : การเท่ากันของเซต
+							.divider
+							p 
+								b.grey-text 13-07-2015 10:00
+								br
+								|  เข้าเรียน เซต (Set)(MATH7K345) : แนะนำเซต
 					li
 						.collapsible-header
 							i.material-icons verified_user
 							| คะแนน
-							span.right.grey-text.darken-3 0 คะแนน
+							span.right.grey-text.darken-3 80 คะแนน
 						.collapsible-body
 							p 
-								strong วัน เดือน ปี
-								|  ชื่อเรื่อง
+								b.grey-text 15-7-2015 11:30
+								br
+								|  เซต (ชุดที่1) 
+								b.deep-orange-text.right 80 คะแนน
 					li
 						.collapsible-header
 							i.material-icons insert_chart
 							| ภาพรวมการเรียน
 						.collapsible-body
+							form
+								.input-field.col.s12
+									select
+										option(value="1",selected) กรกฎาคม
+									label เดือน
+							h5.center-align เดือนกรกฎาคม
+							#chart
+					li
+						.collapsible-header
+							i.material-icons stars
+							| เหรียญรางวัล
+						.collapsible-body.center-align
+							.badge-box	 
+								b Act 1 Scene 1
+								br
+								img(ng-src="images/badges/meteorite/act-1-scene-1.png",alt="Act 1 Scene 1",data-position="top",data-delay="50",data-tooltip="ดูวีดีโอ ครบ 20 นาที").user-badges.tooltipped
+							.badge-box	 
+								b Express Yourself
+								br
+								img(ng-src="images/badges/meteorite/express-yourself.png",alt="Express Yourself",data-position="top",data-delay="50",data-tooltip="ปรับแต่งรูปและข้อมูลโปรไฟล์").user-badges.tooltipped
+							.badge-box	 
+								b Inspiration
+								br
+								img(ng-src="images/badges/meteorite/inspiration.png",alt="Inspiration",data-position="top",data-delay="50",data-tooltip="Another user created a program based on one of yours").user-badges.tooltipped
+							.badge-box	 
+								b Persistence
+								br
+								img(ng-src="images/badges/meteorite/perseverance.png",alt="Persistence",data-position="top",data-delay="50",data-tooltip="Answer a problem correctly after having some trouble with a few problems and sticking with the skill").user-badges.tooltipped
+							.badge-box	 
+								b Thumbs Up
+								br
+								img(ng-src="images/badges/meteorite/thumbs-up.png",alt="Thumbs Up",data-position="top",data-delay="50",data-tooltip="Cast your first up vote for a helpful discussion post or program").user-badges.tooltipped
+							.badge-box	 
+								b Nice Streak
+								br
+								img(ng-src="images/badges/meteorite/nice-streak.png",alt="Nice Streak",data-position="top",data-delay="50",data-tooltip="Correctly answer 20 problems in a row in a single skill").user-badges.tooltipped
+							.badge-box	 
+								b Productive
+								br
+								img(ng-src="images/badges/moon/productive.png",alt="Productive",data-position="top",data-delay="50",data-tooltip="Achieve mastery in 15 unique skills").user-badges.tooltipped
+							.badge-box	 
+								b Redwood
+								br
+								img(ng-src="images/badges/moon/redwood.png",alt="Redwood",data-position="top",data-delay="50",data-tooltip="Remain a member of Khan Academy for 2 years").user-badges.tooltipped
+							.badge-box	 
+								b 10,000 Year Clock
+								br
+								img(ng-src="images/badges/earth/10000-year-clock.png",alt="10000-year-clock",data-position="top",data-delay="50",data-tooltip="Watch part of any video or work on any skill each day for 100 consecutive days").user-badges.tooltipped
+							.badge-box	 
+								b Awesome Listener
+								br
+								img(ng-src="images/badges/moon/awesome-listener.png",alt="Awesome Listener",data-position="top",data-delay="50",data-tooltip="Watch 1 hour of video in a single topic").user-badges.tooltipped
+							.badge-box	 
+								b Magellan
+								br
+								img(ng-src="images/badges/sun/magellan.png",alt="Magellan",data-position="top",data-delay="50",data-tooltip="Achieve mastery in 100 unique skills").user-badges.tooltipped
+							
+			.card-action
+				h5.right-align คะแนนรวม 80 คะแนน
+
+	.col.s12.m8
+		.card.stdDetailCard.animated.fadeIn#cardDetailOf2
+			.card-content
+				span.card-title.orange-text.darken-2 นายกฤตวัฒน์ สอนวิริยะ
+				ul.collapsible.popout(data-collapsible="accordion")
+					li
+						.collapsible-header
+							i.material-icons library_books
+							| บทเรียน
+						.collapsible-body
 							p 
-								strong วัน เดือน ปี
-								|  ชื่อเรื่อง
+								b.grey-text 14-07-2015 13:30
+								br
+								|  เข้าเรียน เซต (Set)(MATH7K345) : แบบทดสอบ
+							.divider
+							p 
+								b.grey-text 14-07-2015 13:00
+								br
+								|  เข้าเรียน เซต (Set)(MATH7K345) : เอกภพสัมพัทธ์
+							.divider
+							p 
+								b.grey-text 14-07-2015 13:30
+								br
+								|  เข้าเรียน เซต (Set)(MATH7K345) : เซตจำกัดและเซตอนัน
+							.divider
+							p 
+								b.grey-text 14-07-2015 13:00
+								br
+								|  เข้าเรียน เซต (Set)(MATH7K345) : การเท่ากันของเซต
+							.divider
+							p 
+								b.grey-text 13-07-2015 10:00
+								br
+								|  เข้าเรียน เซต (Set)(MATH7K345) : แนะนำเซต
+					li
+						.collapsible-header
+							i.material-icons verified_user
+							| คะแนน
+							span.right.grey-text.darken-3 70 คะแนน
+						.collapsible-body
+							p 
+								b.grey-text 15-7-2015 11:00
+								br
+								|  เซต (ชุดที่1) 
+								b.deep-orange-text.right 70 คะแนน
+					li
+						.collapsible-header
+							i.material-icons insert_chart
+							| ภาพรวมการเรียน
+						.collapsible-body
+							form
+								.input-field.col.s12
+									select
+										option(value="1",selected) กรกฎาคม
+									label เดือน
+							h5.center-align เดือนกรกฎาคม
+							#chart
+					li
+						.collapsible-header
+							i.material-icons stars
+							| เหรียญรางวัล
+						.collapsible-body.center-align
+							.badge-box	 
+								b Act 1 Scene 1
+								br
+								img(ng-src="images/badges/meteorite/act-1-scene-1.png",alt="Act 1 Scene 1",data-position="top",data-delay="50",data-tooltip="ดูวีดีโอ ครบ 20 นาที").user-badges.tooltipped
+							.badge-box	 
+								b Persistence
+								br
+								img(ng-src="images/badges/meteorite/perseverance.png",alt="Persistence",data-position="top",data-delay="50",data-tooltip="Answer a problem correctly after having some trouble with a few problems and sticking with the skill").user-badges.tooltipped
+							.badge-box	 
+								b Thumbs Up
+								br
+								img(ng-src="images/badges/meteorite/thumbs-up.png",alt="Thumbs Up",data-position="top",data-delay="50",data-tooltip="Cast your first up vote for a helpful discussion post or program").user-badges.tooltipped
+							.badge-box	 
+								b Nice Streak
+								br
+								img(ng-src="images/badges/meteorite/nice-streak.png",alt="Nice Streak",data-position="top",data-delay="50",data-tooltip="Correctly answer 20 problems in a row in a single skill").user-badges.tooltipped
+							.badge-box	 
+								b Productive
+								br
+								img(ng-src="images/badges/moon/productive.png",alt="Productive",data-position="top",data-delay="50",data-tooltip="Achieve mastery in 15 unique skills").user-badges.tooltipped
+							.badge-box	 
+								b Redwood
+								br
+								img(ng-src="images/badges/moon/redwood.png",alt="Redwood",data-position="top",data-delay="50",data-tooltip="Remain a member of Khan Academy for 2 years").user-badges.tooltipped
+							.badge-box	 
+								b 10,000 Year Clock
+								br
+								img(ng-src="images/badges/earth/10000-year-clock.png",alt="10000-year-clock",data-position="top",data-delay="50",data-tooltip="Watch part of any video or work on any skill each day for 100 consecutive days").user-badges.tooltipped
+							.badge-box	 
+								b Awesome Listener
+								br
+								img(ng-src="images/badges/moon/awesome-listener.png",alt="Awesome Listener",data-position="top",data-delay="50",data-tooltip="Watch 1 hour of video in a single topic").user-badges.tooltipped
+						
+							
+			.card-action
+				h5.right-align คะแนนรวม 70 คะแนน
+
+	.col.s12.m8
+		.card.stdDetailCard.animated.fadeIn#cardDetailOf3
+			.card-content
+				span.card-title.orange-text.darken-2 นายกฤษดา แม่นธนู
+				ul.collapsible.popout(data-collapsible="accordion")
+					li
+						.collapsible-header
+							i.material-icons library_books
+							| บทเรียน
+						.collapsible-body
+							p 
+								b.grey-text 14-07-2015 13:30
+								br
+								|  เข้าเรียน เซต (Set)(MATH7K345) : แบบทดสอบ
+							.divider
+							p 
+								b.grey-text 14-07-2015 13:00
+								br
+								|  เข้าเรียน เซต (Set)(MATH7K345) : เอกภพสัมพัทธ์
+							.divider
+							p 
+								b.grey-text 14-07-2015 13:30
+								br
+								|  เข้าเรียน เซต (Set)(MATH7K345) : เซตจำกัดและเซตอนัน
+							.divider
+							p 
+								b.grey-text 14-07-2015 13:00
+								br
+								|  เข้าเรียน เซต (Set)(MATH7K345) : การเท่ากันของเซต
+							.divider
+							p 
+								b.grey-text 13-07-2015 10:00
+								br
+								|  เข้าเรียน เซต (Set)(MATH7K345) : แนะนำเซต
+					li
+						.collapsible-header
+							i.material-icons verified_user
+							| คะแนน
+							span.right.grey-text.darken-3 75 คะแนน
+						.collapsible-body
+							p 
+								b.grey-text 15-7-2015 11:30
+								br
+								|  เซต (ชุดที่2) 
+								b.deep-orange-text.right 75 คะแนน
+					li
+						.collapsible-header
+							i.material-icons insert_chart
+							| ภาพรวมการเรียน
+						.collapsible-body
+							form
+								.input-field.col.s12
+									select
+										option(value="1",selected) กรกฎาคม
+									label เดือน
+							h5.center-align เดือนกรกฎาคม
+							#chart
 					li
 						.collapsible-header
 							i.material-icons stars
 							| เหรียญรางวัล
 						.collapsible-body
-							p 
-								strong วัน เดือน ปี
-								|  ชื่อเรื่อง
+							.badge-box	 
+								b Act 1 Scene 1
+								br
+								img(ng-src="images/badges/meteorite/act-1-scene-1.png",alt="Act 1 Scene 1",data-position="top",data-delay="50",data-tooltip="ดูวีดีโอ ครบ 20 นาที").user-badges.tooltipped
+							.badge-box	 
+								b Express Yourself
+								br
+								img(ng-src="images/badges/meteorite/express-yourself.png",alt="Express Yourself",data-position="top",data-delay="50",data-tooltip="ปรับแต่งรูปและข้อมูลโปรไฟล์").user-badges.tooltipped
+							.badge-box	 
+								b Inspiration
+								br
+								img(ng-src="images/badges/meteorite/inspiration.png",alt="Inspiration",data-position="top",data-delay="50",data-tooltip="Another user created a program based on one of yours").user-badges.tooltipped
+							.badge-box	 
+								b Persistence
+								br
+								img(ng-src="images/badges/meteorite/perseverance.png",alt="Persistence",data-position="top",data-delay="50",data-tooltip="Answer a problem correctly after having some trouble with a few problems and sticking with the skill").user-badges.tooltipped
+							.badge-box	 
+								b Thumbs Up
+								br
+								img(ng-src="images/badges/meteorite/thumbs-up.png",alt="Thumbs Up",data-position="top",data-delay="50",data-tooltip="Cast your first up vote for a helpful discussion post or program").user-badges.tooltipped
+							.badge-box	 
+								b Magellan
+								br
+								img(ng-src="images/badges/sun/magellan.png",alt="Magellan",data-position="top",data-delay="50",data-tooltip="Achieve mastery in 100 unique skills").user-badges.tooltipped
+							
 			.card-action
-				h5.right-align คะแนนรวม 0 คะแนน
+				h5.right-align คะแนนรวม 75 คะแนน
 
-		.card.stdDetailCard.animated.rollIn#cardDetailOf2
+	.col.s12.m8
+		.card.stdDetailCard.animated.fadeIn#cardDetailOf4
 			.card-content
-				span.card-title.orange-text.darken-2 นายภัทร ไตรรัตน์
+				span.card-title.orange-text.darken-2 นายกีรณัฐ ทัศนเอกจิต
 				ul.collapsible.popout(data-collapsible="accordion")
 					li
 						.collapsible-header
 							i.material-icons library_books
 							| บทเรียน
-							span.right.grey-text.darken-3 0 คะแนน
 						.collapsible-body
 							p 
-								strong วัน เดือน ปี
-								|  ชื่อเรื่อง
+								b.grey-text 14-07-2015 13:30
+								br
+								|  เข้าเรียน เซต (Set)(MATH7K345) : แบบทดสอบ
 							.divider
 							p 
-								strong วัน เดือน ปี
-								|  ชื่อเรื่อง
-					li
-						.collapsible-header
-							i.material-icons beenhere
-							| คะแนนเก็บ
-							span.right.grey-text.darken-3 0 คะแนน
-						.collapsible-body
+								b.grey-text 14-07-2015 13:00
+								br
+								|  เข้าเรียน เซต (Set)(MATH7K345) : เอกภพสัมพัทธ์
+							.divider
 							p 
-								strong วัน เดือน ปี
-								|  ชื่อเรื่อง
+								b.grey-text 14-07-2015 13:30
+								br
+								|  เข้าเรียน เซต (Set)(MATH7K345) : เซตจำกัดและเซตอนัน
+							.divider
+							p 
+								b.grey-text 14-07-2015 13:00
+								br
+								|  เข้าเรียน เซต (Set)(MATH7K345) : การเท่ากันของเซต
+							.divider
+							p 
+								b.grey-text 13-07-2015 10:00
+								br
+								|  เข้าเรียน เซต (Set)(MATH7K345) : แนะนำเซต
 					li
 						.collapsible-header
 							i.material-icons verified_user
-							| คะแนนสอบ
-							span.right.grey-text.darken-3 0 คะแนน
+							| คะแนน
+							span.right.grey-text.darken-3 70 คะแนน
 						.collapsible-body
 							p 
-								strong วัน เดือน ปี
-								|  ชื่อเรื่อง
+								b.grey-text 15-7-2015 11:30
+								br
+								|  เซต (ชุดที่1) 
+								b.deep-orange-text.right 70 คะแนน
 					li
 						.collapsible-header
 							i.material-icons insert_chart
 							| ภาพรวมการเรียน
-							span.right.grey-text.darken-3 0 คะแนน
+						.collapsible-body
+							form
+								.input-field.col.s12
+									select
+										option(value="1",selected) กรกฎาคม
+									label เดือน
+							h5.center-align เดือนกรกฎาคม
+							#chart
+					li
+						.collapsible-header
+							i.material-icons stars
+							| เหรียญรางวัล
+						.collapsible-body
+							.badge-box	 
+								b Act 1 Scene 1
+								br
+								img(ng-src="images/badges/meteorite/act-1-scene-1.png",alt="Act 1 Scene 1",data-position="top",data-delay="50",data-tooltip="ดูวีดีโอ ครบ 20 นาที").user-badges.tooltipped
+							.badge-box	 
+								b Express Yourself
+								br
+								img(ng-src="images/badges/meteorite/express-yourself.png",alt="Express Yourself",data-position="top",data-delay="50",data-tooltip="ปรับแต่งรูปและข้อมูลโปรไฟล์").user-badges.tooltipped
+
+							
+			.card-action
+				h5.right-align คะแนนรวม 70 คะแนน
+
+	.col.s12.m8
+		.card.stdDetailCard.animated.fadeIn#cardDetailOf5
+			.card-content
+				span.card-title.orange-text.darken-2 นางสาวจารีวรรณ สาระพล
+				ul.collapsible.popout(data-collapsible="accordion")
+					li
+						.collapsible-header
+							i.material-icons library_books
+							| บทเรียน
 						.collapsible-body
 							p 
-								strong วัน เดือน ปี
-								|  ชื่อเรื่อง
+								b.grey-text 14-07-2015 13:30
+								br
+								|  เข้าเรียน เซต (Set)(MATH7K345) : แบบทดสอบ
+							.divider
+							p 
+								b.grey-text 14-07-2015 13:00
+								br
+								|  เข้าเรียน เซต (Set)(MATH7K345) : เอกภพสัมพัทธ์
+							.divider
+							p 
+								b.grey-text 14-07-2015 13:30
+								br
+								|  เข้าเรียน เซต (Set)(MATH7K345) : เซตจำกัดและเซตอนัน
+
+					li
+						.collapsible-header
+							i.material-icons verified_user
+							| คะแนน
+							span.right.grey-text.darken-3 60 คะแนน
+						.collapsible-body
+							p 
+								b.grey-text 15-7-2015 11:30
+								br
+								|  เซต (ชุดที่1) 
+								b.deep-orange-text.right 60 คะแนน
+					li
+						.collapsible-header
+							i.material-icons insert_chart
+							| ภาพรวมการเรียน
+						.collapsible-body
+							form
+								.input-field.col.s12
+									select
+										option(value="1",selected) กรกฎาคม
+									label เดือน
+							h5.center-align เดือนกรกฎาคม
+							#chart
+					li
+						.collapsible-header
+							i.material-icons stars
+							| เหรียญรางวัล
+						.collapsible-body
+							.badge-box	 
+								b Act 1 Scene 1
+								br
+								img(ng-src="images/badges/meteorite/act-1-scene-1.png",alt="Act 1 Scene 1",data-position="top",data-delay="50",data-tooltip="ดูวีดีโอ ครบ 20 นาที").user-badges.tooltipped
+							.badge-box	 
+								b Express Yourself
+								br
+								img(ng-src="images/badges/meteorite/express-yourself.png",alt="Express Yourself",data-position="top",data-delay="50",data-tooltip="ปรับแต่งรูปและข้อมูลโปรไฟล์").user-badges.tooltipped
+							.badge-box	 
+								b Inspiration
+								br
+								img(ng-src="images/badges/meteorite/inspiration.png",alt="Inspiration",data-position="top",data-delay="50",data-tooltip="Another user created a program based on one of yours").user-badges.tooltipped
+							.badge-box	 
+								b Redwood
+								br
+								img(ng-src="images/badges/moon/redwood.png",alt="Redwood",data-position="top",data-delay="50",data-tooltip="Remain a member of Khan Academy for 2 years").user-badges.tooltipped
+							.badge-box	 
+								b 10,000 Year Clock
+								br
+								img(ng-src="images/badges/earth/10000-year-clock.png",alt="10000-year-clock",data-position="top",data-delay="50",data-tooltip="Watch part of any video or work on any skill each day for 100 consecutive days").user-badges.tooltipped
+							.badge-box	 
+								b Awesome Listener
+								br
+								img(ng-src="images/badges/moon/awesome-listener.png",alt="Awesome Listener",data-position="top",data-delay="50",data-tooltip="Watch 1 hour of video in a single topic").user-badges.tooltipped
+							.badge-box	 
+								b Magellan
+								br
+								img(ng-src="images/badges/sun/magellan.png",alt="Magellan",data-position="top",data-delay="50",data-tooltip="Achieve mastery in 100 unique skills").user-badges.tooltipped
+							
 			.card-action
-				h5.right-align คะแนนรวม 0 คะแนน
+				h5.right-align คะแนนรวม 60 คะแนน
+	
+	.col.s12.m8
+		.card.stdDetailCard.animated.fadeIn#cardDetailOf7
+			.card-content
+				span.card-title.orange-text.darken-2 นางสาวจารีวรรณ สาระพล
+				ul.collapsible.popout(data-collapsible="accordion")
+					li
+						.collapsible-header
+							i.material-icons library_books
+							| บทเรียน
+						.collapsible-body
+							p 
+								b.grey-text 14-07-2015 13:30
+								br
+								|  เข้าเรียน เซต (Set)(MATH7K345) : แบบทดสอบ
+							.divider
+							p 
+								b.grey-text 14-07-2015 13:00
+								br
+								|  เข้าเรียน เซต (Set)(MATH7K345) : เอกภพสัมพัทธ์
+							.divider
+							p 
+								b.grey-text 14-07-2015 13:30
+								br
+								|  เข้าเรียน เซต (Set)(MATH7K345) : เซตจำกัดและเซตอนัน
+
+					li
+						.collapsible-header
+							i.material-icons verified_user
+							| คะแนน
+							span.right.grey-text.darken-3 98 คะแนน
+						.collapsible-body
+							p 
+								b.grey-text 15-7-2015 11:30
+								br
+								|  เซต (ชุดที่1) 
+								b.deep-orange-text.right 98 คะแนน
+					li
+						.collapsible-header
+							i.material-icons insert_chart
+							| ภาพรวมการเรียน
+						.collapsible-body
+							form
+								.input-field.col.s12
+									select
+										option(value="1",selected) กรกฎาคม
+									label เดือน
+							h5.center-align เดือนกรกฎาคม
+							#chart
+					li
+						.collapsible-header
+							i.material-icons stars
+							| เหรียญรางวัล
+						.collapsible-body
+							.badge-box	 
+								b Act 1 Scene 1
+								br
+								img(ng-src="images/badges/meteorite/act-1-scene-1.png",alt="Act 1 Scene 1",data-position="top",data-delay="50",data-tooltip="ดูวีดีโอ ครบ 20 นาที").user-badges.tooltipped
+							.badge-box	 
+								b Express Yourself
+								br
+								img(ng-src="images/badges/meteorite/express-yourself.png",alt="Express Yourself",data-position="top",data-delay="50",data-tooltip="ปรับแต่งรูปและข้อมูลโปรไฟล์").user-badges.tooltipped
+							.badge-box	 
+								b Inspiration
+								br
+								img(ng-src="images/badges/meteorite/inspiration.png",alt="Inspiration",data-position="top",data-delay="50",data-tooltip="Another user created a program based on one of yours").user-badges.tooltipped
+							.badge-box	 
+								b Redwood
+								br
+								img(ng-src="images/badges/moon/redwood.png",alt="Redwood",data-position="top",data-delay="50",data-tooltip="Remain a member of Khan Academy for 2 years").user-badges.tooltipped
+							.badge-box	 
+								b 10,000 Year Clock
+								br
+								img(ng-src="images/badges/earth/10000-year-clock.png",alt="10000-year-clock",data-position="top",data-delay="50",data-tooltip="Watch part of any video or work on any skill each day for 100 consecutive days").user-badges.tooltipped
+							.badge-box	 
+								b Awesome Listener
+								br
+								img(ng-src="images/badges/moon/awesome-listener.png",alt="Awesome Listener",data-position="top",data-delay="50",data-tooltip="Watch 1 hour of video in a single topic").user-badges.tooltipped
+							.badge-box	 
+								b Magellan
+								br
+								img(ng-src="images/badges/sun/magellan.png",alt="Magellan",data-position="top",data-delay="50",data-tooltip="Achieve mastery in 100 unique skills").user-badges.tooltipped
+							.badge-box	 
+								b Picking Up Steam
+								br
+								img(ng-src="images/badges/meteorite/picking-up-steam.png",alt="Picking Up Steam",data-position="top",data-delay="50",data-tooltip="Quickly & correctly answer 5 skill problems in a row (time limit depends on skill difficulty)").user-badges.tooltipped
+							.badge-box	 
+								b Sub-light Speed
+								br
+								img(ng-src="images/badges/earth/sublight-speed.png",alt="Sub-light Speed",data-position="top",data-delay="50",data-tooltip="Quickly & correctly answer 42 skill problems in a row (time limit depends on skill difficulty)").user-badges.tooltipped
+
+			.card-action
+				h5.right-align คะแนนรวม 98 คะแนน
 		
 
-
+script(src="scripts/charts/chart2.js")
+script(src="scripts/charts/chart3.js")
 script.
 	$(document).ready(function(){
+		$('.tooltipped').tooltip({delay: 50});
 		$('select').material_select();
 		$("#studentnametable").tablesorter();
 		$('.collapsible').collapsible({ accordion : false });
@@ -165,8 +652,8 @@ script.
 		//- student's card detail events
 		$('.stdDetailCard').hide();
 		$('.stdDetailCard').first().show();
-		$('.stdname').first().addClass('selected'); 
-		var pre_card = '#cardDetailOf'+$('.stdname').first().attr('id');
+		$('.stdname').first().addClass('selected');
+		var pre_card = '#cardDetailOf1';
 		$('.stdname').click(function(){
 			var card = '#cardDetailOf'+$(this).attr('id');
 			if (pre_card == card){

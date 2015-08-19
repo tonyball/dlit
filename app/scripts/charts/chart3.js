@@ -1,4 +1,4 @@
-var chart = c3.generate({
+var chart2 = c3.generate({
     animationEnabled: true,
     data: {
         columns: [
